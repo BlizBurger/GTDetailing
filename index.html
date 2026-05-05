@@ -935,6 +935,39 @@
     }
     .tarifs-cta { text-align: center; margin-top: 48px; }
 
+    .vehicle-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin: 0 auto 28px;
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 999px;
+      overflow: hidden;
+      width: fit-content;
+    }
+    .vehicle-btn {
+      background: transparent;
+      border: none;
+      color: var(--grey-mid);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      white-space: nowrap;
+    }
+    .vehicle-btn.active {
+      background: var(--gold);
+      color: #000;
+    }
+    .vehicle-btn:not(.active):hover {
+      background: rgba(212,175,55,0.08);
+      color: var(--white);
+    }
+
     /* ===== RÉSERVATION ===== */
     #reserver {
       padding: var(--section-pad) 0;
@@ -1991,6 +2024,8 @@
       .hero-diag-3 { display: none; }
       .tarifs-tabs { flex-direction: column; width: 100%; }
       .tarifs-tab-btn + .tarifs-tab-btn { border-left: none; border-top: 1px solid rgba(212,175,55,0.25); }
+      .vehicle-toggle { flex-direction: column; border-radius: 12px; }
+      .vehicle-btn { padding: 12px 20px; }
       .form-grid { grid-template-columns: 1fr; }
       .form-grid .full { grid-column: 1; }
       .apropos-stats { grid-template-columns: 1fr; }
@@ -2261,171 +2296,344 @@
         <p class="section-subtitle" style="margin: 0 auto;">Des prestations d'exception à des tarifs clairs. Produits professionnels inclus.</p>
       </div>
 
+      <!-- Vehicle type toggle -->
+      <div class="vehicle-toggle reveal" role="group" aria-label="Type de véhicule">
+        <button class="vehicle-btn active" data-vehicle="berline">Citadines &amp; Berlines</button>
+        <button class="vehicle-btn" data-vehicle="suv">SUVs · Breaks · Supercars</button>
+      </div>
+
       <!-- Tabs -->
       <div class="tarifs-tabs reveal" role="tablist" aria-label="Catégories de prestations">
-        <button class="tarifs-tab-btn active" data-tab="interieur" role="tab" aria-selected="true" aria-controls="tab-interieur">Intérieur</button>
-        <button class="tarifs-tab-btn" data-tab="exterieur" role="tab" aria-selected="false" aria-controls="tab-exterieur">Extérieur</button>
-        <button class="tarifs-tab-btn" data-tab="packs" role="tab" aria-selected="false" aria-controls="tab-packs">Packs Complets</button>
+        <button class="tarifs-tab-btn active" data-tab="interieur" role="tab" aria-selected="true">Intérieur</button>
+        <button class="tarifs-tab-btn" data-tab="exterieur" role="tab" aria-selected="false">Extérieur</button>
+        <button class="tarifs-tab-btn" data-tab="packs" role="tab" aria-selected="false">Packs Complets</button>
       </div>
 
-      <!-- TAB: INTÉRIEUR -->
-      <div class="tarifs-panel active" id="tab-interieur" role="tabpanel" aria-labelledby="tab-btn-interieur">
-        <div class="pricing-grid">
+      <!-- ══════════ BERLINES ══════════ -->
+      <div class="vehicle-panels" data-vehicle-panels="berline">
 
-          <article class="pricing-card reveal">
-            <div class="pricing-tier">Classique</div>
-            <div class="pricing-price"><span class="price-amount">60</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="check">✓</span>Aspiration classique complète</li>
-              <li><span class="check">✓</span>Dépoussiérage tableau de bord et plastiques</li>
-              <li><span class="check">✓</span>Nettoyage des plastiques</li>
-              <li><span class="check">✓</span>Nettoyage des vitres intérieures</li>
-            </ul>
-            <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
-          </article>
+        <!-- TAB: INTÉRIEUR — Berlines -->
+        <div class="tarifs-panel active" data-tab-panel="interieur">
+          <div class="pricing-grid">
 
-          <article class="pricing-card popular reveal">
-            <span class="popular-badge">★ Populaire</span>
-            <div class="pricing-tier">Premium</div>
-            <div class="pricing-price"><span class="price-amount">75</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="check">✓</span>Tout le pack Classique</li>
-              <li><span class="check">✓</span>Nettoyage du volant</li>
-              <li><span class="check">✓</span>Shampooing des tapis</li>
-              <li><span class="check">✓</span>Parfum d'habitacle</li>
-              <li><span class="check">✓</span>Nettoyage approfondi des plastiques</li>
-            </ul>
-            <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Classique</div>
+              <div class="pricing-price"><span class="price-amount">70</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Aspiration classique complète</li>
+                <li><span class="check">✓</span>Dépoussiérage tableau de bord et plastiques</li>
+                <li><span class="check">✓</span>Nettoyage des plastiques</li>
+                <li><span class="check">✓</span>Nettoyage des vitres intérieures</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
-          <article class="pricing-card reveal">
-            <div class="pricing-tier">Perfect</div>
-            <div class="pricing-price"><span class="price-amount">120</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="check">✓</span>Tout le pack Premium</li>
-              <li><span class="check">✓</span>Protection et nourrissage des cuirs</li>
-              <li><span class="check">✓</span>Protection des plastiques contre les UV</li>
-              <li><span class="check">✓</span>Nettoyage en profondeur des sièges (cuirs/textiles)</li>
-              <li><span class="check">✓</span>Détail complet de l'habitacle</li>
-            </ul>
-            <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card popular reveal">
+              <span class="popular-badge">★ Populaire</span>
+              <div class="pricing-tier">Premium</div>
+              <div class="pricing-price"><span class="price-amount">85</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Classique</li>
+                <li><span class="check">✓</span>Nettoyage du volant</li>
+                <li><span class="check">✓</span>Shampooing des tapis</li>
+                <li><span class="check">✓</span>Parfum d'habitacle</li>
+                <li><span class="check">✓</span>Nettoyage approfondi des plastiques</li>
+              </ul>
+              <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Perfect</div>
+              <div class="pricing-price"><span class="price-amount">130</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Premium</li>
+                <li><span class="check">✓</span>Protection et nourrissage des cuirs</li>
+                <li><span class="check">✓</span>Protection des plastiques contre les UV</li>
+                <li><span class="check">✓</span>Nettoyage en profondeur des sièges (cuirs/textiles)</li>
+                <li><span class="check">✓</span>Détail complet de l'habitacle</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+          </div>
         </div>
-      </div>
 
-      <!-- TAB: EXTÉRIEUR -->
-      <div class="tarifs-panel" id="tab-exterieur" role="tabpanel" aria-labelledby="tab-btn-exterieur">
-        <div class="pricing-grid">
+        <!-- TAB: EXTÉRIEUR — Berlines -->
+        <div class="tarifs-panel" data-tab-panel="exterieur">
+          <div class="pricing-grid">
 
-          <article class="pricing-card reveal">
-            <div class="pricing-tier">Classique</div>
-            <div class="pricing-price"><span class="price-amount">35</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="check">✓</span>Prélavage à la mousse active</li>
-              <li><span class="check">✓</span>Lavage manuel de la carrosserie</li>
-              <li><span class="check">✓</span>Nettoyage des faces de jantes</li>
-              <li><span class="check">✓</span>Rinçage haute pression</li>
-              <li><span class="check">✓</span>Séchage manuel avec microfibre</li>
-              <li><span class="check">✓</span>Brillance des pneus</li>
-            </ul>
-            <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Classique</div>
+              <div class="pricing-price"><span class="price-amount">40</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Prélavage à la mousse active</li>
+                <li><span class="check">✓</span>Lavage manuel de la carrosserie</li>
+                <li><span class="check">✓</span>Nettoyage des faces de jantes</li>
+                <li><span class="check">✓</span>Rinçage haute pression</li>
+                <li><span class="check">✓</span>Séchage manuel avec microfibre</li>
+                <li><span class="check">✓</span>Brillance des pneus</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
-          <article class="pricing-card popular reveal">
-            <span class="popular-badge">★ Populaire</span>
-            <div class="pricing-tier">Premium</div>
-            <div class="pricing-price"><span class="price-amount">40</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="check">✓</span>Tout le pack Classique</li>
-              <li><span class="check">✓</span>Nettoyage approfondi des jantes</li>
-              <li><span class="check">✓</span>Pose d'une cire à effet déperlant</li>
-              <li><span class="check">✓</span>Traitement déperlant sur vitres</li>
-            </ul>
-            <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card popular reveal">
+              <span class="popular-badge">★ Populaire</span>
+              <div class="pricing-tier">Premium</div>
+              <div class="pricing-price"><span class="price-amount">45</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Classique</li>
+                <li><span class="check">✓</span>Nettoyage approfondi des jantes</li>
+                <li><span class="check">✓</span>Pose d'une cire à effet déperlant</li>
+                <li><span class="check">✓</span>Traitement déperlant sur vitres</li>
+              </ul>
+              <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
-          <article class="pricing-card reveal">
-            <div class="pricing-tier">Perfect</div>
-            <div class="pricing-price"><span class="price-amount">50</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="check">✓</span>Tout le pack Premium</li>
-              <li><span class="check">✓</span>Pose d'une protection type Wax (1-3 mois)</li>
-              <li><span class="check">✓</span>Rénovation des plastiques extérieurs</li>
-            </ul>
-            <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Perfect</div>
+              <div class="pricing-price"><span class="price-amount">50</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Premium</li>
+                <li><span class="check">✓</span>Pose d'une protection type Wax (1-3 mois)</li>
+                <li><span class="check">✓</span>Rénovation des plastiques extérieurs</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
+          </div>
         </div>
-      </div>
 
-      <!-- TAB: PACKS COMPLETS -->
-      <div class="tarifs-panel" id="tab-packs" role="tabpanel" aria-labelledby="tab-btn-packs">
-        <div class="pricing-grid">
+        <!-- TAB: PACKS COMPLETS — Berlines -->
+        <div class="tarifs-panel" data-tab-panel="packs">
+          <div class="pricing-grid">
 
-          <article class="pricing-card reveal">
-            <div class="pricing-tier">Pack Classique</div>
-            <div class="pricing-price"><span class="price-amount">80</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="sub-label">Intérieur Classique</span></li>
-              <li><span class="check">✓</span>Aspiration complète</li>
-              <li><span class="check">✓</span>Dépoussiérage tableau de bord</li>
-              <li><span class="check">✓</span>Nettoyage plastiques + vitres</li>
-              <li><span class="sub-label">Extérieur Classique</span></li>
-              <li><span class="check">✓</span>Prélavage mousse + lavage manuel</li>
-              <li><span class="check">✓</span>Jantes, rinçage HP, séchage microfibre</li>
-              <li><span class="check">✓</span>Brillance des pneus</li>
-            </ul>
-            <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Pack Classique</div>
+              <div class="pricing-price"><span class="price-amount">95</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="sub-label">Intérieur Classique</span></li>
+                <li><span class="check">✓</span>Aspiration complète</li>
+                <li><span class="check">✓</span>Dépoussiérage tableau de bord</li>
+                <li><span class="check">✓</span>Nettoyage plastiques + vitres</li>
+                <li><span class="sub-label">Extérieur Classique</span></li>
+                <li><span class="check">✓</span>Prélavage mousse + lavage manuel</li>
+                <li><span class="check">✓</span>Jantes, rinçage HP, séchage microfibre</li>
+                <li><span class="check">✓</span>Brillance des pneus</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
-          <article class="pricing-card popular reveal">
-            <span class="popular-badge">★ Populaire</span>
-            <div class="pricing-tier">Pack Premium</div>
-            <div class="pricing-price"><span class="price-amount">100</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="sub-label">Intérieur Premium</span></li>
-              <li><span class="check">✓</span>Pack Intérieur Classique complet</li>
-              <li><span class="check">✓</span>Volant, shampooing tapis, parfum</li>
-              <li><span class="check">✓</span>Nettoyage approfondi plastiques</li>
-              <li><span class="sub-label">Extérieur Premium</span></li>
-              <li><span class="check">✓</span>Pack Extérieur Classique complet</li>
-              <li><span class="check">✓</span>Jantes approfondies + cire déperlante</li>
-              <li><span class="check">✓</span>Traitement déperlant vitres</li>
-            </ul>
-            <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card popular reveal">
+              <span class="popular-badge">★ Populaire</span>
+              <div class="pricing-tier">Pack Premium</div>
+              <div class="pricing-price"><span class="price-amount">110</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="sub-label">Intérieur Premium</span></li>
+                <li><span class="check">✓</span>Pack Intérieur Classique complet</li>
+                <li><span class="check">✓</span>Volant, shampooing tapis, parfum</li>
+                <li><span class="check">✓</span>Nettoyage approfondi plastiques</li>
+                <li><span class="sub-label">Extérieur Premium</span></li>
+                <li><span class="check">✓</span>Pack Extérieur Classique complet</li>
+                <li><span class="check">✓</span>Jantes approfondies + cire déperlante</li>
+                <li><span class="check">✓</span>Traitement déperlant vitres</li>
+              </ul>
+              <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
-          <article class="pricing-card reveal">
-            <div class="pricing-tier">Pack Perfect</div>
-            <div class="pricing-price"><span class="price-amount">150</span><span class="price-currency">€</span></div>
-            <div class="pricing-divider"></div>
-            <ul class="pricing-features">
-              <li><span class="sub-label">Intérieur Perfect</span></li>
-              <li><span class="check">✓</span>Pack Intérieur Premium complet</li>
-              <li><span class="check">✓</span>Protection cuirs + plastiques UV</li>
-              <li><span class="check">✓</span>Nettoyage profond sièges</li>
-              <li><span class="check">✓</span>Détail complet de l'habitacle</li>
-              <li><span class="sub-label">Extérieur Perfect</span></li>
-              <li><span class="check">✓</span>Pack Extérieur Premium complet</li>
-              <li><span class="check">✓</span>Protection Wax (1-3 mois)</li>
-              <li><span class="check">✓</span>Rénovation plastiques extérieurs</li>
-            </ul>
-            <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
-          </article>
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Pack Perfect</div>
+              <div class="pricing-price"><span class="price-amount">165</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="sub-label">Intérieur Perfect</span></li>
+                <li><span class="check">✓</span>Pack Intérieur Premium complet</li>
+                <li><span class="check">✓</span>Protection cuirs + plastiques UV</li>
+                <li><span class="check">✓</span>Nettoyage profond sièges</li>
+                <li><span class="check">✓</span>Détail complet de l'habitacle</li>
+                <li><span class="sub-label">Extérieur Perfect</span></li>
+                <li><span class="check">✓</span>Pack Extérieur Premium complet</li>
+                <li><span class="check">✓</span>Protection Wax (1-3 mois)</li>
+                <li><span class="check">✓</span>Rénovation plastiques extérieurs</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
 
+          </div>
         </div>
-      </div>
 
-      <p class="tarifs-note reveal">Tarifs pour véhicules standards — supplément selon gabarit (SUV, van, supercar).</p>
+      </div><!-- /vehicle-panels berline -->
+
+      <!-- ══════════ SUVs · BREAKS · SUPERCARS ══════════ -->
+      <div class="vehicle-panels" data-vehicle-panels="suv" style="display:none;">
+
+        <!-- TAB: INTÉRIEUR — SUV -->
+        <div class="tarifs-panel active" data-tab-panel="interieur">
+          <div class="pricing-grid">
+
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Classique</div>
+              <div class="pricing-price"><span class="price-amount">85</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Aspiration classique complète</li>
+                <li><span class="check">✓</span>Dépoussiérage tableau de bord et plastiques</li>
+                <li><span class="check">✓</span>Nettoyage des plastiques</li>
+                <li><span class="check">✓</span>Nettoyage des vitres intérieures</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+            <article class="pricing-card popular reveal">
+              <span class="popular-badge">★ Populaire</span>
+              <div class="pricing-tier">Premium</div>
+              <div class="pricing-price"><span class="price-amount">100</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Classique</li>
+                <li><span class="check">✓</span>Nettoyage du volant</li>
+                <li><span class="check">✓</span>Shampooing des tapis</li>
+                <li><span class="check">✓</span>Parfum d'habitacle</li>
+                <li><span class="check">✓</span>Nettoyage approfondi des plastiques</li>
+              </ul>
+              <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Perfect</div>
+              <div class="pricing-price"><span class="price-amount">140</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Premium</li>
+                <li><span class="check">✓</span>Protection et nourrissage des cuirs</li>
+                <li><span class="check">✓</span>Protection des plastiques contre les UV</li>
+                <li><span class="check">✓</span>Nettoyage en profondeur des sièges (cuirs/textiles)</li>
+                <li><span class="check">✓</span>Détail complet de l'habitacle</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- TAB: EXTÉRIEUR — SUV -->
+        <div class="tarifs-panel" data-tab-panel="exterieur">
+          <div class="pricing-grid">
+
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Classique</div>
+              <div class="pricing-price"><span class="price-amount">50</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Prélavage à la mousse active</li>
+                <li><span class="check">✓</span>Lavage manuel de la carrosserie</li>
+                <li><span class="check">✓</span>Nettoyage des faces de jantes</li>
+                <li><span class="check">✓</span>Rinçage haute pression</li>
+                <li><span class="check">✓</span>Séchage manuel avec microfibre</li>
+                <li><span class="check">✓</span>Brillance des pneus</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+            <article class="pricing-card popular reveal">
+              <span class="popular-badge">★ Populaire</span>
+              <div class="pricing-tier">Premium</div>
+              <div class="pricing-price"><span class="price-amount">60</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Classique</li>
+                <li><span class="check">✓</span>Nettoyage approfondi des jantes</li>
+                <li><span class="check">✓</span>Pose d'une cire à effet déperlant</li>
+                <li><span class="check">✓</span>Traitement déperlant sur vitres</li>
+              </ul>
+              <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Perfect</div>
+              <div class="pricing-price"><span class="price-amount">70</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="check">✓</span>Tout le pack Premium</li>
+                <li><span class="check">✓</span>Pose d'une protection type Wax (1-3 mois)</li>
+                <li><span class="check">✓</span>Rénovation des plastiques extérieurs</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- TAB: PACKS COMPLETS — SUV -->
+        <div class="tarifs-panel" data-tab-panel="packs">
+          <div class="pricing-grid">
+
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Pack Classique</div>
+              <div class="pricing-price"><span class="price-amount">110</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="sub-label">Intérieur Classique</span></li>
+                <li><span class="check">✓</span>Aspiration complète</li>
+                <li><span class="check">✓</span>Dépoussiérage tableau de bord</li>
+                <li><span class="check">✓</span>Nettoyage plastiques + vitres</li>
+                <li><span class="sub-label">Extérieur Classique</span></li>
+                <li><span class="check">✓</span>Prélavage mousse + lavage manuel</li>
+                <li><span class="check">✓</span>Jantes, rinçage HP, séchage microfibre</li>
+                <li><span class="check">✓</span>Brillance des pneus</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+            <article class="pricing-card popular reveal">
+              <span class="popular-badge">★ Populaire</span>
+              <div class="pricing-tier">Pack Premium</div>
+              <div class="pricing-price"><span class="price-amount">140</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="sub-label">Intérieur Premium</span></li>
+                <li><span class="check">✓</span>Pack Intérieur Classique complet</li>
+                <li><span class="check">✓</span>Volant, shampooing tapis, parfum</li>
+                <li><span class="check">✓</span>Nettoyage approfondi plastiques</li>
+                <li><span class="sub-label">Extérieur Premium</span></li>
+                <li><span class="check">✓</span>Pack Extérieur Classique complet</li>
+                <li><span class="check">✓</span>Jantes approfondies + cire déperlante</li>
+                <li><span class="check">✓</span>Traitement déperlant vitres</li>
+              </ul>
+              <a href="#reserver" class="btn btn-gold" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+            <article class="pricing-card reveal">
+              <div class="pricing-tier">Pack Perfect</div>
+              <div class="pricing-price"><span class="price-amount">190</span><span class="price-currency">€</span></div>
+              <div class="pricing-divider"></div>
+              <ul class="pricing-features">
+                <li><span class="sub-label">Intérieur Perfect</span></li>
+                <li><span class="check">✓</span>Pack Intérieur Premium complet</li>
+                <li><span class="check">✓</span>Protection cuirs + plastiques UV</li>
+                <li><span class="check">✓</span>Nettoyage profond sièges</li>
+                <li><span class="check">✓</span>Détail complet de l'habitacle</li>
+                <li><span class="sub-label">Extérieur Perfect</span></li>
+                <li><span class="check">✓</span>Pack Extérieur Premium complet</li>
+                <li><span class="check">✓</span>Protection Wax (1-3 mois)</li>
+                <li><span class="check">✓</span>Rénovation plastiques extérieurs</li>
+              </ul>
+              <a href="#reserver" class="btn btn-ghost" style="justify-content:center;">RÉSERVER</a>
+            </article>
+
+          </div>
+        </div>
+
+      </div><!-- /vehicle-panels suv -->
+
+      <p class="tarifs-note reveal">Tarifs indicatifs — devis personnalisé sur demande.</p>
 
       <div class="tarifs-cta reveal">
         <a href="#reserver" class="btn btn-gold">
@@ -3513,34 +3721,53 @@
     })();
 
 
-    /* ===== TARIFS — TAB SWITCHING ===== */
+    /* ===== TARIFS — VEHICLE TOGGLE + TAB SWITCHING ===== */
     (function () {
-      const tabs   = document.querySelectorAll('.tarifs-tab-btn');
-      const panels = document.querySelectorAll('.tarifs-panel');
+      var activeVehicle = 'berline';
+      var activeTab     = 'interieur';
 
-      tabs.forEach(function (tab) {
+      function showPanels() {
+        // vehicle-panels visibility
+        document.querySelectorAll('.vehicle-panels').forEach(function (vp) {
+          vp.style.display = (vp.dataset.vehiclePanels === activeVehicle) ? '' : 'none';
+        });
+        // within visible vehicle-panels, show correct tab-panel
+        var activePanels = document.querySelector('.vehicle-panels[data-vehicle-panels="' + activeVehicle + '"]');
+        if (!activePanels) return;
+        activePanels.querySelectorAll('.tarifs-panel').forEach(function (p) {
+          var show = p.dataset.tabPanel === activeTab;
+          p.classList.toggle('active', show);
+          if (show) {
+            p.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+          }
+        });
+      }
+
+      // Vehicle toggle
+      document.querySelectorAll('.vehicle-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.vehicle-btn').forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          activeVehicle = btn.dataset.vehicle;
+          showPanels();
+        });
+      });
+
+      // Tab switching
+      document.querySelectorAll('.tarifs-tab-btn').forEach(function (tab) {
         tab.addEventListener('click', function () {
-          const target = tab.dataset.tab;
-
-          tabs.forEach(function (t) {
+          document.querySelectorAll('.tarifs-tab-btn').forEach(function (t) {
             t.classList.remove('active');
             t.setAttribute('aria-selected', 'false');
           });
-          panels.forEach(function (p) { p.classList.remove('active'); });
-
           tab.classList.add('active');
           tab.setAttribute('aria-selected', 'true');
-
-          const panel = document.getElementById('tab-' + target);
-          if (panel) {
-            panel.classList.add('active');
-            // Trigger reveal on freshly visible cards
-            panel.querySelectorAll('.reveal').forEach(function (el) {
-              el.classList.add('visible');
-            });
-          }
+          activeTab = tab.dataset.tab;
+          showPanels();
         });
       });
+
+      showPanels();
     })();
 
 
