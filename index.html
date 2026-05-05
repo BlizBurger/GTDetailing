@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- ===== META ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GT Detailing — Détailing Automobile Monaco · Nice · Menton</title>
+  <meta name="description" content="GT Detailing — Spécialiste du détailing automobile sur la Côte d'Azur. Lavage, polissage, traitement céramique et protection peinture à Monaco, Nice et Menton.">
+  <meta name="keywords" content="détailing automobile, car detailing, Monaco, Nice, Menton, Côte d'Azur, lavage voiture, traitement céramique, polissage, correction peinture">
+  <meta name="author" content="GT Detailing — Albert Kedilerli">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GT Detailing — L'Excellence du Détailing sur la Côte d'Azur">
+  <meta property="og:description" content="Spécialiste du détailing automobile à Monaco, Nice et Menton. Lavage, polissage, traitement céramique, protection peinture.">
+  <meta property="og:image" content="<!-- OG IMAGE À REMPLACER -->">
+  <meta property="og:url" content="<!-- URL DU SITE À REMPLACER -->">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GT Detailing — Côte d'Azur">
+  <meta name="twitter:description" content="Spécialiste du détailing automobile à Monaco, Nice et Menton.">
+
+  <!-- ===== SCHEMA.ORG JSON-LD ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "GT Detailing",
+    "alternateName": "GT Detailing MC",
+    "description": "Spécialiste du détailing automobile haut de gamme sur la Côte d'Azur — Monaco, Nice, Menton.",
+    "url": "<!-- URL DU SITE À REMPLACER -->",
+    "telephone": "+33647869180",
+    "email": "albert@gtdetailingmc.com",
+    "founder": "Albert Kedilerli",
+    "taxID": "99403619200015",
+    "legalName": "EI Albert Kedilerli / GT Detailing",
+    "priceRange": "€€€",
+    "currenciesAccepted": "EUR",
+    "areaServed": [
+      { "@type": "City", "name": "Monaco" },
+      { "@type": "City", "name": "Nice" },
+      { "@type": "City", "name": "Menton" },
+      { "@type": "City", "name": "Antibes" },
+      { "@type": "City", "name": "Cannes" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Provence-Alpes-Côte d'Azur",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.7102",
+      "longitude": "7.2620"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "sameAs": [
+      "<!-- LIEN INSTAGRAM À REMPLACER -->",
+      "<!-- LIEN FACEBOOK À REMPLACER -->",
+      "<!-- LIEN GOOGLE BUSINESS À REMPLACER -->"
+    ]
+  }
+  </script>
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ===== RESET & CSS VARIABLES ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black:       #000000;
+      --black-deep:  #0A0A0A;
+      --black-card:  #111111;
+      --black-card2: #161616;
+      --gold:        #D4AF37;
+      --gold-bright: #FFD700;
+      --gold-dark:   #A8841C;
+      --gold-dim:    rgba(212, 175, 55, 0.15);
+      --white:       #FFFFFF;
+      --grey-light:  #CCCCCC;
+      --grey-mid:    #888888;
+      --grey-dark:   #333333;
+
+      --font-head:   'Bebas Neue', sans-serif;
+      --font-body:   'DM Sans', sans-serif;
+
+      --nav-h:       80px;
+      --section-pad: clamp(60px, 8vw, 120px);
+      --container:   1260px;
+      --radius:      4px;
+
+      --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+
+      --transition-fast:   0.2s ease;
+      --transition-mid:    0.4s var(--ease-out);
+      --transition-slow:   0.8s var(--ease-out);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul { list-style: none; }
+
+    /* Noise texture overlay (subtle grain effect) */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ===== UTILITIES ===== */
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 60px);
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      position: relative;
+      padding-left: 28px;
+    }
+    .section-label::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .section-title span { color: var(--gold); }
+
+    .section-subtitle {
+      font-size: clamp(14px, 1.6vw, 17px);
+      color: var(--grey-light);
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* Gold shimmer button */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      transition: all var(--transition-mid);
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 50%, var(--gold) 100%);
+      background-size: 200% 100%;
+      color: var(--black);
+    }
+    .btn-gold::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.6s ease;
+    }
+    .btn-gold:hover { background-position: 100% 0; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4); }
+    .btn-gold:hover::before { left: 100%; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* Scroll reveal utility */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gold divider line */
+    .gold-divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+      margin: 24px 0;
+    }
+
+    /* ===== NAV ===== */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+    }
+
+    #nav.scrolled {
+      background: rgba(0, 0, 0, 0.97);
+      box-shadow: 0 1px 0 rgba(212, 175, 55, 0.15), 0 4px 24px rgba(0,0,0,0.6);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 24px;
+    }
+
+    /* Logo */
+    .nav-logo {
+      flex-shrink: 0;
+    }
+
+    /* CLIENT: remplacer le bloc .logo-placeholder par <img src="logo.png" alt="GT Detailing" style="height:50px;"> */
+    .logo-placeholder {
+      width: 160px;
+      height: 52px;
+      border: 1.5px dashed var(--gold);
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      transition: border-color var(--transition-fast);
+      position: relative;
+    }
+    .logo-placeholder:hover { border-color: var(--gold-bright); }
+
+    .logo-placeholder-label {
+      font-family: var(--font-body);
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey-mid);
+    }
+    .logo-placeholder-name {
+      font-family: var(--font-head);
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .logo-dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: var(--gold-bright);
+      border-radius: 50%;
+      margin-left: 2px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+    }
+
+    /* Desktop nav links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 40px);
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      position: relative;
+      padding-bottom: 4px;
+      transition: color var(--transition-fast);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width var(--transition-mid);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta { flex-shrink: 0; }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      cursor: pointer;
+      z-index: 1010;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.35s var(--ease-out), opacity 0.35s ease, width 0.35s ease;
+      transform-origin: center;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile menu overlay */
+    .nav-mobile {
+      position: fixed;
+      inset: 0;
+      background: var(--black);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .nav-mobile.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav-mobile a {
+      font-family: var(--font-head);
+      font-size: clamp(36px, 8vw, 56px);
+      letter-spacing: 0.06em;
+      color: var(--white);
+      transition: color var(--transition-fast);
+    }
+    .nav-mobile a:hover { color: var(--gold); }
+    .nav-mobile .btn {
+      margin-top: 12px;
+      font-size: 15px;
+      padding: 16px 40px;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      position: relative;
+      width: 100%;
+      height: 100svh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    /* Canvas particles */
+    #particles-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Diagonal gold line decoration */
+    .hero-diag {
+      position: absolute;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-diag-1 {
+      top: 0; right: 12%;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(212,175,55,0.5) 30%, rgba(212,175,55,0.15) 70%, transparent 100%);
+      transform: skewX(-8deg);
+      transform-origin: top;
+    }
+    .hero-diag-2 {
+      bottom: 0; left: 8%;
+      width: 1px;
+      height: 60%;
+      background: linear-gradient(to top, transparent 0%, rgba(255,215,0,0.3) 60%, transparent 100%);
+      transform: skewX(-8deg);
+    }
+    .hero-diag-3 {
+      top: 15%; right: 8%;
+      width: 180px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      transform: rotate(-45deg);
+      animation: diagPulse 4s ease-in-out infinite;
+    }
+    @keyframes diagPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Corner accents */
+    .hero-corner {
+      position: absolute;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-corner-tl {
+      top: 40px; left: 40px;
+      width: 50px; height: 50px;
+      border-top: 1.5px solid var(--gold);
+      border-left: 1.5px solid var(--gold);
+      opacity: 0.5;
+    }
+    .hero-corner-br {
+      bottom: 40px; right: 40px;
+      width: 50px; height: 50px;
+      border-bottom: 1.5px solid var(--gold);
+      border-right: 1.5px solid var(--gold);
+      opacity: 0.5;
+    }
+
+    /* Hero content */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: 0 20px;
+      max-width: 980px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 100px;
+      padding: 8px 20px;
+      margin-bottom: 32px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeUp 0.8s var(--ease-out) 0.2s forwards;
+    }
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold-bright);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.8); }
+    }
+    .hero-badge span {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(52px, 10vw, 130px);
+      line-height: 0.9;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: heroFadeUp 0.9s var(--ease-out) 0.4s forwards;
+    }
+    .hero-title .gold-text {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(13px, 1.8vw, 16px);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      margin-bottom: 48px;
+      font-weight: 300;
+      opacity: 0;
+      animation: heroFadeUp 0.9s var(--ease-out) 0.6s forwards;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: heroFadeUp 0.9s var(--ease-out) 0.8s forwards;
+    }
+
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: heroFadeUp 0.9s var(--ease-out) 1.2s forwards;
+    }
+    .hero-scroll span {
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey-mid);
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0% { transform: scaleY(1); transform-origin: top; }
+      50% { transform: scaleY(0.3); transform-origin: top; }
+      51% { transform: scaleY(0.3); transform-origin: bottom; }
+      100% { transform: scaleY(1); transform-origin: bottom; }
+    }
+
+    /* ===== SERVICES ===== */
+    #services {
+      padding: var(--section-pad) 0;
+      background: var(--black-deep);
+      position: relative;
+      z-index: 1;
+    }
+
+    #services::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: clamp(40px, 6vw, 80px);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .service-card {
+      background: var(--black-card);
+      padding: clamp(28px, 4vw, 48px) clamp(24px, 3vw, 40px);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      transition: transform 0.4s var(--ease-out), background 0.3s ease;
+    }
+
+    /* Animated border on hover via pseudo-element */
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid transparent;
+      transition: border-color 0.4s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+      transition: width 0.5s var(--ease-out);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      background: var(--black-card2);
+      z-index: 1;
+    }
+    .service-card:hover::before { border-color: rgba(212,175,55,0.35); }
+    .service-card:hover::after { width: 100%; }
+
+    /* Gold glow on hover */
+    .service-card:hover .service-icon-wrap {
+      background: rgba(212,175,55,0.12);
+      box-shadow: 0 0 24px rgba(212,175,55,0.15);
+    }
+    .service-card:hover .service-icon-wrap svg {
+      filter: drop-shadow(0 0 6px rgba(255,215,0,0.5));
+    }
+
+    .service-icon-wrap {
+      width: 58px; height: 58px;
+      background: rgba(212,175,55,0.07);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .service-icon-wrap svg {
+      width: 28px; height: 28px;
+      transition: filter 0.4s ease;
+    }
+
+    .service-card-number {
+      position: absolute;
+      top: 20px; right: 24px;
+      font-family: var(--font-head);
+      font-size: 64px;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      user-select: none;
+      transition: color 0.4s ease;
+    }
+    .service-card:hover .service-card-number { color: rgba(212,175,55,0.06); }
+
+    .service-card-title {
+      font-family: var(--font-head);
+      font-size: clamp(20px, 2.5vw, 26px);
+      letter-spacing: 0.05em;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+
+    .service-card-desc {
+      font-size: 13.5px;
+      color: var(--grey-mid);
+      line-height: 1.65;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+    .service-link svg {
+      width: 14px; height: 14px;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover .service-link { gap: 12px; color: var(--gold-bright); }
+    .service-card:hover .service-link svg { transform: translateX(4px); }
+
+    /* Staggered reveal delays */
+    .service-card:nth-child(1) { transition-delay: 0.0s; }
+    .service-card:nth-child(2) { transition-delay: 0.08s; }
+    .service-card:nth-child(3) { transition-delay: 0.16s; }
+    .service-card:nth-child(4) { transition-delay: 0.24s; }
+    .service-card:nth-child(5) { transition-delay: 0.32s; }
+    .service-card:nth-child(6) { transition-delay: 0.40s; }
+
+    .services-cta {
+      text-align: center;
+      margin-top: clamp(40px, 5vw, 64px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --nav-h: 64px; }
+      .services-grid { grid-template-columns: 1fr; gap: 1px; }
+      .hero-corner-tl, .hero-corner-br { display: none; }
+      .hero-diag-3 { display: none; }
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="nav" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- Logo — CLIENT: remplacer par <img src="logo.png" alt="GT Detailing" style="height:50px;"> -->
+        <a href="#hero" class="nav-logo" aria-label="GT Detailing — Accueil">
+          <div class="logo-placeholder">
+            <span class="logo-placeholder-label">Votre logo ici</span>
+            <span class="logo-placeholder-name">GT DETAILING<span class="logo-dot"></span></span>
+          </div>
+        </a>
+
+        <!-- Desktop nav links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#reserver">Réserver</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Desktop CTA -->
+        <div class="nav-cta">
+          <a href="#reserver" class="btn btn-gold">Réserver maintenant</a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="nav-hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav-mobile" id="navMobile" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <a href="#services" class="nav-mobile-link">Services</a>
+    <a href="#tarifs" class="nav-mobile-link">Tarifs</a>
+    <a href="#portfolio" class="nav-mobile-link">Portfolio</a>
+    <a href="#reserver" class="nav-mobile-link">Réserver</a>
+    <a href="#contact" class="nav-mobile-link">Contact</a>
+    <a href="#reserver" class="btn btn-gold">Réserver maintenant</a>
+  </div>
+
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Présentation GT Detailing">
+
+    <!-- Particle canvas -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Decorative diagonal lines -->
+    <div class="hero-diag hero-diag-1" aria-hidden="true"></div>
+    <div class="hero-diag hero-diag-2" aria-hidden="true"></div>
+    <div class="hero-diag hero-diag-3" aria-hidden="true"></div>
+
+    <!-- Corner accents -->
+    <div class="hero-corner hero-corner-tl" aria-hidden="true"></div>
+    <div class="hero-corner hero-corner-br" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+
+      <div class="hero-badge" aria-label="Détailing professionnel Côte d'Azur">
+        <span class="hero-badge-dot"></span>
+        <span>Détailing Professionnel · Côte d'Azur</span>
+      </div>
+
+      <h1 class="hero-title">
+        L'EXCELLENCE DU
+        <span class="gold-text">DÉTAILING</span>
+      </h1>
+
+      <p class="hero-subtitle">Monaco &nbsp;·&nbsp; Menton &nbsp;·&nbsp; Nice &nbsp;·&nbsp; Côte d'Azur</p>
+
+      <div class="hero-ctas">
+        <a href="#reserver" class="btn btn-gold">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Réserver
+        </a>
+        <a href="#services" class="btn btn-ghost">Voir nos services</a>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" aria-labelledby="services-title">
+    <div class="container">
+
+      <div class="services-header reveal">
+        <span class="section-label">Ce que nous faisons</span>
+        <h2 class="section-title" id="services-title">NOS <span>SERVICES</span></h2>
+        <p class="section-subtitle">Un soin d'exception pour chaque véhicule. Du lavage minutieux au détailing complet, nous traitons votre voiture comme une œuvre d'art.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Card 1: Lavage intérieur -->
+        <article class="service-card reveal">
+          <span class="service-card-number" aria-hidden="true">01</span>
+          <div class="service-icon-wrap">
+            <!-- Seat / interior icon -->
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 20h20M6 20V12c0-1.1.9-2 2-2h4l2-4h4l1 4h2c1.1 0 2 .9 2 2v8" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 20v-6h8v6" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 23h2M19 23h2" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Lavage intérieur complet</h3>
+          <p class="service-card-desc">Aspiration, dépoussiérage, nettoyage des plastiques, des vitres et des sièges. Un habitacle impeccable, comme à la sortie du showroom.</p>
+          <a href="#tarifs" class="service-link" aria-label="En savoir plus sur le lavage intérieur">
+            En savoir plus
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 2: Lavage extérieur -->
+        <article class="service-card reveal">
+          <span class="service-card-number" aria-hidden="true">02</span>
+          <div class="service-icon-wrap">
+            <!-- Car wash / water drop icon -->
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 18h22M5 18V13l3-5h12l3 5v5" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="8.5" cy="20.5" r="1.5" stroke="#FFD700" stroke-width="1.5"/>
+              <circle cx="19.5" cy="20.5" r="1.5" stroke="#FFD700" stroke-width="1.5"/>
+              <path d="M14 4v5M11 6l3-3 3 3" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 9h8" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Lavage extérieur</h3>
+          <p class="service-card-desc">Prélavage mousse active, lavage manuel soigneux, nettoyage des jantes, rinçage haute pression et séchage microfibre. Brillance garantie.</p>
+          <a href="#tarifs" class="service-link" aria-label="En savoir plus sur le lavage extérieur">
+            En savoir plus
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 3: Traitement céramique -->
+        <article class="service-card reveal">
+          <span class="service-card-number" aria-hidden="true">03</span>
+          <div class="service-icon-wrap">
+            <!-- Diamond / shield icon -->
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M14 3L5 10l9 15 9-15-9-7z" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M5 10h18M10 10l4-7 4 7" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 10l5 12 5-12" stroke="#FFD700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Traitement céramique</h3>
+          <p class="service-card-desc">Protection longue durée de la carrosserie par revêtement céramique nano-technologique. Hydrophobicité maximale, brillance intense.</p>
+          <a href="#reserver" class="service-link" aria-label="En savoir plus sur le traitement céramique">
+            Demander un devis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 4: Polissage / Correction peinture -->
+        <article class="service-card reveal">
+          <span class="service-card-number" aria-hidden="true">04</span>
+          <div class="service-icon-wrap">
+            <!-- Polish / swirl icon -->
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="14" cy="14" r="9" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M14 5a9 9 0 0 1 6.36 15.36" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 14a4 4 0 0 1 4-4 4 4 0 0 1 2.83 6.83" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="14" cy="14" r="2" fill="#D4AF37" opacity="0.4"/>
+              <path d="M14 3v2M14 23v2M3 14h2M23 14h2" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Polissage / Correction peinture</h3>
+          <p class="service-card-desc">Élimination des micro-rayures, tourbillons et défauts de peinture. Correction professionnelle pour retrouver l'éclat d'origine.</p>
+          <a href="#reserver" class="service-link" aria-label="En savoir plus sur le polissage">
+            Demander un devis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 5: Décontamination -->
+        <article class="service-card reveal">
+          <span class="service-card-number" aria-hidden="true">05</span>
+          <div class="service-icon-wrap">
+            <!-- Droplet / clean icon -->
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M14 4C14 4 6 12.5 6 17a8 8 0 0 0 16 0c0-4.5-8-13-8-13z" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M10 18a4 4 0 0 0 4 3" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14 8l1 2M14 8l-1 2" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+              <path d="M18 14l1.5-1.5M10 14l-1.5-1.5" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Décontamination</h3>
+          <p class="service-card-desc">Traitement chimique et mécanique pour éliminer les contaminants ferreux, la sève, les insectes et les résidus industriels incrustés.</p>
+          <a href="#tarifs" class="service-link" aria-label="En savoir plus sur la décontamination">
+            En savoir plus
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 6: Détailing complet -->
+        <article class="service-card reveal">
+          <span class="service-card-number" aria-hidden="true">06</span>
+          <div class="service-icon-wrap">
+            <!-- Star / complete icon -->
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M14 3l2.8 5.7L23 9.5l-4.5 4.4 1.1 6.2L14 17.2l-5.6 2.9 1.1-6.2L5 9.5l6.2-.8L14 3z" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M14 3l2.8 5.7L23 9.5l-4.5 4.4 1.1 6.2L14 17.2l-5.6 2.9 1.1-6.2L5 9.5l6.2-.8L14 3z" fill="#D4AF37" fill-opacity="0.08"/>
+              <path d="M14 8v6M11 14h6" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Détailing complet</h3>
+          <p class="service-card-desc">Le traitement ultime — intérieur + extérieur + décontamination + correction + protection céramique. Votre véhicule, sublimé à l'état de l'art.</p>
+          <a href="#reserver" class="service-link" aria-label="En savoir plus sur le détailing complet">
+            Demander un devis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+      </div><!-- /services-grid -->
+
+      <!-- Section CTA -->
+      <div class="services-cta reveal">
+        <a href="#reserver" class="btn btn-gold">
+          Réserver une prestation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SUITE AU PROCHAIN PROMPT -->
+
+
+  <!-- ===== JS ===== -->
+  <script>
+
+    /* ===== NAV SCROLL BEHAVIOR ===== */
+    (function () {
+      const nav = document.getElementById('nav');
+      const threshold = 60;
+
+      function onScroll() {
+        if (window.scrollY > threshold) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll(); // run on load
+    })();
+
+
+    /* ===== HAMBURGER / MOBILE MENU ===== */
+    (function () {
+      const hamburger = document.getElementById('hamburger');
+      const navMobile = document.getElementById('navMobile');
+      const mobileLinks = navMobile.querySelectorAll('a');
+      let isOpen = false;
+
+      function openMenu() {
+        isOpen = true;
+        hamburger.classList.add('open');
+        navMobile.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        isOpen = false;
+        hamburger.classList.remove('open');
+        navMobile.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen) closeMenu();
+      });
+    })();
+
+
+    /* ===== CANVAS PARTICLE SYSTEM ===== */
+    (function () {
+      const canvas = document.getElementById('particles-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      let W, H, particles = [], animId;
+
+      const PARTICLE_COUNT = 70;
+      const GOLD_COLORS = ['rgba(212,175,55,', 'rgba(255,215,0,', 'rgba(184,142,10,', 'rgba(240,190,60,'];
+
+      function resize() {
+        W = canvas.width  = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+
+      function rand(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      function createParticle() {
+        const colorBase = GOLD_COLORS[Math.floor(Math.random() * GOLD_COLORS.length)];
+        return {
+          x: rand(0, W),
+          y: rand(0, H),
+          r: rand(0.5, 2.2),
+          vx: rand(-0.2, 0.2),
+          vy: rand(-0.5, -0.12),
+          alpha: rand(0.05, 0.55),
+          alphaDir: rand(0.002, 0.008),
+          colorBase: colorBase,
+          twinkle: Math.random() > 0.6,
+        };
+      }
+
+      function initParticles() {
+        particles = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+          const p = createParticle();
+          p.y = rand(0, H); // scattered start
+          particles.push(p);
+        }
+      }
+
+      function drawParticle(p) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.colorBase + p.alpha + ')';
+        ctx.fill();
+      }
+
+      function updateParticle(p) {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Twinkle
+        if (p.twinkle) {
+          p.alpha += p.alphaDir;
+          if (p.alpha >= 0.55 || p.alpha <= 0.03) {
+            p.alphaDir *= -1;
+          }
+        }
+
+        // Wrap around
+        if (p.y < -10) {
+          p.y = H + 10;
+          p.x = rand(0, W);
+        }
+        if (p.x < -10) p.x = W + 10;
+        if (p.x > W + 10) p.x = -10;
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, W, H);
+
+        // Very subtle radial gradient overlay
+        const grd = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, Math.max(W, H) * 0.7);
+        grd.addColorStop(0, 'rgba(20, 14, 0, 0)');
+        grd.addColorStop(1, 'rgba(0, 0, 0, 0.4)');
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, W, H);
+
+        particles.forEach(function (p) {
+          updateParticle(p);
+          drawParticle(p);
+        });
+
+        // Subtle connection lines between close particles
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 80) {
+              const alpha = (1 - dist / 80) * 0.06;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = 'rgba(212,175,55,' + alpha + ')';
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+
+        animId = requestAnimationFrame(animate);
+      }
+
+      // Init
+      resize();
+      initParticles();
+      animate();
+
+      // Handle resize
+      let resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          cancelAnimationFrame(animId);
+          resize();
+          initParticles();
+          animate();
+        }, 200);
+      });
+    })();
+
+
+    /* ===== INTERSECTION OBSERVER — SCROLL REVEALS ===== */
+    (function () {
+      const revealEls = document.querySelectorAll('.reveal');
+
+      if (!('IntersectionObserver' in window)) {
+        // Fallback: show all immediately
+        revealEls.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealEls.forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+
+  </script>
+
+</body>
+</html>
