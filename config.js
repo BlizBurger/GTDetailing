@@ -12,7 +12,7 @@
 var INSTAGRAM = "https://www.instagram.com/gtdetailing";   // ← mettez votre lien Instagram
 var TIKTOK    = "https://www.tiktok.com/@gtdetailing";     // ← mettez votre lien TikTok
 var FACEBOOK  = "";                                         // ← optionnel, laissez "" si pas de Facebook
-var GOOGLE_MAPS_EMBED = "";                                 // ← lien iframe Google Maps (voir LISEZ-MOI.html)
+var GOOGLE_MAPS_EMBED = "https://maps.google.com/maps?q=Monaco,+Menton,+Nice,+France&t=&z=10&ie=UTF8&iwloc=&output=embed"; // Zone d'intervention
 
 
 /* ─── 2. VOS AVIS GOOGLE ─────────────────────────────────────── */
