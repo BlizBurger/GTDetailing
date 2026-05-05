@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GT Detailing — Guide de personnalisation</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
+    .top { background: linear-gradient(135deg, #111, #1a1600); border-bottom: 2px solid #D4AF37; padding: 40px 24px; text-align: center; }
+    .top h1 { font-size: clamp(24px,5vw,40px); color: #D4AF37; letter-spacing: 0.06em; margin-bottom: 8px; }
+    .top p { color: #aaa; font-size: 15px; max-width: 600px; margin: 0 auto; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    /* Steps */
+    .step { display: flex; gap: 20px; margin-bottom: 40px; align-items: flex-start; }
+    .step-num { width: 48px; height: 48px; border-radius: 50%; background: #D4AF37; color: #000; font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-body { flex: 1; }
+    .step-body h2 { font-size: 20px; color: #fff; margin-bottom: 8px; }
+    .step-body p { color: #bbb; font-size: 14px; margin-bottom: 10px; }
+
+    /* Cards */
+    .card { background: #111; border: 1px solid #222; border-radius: 8px; padding: 20px; margin-top: 12px; }
+    .card h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #D4AF37; margin-bottom: 14px; }
+
+    /* File list */
+    .file-list { display: grid; gap: 8px; }
+    .file-row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #1a1a1a; border-radius: 6px; }
+    .file-icon { width: 36px; height: 36px; border-radius: 6px; background: #222; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .file-name { font-family: 'Courier New', monospace; font-size: 13px; color: #D4AF37; font-weight: 600; min-width: 140px; }
+    .file-desc { font-size: 13px; color: #888; }
+    .file-row.sep { background: none; border-top: 1px solid #222; padding: 4px 0 0; margin-top: 4px; }
+    .file-row.sep .file-name { color: #555; font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; }
+
+    /* Code block */
+    .code-block { background: #0d0d0d; border: 1px solid #333; border-radius: 6px; padding: 20px; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.8; overflow-x: auto; margin-top: 10px; }
+    .code-comment { color: #555; }
+    .code-key { color: #D4AF37; }
+    .code-val { color: #80c980; }
+    .code-section { color: #888; font-size: 12px; margin-top: 10px; margin-bottom: 2px; display: block; }
+
+    /* Alert boxes */
+    .alert { padding: 14px 18px; border-radius: 6px; font-size: 13px; margin-top: 12px; display: flex; gap: 12px; align-items: flex-start; }
+    .alert-gold { background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.35); color: #D4AF37; }
+    .alert-green { background: rgba(80,200,80,0.08); border: 1px solid rgba(80,200,80,0.3); color: #80c980; }
+    .alert-grey { background: rgba(255,255,255,0.04); border: 1px solid #333; color: #aaa; }
+    .alert-icon { font-size: 18px; flex-shrink: 0; }
+
+    /* Steps menu */
+    .menu { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+    .menu a { padding: 8px 16px; background: #111; border: 1px solid #333; border-radius: 4px; font-size: 13px; color: #aaa; text-decoration: none; transition: all 0.2s; }
+    .menu a:hover { border-color: #D4AF37; color: #D4AF37; }
+
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, #333, transparent); margin: 48px 0; }
+    h2.section { font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: #555; margin-bottom: 28px; margin-top: 48px; display: flex; align-items: center; gap: 12px; }
+    h2.section::after { content: ''; flex: 1; height: 1px; background: #222; }
+
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .badge-gold { background: rgba(212,175,55,0.15); color: #D4AF37; border: 1px solid rgba(212,175,55,0.3); }
+    .badge-green { background: rgba(80,200,80,0.12); color: #80c980; border: 1px solid rgba(80,200,80,0.25); }
+    .badge-free { background: rgba(100,180,255,0.1); color: #80b4ff; border: 1px solid rgba(100,180,255,0.25); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } .step { flex-direction: column; } }
+
+    .btn { display: inline-block; padding: 12px 24px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none; letter-spacing: 0.08em; }
+    .btn-gold { background: #D4AF37; color: #000; }
+    .btn-ghost { border: 1px solid #444; color: #aaa; }
+
+    footer-guide { display: block; text-align: center; padding: 32px; color: #444; font-size: 12px; border-top: 1px solid #1a1a1a; }
+  </style>
+</head>
+<body>
+
+<div class="top">
+  <h1>GT DETAILING — GUIDE DE PERSONNALISATION</h1>
+  <p>Tout ce qu'il faut faire pour mettre à jour votre site. En 3 étapes simples, sans toucher au code.</p>
+</div>
+
+<div class="container">
+
+  <div class="alert alert-green" style="margin-bottom:32px;">
+    <span class="alert-icon">✅</span>
+    <div>
+      <strong>Comment ça marche :</strong> vous n'avez que 2 fichiers à modifier —
+      <code style="color:#D4AF37;">config.js</code> pour les textes et liens,
+      et vos images renommées selon les règles ci-dessous. Rien d'autre.
+    </div>
+  </div>
+
+  <nav class="menu">
+    <a href="#etape1">① Préparer les images</a>
+    <a href="#etape2">② Remplir config.js</a>
+    <a href="#etape3">③ Uploader sur Hostinger</a>
+    <a href="#formspree">④ Activer les formulaires</a>
+    <a href="#google-maps">⑤ Google Maps</a>
+    <a href="#avis">⑥ Avis Google</a>
+  </nav>
+
+
+  <!-- ÉTAPE 1 -->
+  <div class="step" id="etape1">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Préparer et renommer vos images</h2>
+      <p>Renommez vos photos <strong>exactement</strong> avec ces noms de fichiers. Le site les affiche automatiquement dès qu'il les trouve — <strong>aucun code à modifier</strong>.</p>
+
+      <div class="card">
+        <h3>Noms des fichiers à respecter</h3>
+        <div class="file-list">
+
+          <div class="file-row sep"><span class="file-name">LOGO</span></div>
+          <div class="file-row">
+            <div class="file-icon">🏷️</div>
+            <span class="file-name">logo.png</span>
+            <span class="file-desc">Votre logo (fond transparent de préférence) — hauteur 100 px minimum</span>
+          </div>
+
+          <div class="file-row sep"><span class="file-name">ÉQUIPE</span></div>
+          <div class="file-row">
+            <div class="file-icon">📸</div>
+            <span class="file-name">equipe.jpg</span>
+            <span class="file-desc">Photo équipe ou portrait Albert — format vertical (ex: 800×1000 px)</span>
+          </div>
+
+          <div class="file-row sep"><span class="file-name">SLIDERS AVANT / APRÈS</span></div>
+          <div class="file-row"><div class="file-icon">🚗</div><span class="file-name">avant-1.jpg</span><span class="file-desc">Photo AVANT — véhicule 1 (ex: Ferrari)</span></div>
+          <div class="file-row"><div class="file-icon">✨</div><span class="file-name">apres-1.jpg</span><span class="file-desc">Photo APRÈS — véhicule 1</span></div>
+          <div class="file-row"><div class="file-icon">🚗</div><span class="file-name">avant-2.jpg</span><span class="file-desc">Photo AVANT — véhicule 2 (ex: Porsche)</span></div>
+          <div class="file-row"><div class="file-icon">✨</div><span class="file-name">apres-2.jpg</span><span class="file-desc">Photo APRÈS — véhicule 2</span></div>
+          <div class="file-row"><div class="file-icon">🚗</div><span class="file-name">avant-3.jpg</span><span class="file-desc">Photo AVANT — véhicule 3</span></div>
+          <div class="file-row"><div class="file-icon">✨</div><span class="file-name">apres-3.jpg</span><span class="file-desc">Photo APRÈS — véhicule 3</span></div>
+          <div class="file-row"><div class="file-icon">🚗</div><span class="file-name">avant-4.jpg</span><span class="file-desc">Photo AVANT — véhicule 4</span></div>
+          <div class="file-row"><div class="file-icon">✨</div><span class="file-name">apres-4.jpg</span><span class="file-desc">Photo APRÈS — véhicule 4</span></div>
+
+          <div class="file-row sep"><span class="file-name">INSTAGRAM (photos carrées)</span></div>
+          <div class="file-row"><div class="file-icon">📷</div><span class="file-name">insta-1.jpg</span><span class="file-desc">Photo Instagram n°1 — format carré (600×600 px)</span></div>
+          <div class="file-row"><div class="file-icon">📷</div><span class="file-name">insta-2.jpg</span><span class="file-desc">Photo Instagram n°2</span></div>
+          <div class="file-row"><div class="file-icon">📷</div><span class="file-name">insta-3.jpg</span><span class="file-desc">Photo Instagram n°3</span></div>
+          <div class="file-row"><div class="file-icon">📷</div><span class="file-name">insta-4.jpg</span><span class="file-desc">Photo Instagram n°4</span></div>
+          <div class="file-row"><div class="file-icon">📷</div><span class="file-name">insta-5.jpg</span><span class="file-desc">Photo Instagram n°5</span></div>
+          <div class="file-row"><div class="file-icon">📷</div><span class="file-name">insta-6.jpg</span><span class="file-desc">Photo Instagram n°6</span></div>
+
+        </div>
+      </div>
+
+      <div class="alert alert-gold" style="margin-top:12px;">
+        <span class="alert-icon">💡</span>
+        <span>Conseil : utilisez <a href="https://tinypng.com" target="_blank" style="color:#D4AF37;">tinypng.com</a> pour compresser vos images avant de les uploader (gratuit, ça accélère le site).</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ÉTAPE 2 -->
+  <div class="step" id="etape2">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Remplir le fichier <code style="color:#D4AF37;font-size:18px;">config.js</code></h2>
+      <p>C'est le <strong>seul fichier texte</strong> à modifier. Ouvrez-le avec le Bloc-notes (Windows) ou TextEdit (Mac). Remplacez les valeurs entre guillemets. Sauvegardez.</p>
+
+      <div class="card">
+        <h3>Contenu de config.js — modifiez les parties en vert</h3>
+        <div class="code-block">
+          <span class="code-comment">/* VOS RÉSEAUX SOCIAUX */</span><br>
+          <br>
+          <span class="code-key">var INSTAGRAM </span>= <span class="code-val">"https://www.instagram.com/votrecompte"</span>;<br>
+          <span class="code-key">var TIKTOK    </span>= <span class="code-val">"https://www.tiktok.com/@votrecompte"</span>;<br>
+          <span class="code-key">var FACEBOOK  </span>= <span class="code-val">""</span>; <span class="code-comment">// laissez "" si pas de page Facebook</span><br>
+          <br>
+          <span class="code-comment">/* LIEN VERS VOS AVIS GOOGLE */</span><br>
+          <span class="code-key">var GOOGLE_AVIS_URL </span>= <span class="code-val">"https://maps.google.com/...votrelien..."</span>;<br>
+          <br>
+          <span class="code-comment">/* FORMULAIRES — copiez votre ID Formspree ici (voir étape 4) */</span><br>
+          <span class="code-key">var FORMSPREE_ID </span>= <span class="code-val">"abc123def"</span>;<br>
+          <br>
+          <span class="code-comment">/* VOS AVIS CLIENTS — remplacez texte, prénom, ville */</span><br>
+          <span class="code-key">var AVIS </span>= [<br>
+          &nbsp;&nbsp;{ texte: <span class="code-val">"Votre premier vrai avis client ici..."</span>, prenom: <span class="code-val">"Marc"</span>, ville: <span class="code-val">"Monaco"</span> },<br>
+          &nbsp;&nbsp;{ texte: <span class="code-val">"Deuxième avis..."</span>, prenom: <span class="code-val">"Sophie"</span>, ville: <span class="code-val">"Nice"</span> },<br>
+          &nbsp;&nbsp;<span class="code-comment">// ajoutez autant d'avis que vous voulez</span><br>
+          ];<br>
+          <br>
+          <span class="code-comment">/* NOMS DES VÉHICULES DANS LES SLIDERS */</span><br>
+          <span class="code-key">var SLIDERS </span>= [<br>
+          &nbsp;&nbsp;{ titre: <span class="code-val">"Ferrari 488"</span>, tag: <span class="code-val">"Traitement céramique"</span> },<br>
+          &nbsp;&nbsp;{ titre: <span class="code-val">"Porsche 911"</span>, tag: <span class="code-val">"Correction peinture"</span> },<br>
+          &nbsp;&nbsp;{ titre: <span class="code-val">"Range Rover"</span>, tag: <span class="code-val">"Détailing complet"</span> },<br>
+          &nbsp;&nbsp;{ titre: <span class="code-val">"Lamborghini"</span>, tag: <span class="code-val">"Lavage premium"</span> },<br>
+          ];<br>
+          <br>
+          <span class="code-comment">/* GOOGLE MAPS — voir étape 5 */</span><br>
+          <span class="code-key">var GOOGLE_MAPS_EMBED </span>= <span class="code-val">""</span>;
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ÉTAPE 3 -->
+  <div class="step" id="etape3">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>Uploader sur Hostinger</h2>
+      <p>Une seule fois. Ensuite, pour mettre à jour une image ou un texte, vous re-uploadez juste le fichier modifié.</p>
+
+      <div class="card">
+        <h3>Étapes dans le Gestionnaire de fichiers Hostinger</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:4px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">1</div>
+            <p style="color:#bbb;font-size:14px;">Connectez-vous sur <strong style="color:#fff;">hpanel.hostinger.com</strong> → votre hébergement → <strong style="color:#fff;">Gérer</strong> → <strong style="color:#fff;">Gestionnaire de fichiers</strong></p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">2</div>
+            <p style="color:#bbb;font-size:14px;">Ouvrez le dossier <code style="color:#D4AF37;">public_html</code></p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">3</div>
+            <p style="color:#bbb;font-size:14px;">Cliquez <strong style="color:#fff;">Télécharger ⬆</strong> et sélectionnez <strong>tous</strong> les fichiers d'un coup :</p>
+          </div>
+        </div>
+
+        <div style="background:#1a1a1a;border-radius:6px;padding:16px;margin-top:16px;font-family:monospace;font-size:13px;color:#888;line-height:2;">
+          📄 <span style="color:#D4AF37;">index.html</span><br>
+          📄 <span style="color:#D4AF37;">config.js</span><br>
+          🖼️ logo.png<br>
+          🖼️ equipe.jpg<br>
+          🖼️ avant-1.jpg &nbsp;/&nbsp; apres-1.jpg<br>
+          🖼️ avant-2.jpg &nbsp;/&nbsp; apres-2.jpg<br>
+          🖼️ avant-3.jpg &nbsp;/&nbsp; apres-3.jpg<br>
+          🖼️ avant-4.jpg &nbsp;/&nbsp; apres-4.jpg<br>
+          🖼️ insta-1.jpg &nbsp;…&nbsp; insta-6.jpg
+        </div>
+      </div>
+
+      <div class="alert alert-green" style="margin-top:12px;">
+        <span class="alert-icon">✅</span>
+        <span>Une fois ces fichiers uploadés, votre site est en ligne et complet. Ouvrez <strong>votredomaine.com</strong> pour vérifier.</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ÉTAPE 4 — FORMSPREE -->
+  <div class="step" id="formspree">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h2>Activer les formulaires <span class="badge badge-free">Gratuit</span></h2>
+      <p>Par défaut les formulaires ouvrent votre client mail. Pour recevoir les demandes <strong>directement dans votre boîte email</strong>, configurez Formspree (5 minutes, gratuit jusqu'à 50 emails/mois).</p>
+
+      <div class="card">
+        <h3>Configuration en 4 clics</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:24px;height:24px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;">1</div>
+            <p style="color:#bbb;font-size:14px;">Allez sur <a href="https://formspree.io" target="_blank" style="color:#D4AF37;">formspree.io</a> → créer un compte avec <strong style="color:#fff;">albert@gtdetailingmc.com</strong></p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:24px;height:24px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;">2</div>
+            <p style="color:#bbb;font-size:14px;">Cliquez <strong style="color:#fff;">+ New Form</strong> → donnez un nom (ex: "GT Detailing")</p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:24px;height:24px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;">3</div>
+            <p style="color:#bbb;font-size:14px;">Copiez l'<strong style="color:#fff;">ID du formulaire</strong> (les 8 lettres dans l'URL, ex: <code style="color:#D4AF37;">xpzgkwqr</code>)</p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:24px;height:24px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;">4</div>
+            <p style="color:#bbb;font-size:14px;">Collez cet ID dans <code style="color:#D4AF37;">config.js</code> à la ligne <code style="color:#D4AF37;">var FORMSPREE_ID = "..."</code> → sauvegardez et ré-uploadez config.js</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ÉTAPE 5 — GOOGLE MAPS -->
+  <div class="step" id="google-maps">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h2>Intégrer la carte Google Maps</h2>
+      <div class="card">
+        <h3>Obtenir le code iframe</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">1.</div><p style="color:#bbb;font-size:14px;">Allez sur <a href="https://www.google.fr/maps" target="_blank" style="color:#D4AF37;">google.fr/maps</a> → cherchez "Monaco" ou votre adresse</p></div>
+          <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">2.</div><p style="color:#bbb;font-size:14px;">Cliquez <strong style="color:#fff;">Partager</strong> → onglet <strong style="color:#fff;">"Intégrer une carte"</strong> → <strong style="color:#fff;">"Copier le HTML"</strong></p></div>
+          <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">3.</div><p style="color:#bbb;font-size:14px;">Le code copié ressemble à :<br><code style="color:#888;font-size:12px;">&lt;iframe src="https://www.google.com/maps/embed?pb=..." ...&gt;</code><br>Prenez <strong style="color:#fff;">uniquement la valeur de src</strong> (le lien entre les guillemets)</p></div>
+          <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">4.</div><p style="color:#bbb;font-size:14px;">Collez ce lien dans <code style="color:#D4AF37;">config.js</code> à la ligne <code style="color:#D4AF37;">var GOOGLE_MAPS_EMBED = "..."</code></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ÉTAPE 6 — AVIS GOOGLE -->
+  <div class="step" id="avis">
+    <div class="step-num">6</div>
+    <div class="step-body">
+      <h2>Mettre vos vrais avis Google</h2>
+      <p>Deux options :</p>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Option A — Manuel <span class="badge badge-green">Simple</span></h3>
+          <p style="color:#bbb;font-size:13px;margin-bottom:10px;">Copiez-collez vos avis Google dans <code style="color:#D4AF37;">config.js</code>, section <code>var AVIS = [...]</code>. Ajoutez autant de cartes que vous voulez.</p>
+          <div class="alert alert-grey"><span class="alert-icon">👍</span><span>Parfait pour commencer. Vous mettez à jour quand vous avez de nouveaux avis.</span></div>
+        </div>
+        <div class="card">
+          <h3>Option B — Automatique <span class="badge badge-gold">Recommandé</span></h3>
+          <p style="color:#bbb;font-size:13px;margin-bottom:10px;">Elfsight Google Reviews affiche vos vrais avis en temps réel, mis à jour automatiquement.</p>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:#888;">
+            <span>1. Allez sur <a href="https://elfsight.com" target="_blank" style="color:#D4AF37;">elfsight.com</a> (gratuit jusqu'à 200 vues/mois)</span>
+            <span>2. Cherchez "Google Reviews" → configurez</span>
+            <span>3. Copiez le code qu'ils donnent</span>
+            <span>4. Collez-le dans Hostinger à la place du carrousel d'avis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="divider"></div>
+
+  <!-- RÉSUMÉ -->
+  <h2 class="section">Checklist finale</h2>
+
+  <div style="display:grid;gap:8px;">
+    <label style="display:flex;gap:12px;align-items:center;cursor:pointer;padding:10px 14px;background:#111;border-radius:6px;font-size:14px;color:#bbb;">
+      <input type="checkbox" style="width:18px;height:18px;accent-color:#D4AF37;"> Images renommées et prêtes (17 fichiers)
+    </label>
+    <label style="display:flex;gap:12px;align-items:center;cursor:pointer;padding:10px 14px;background:#111;border-radius:6px;font-size:14px;color:#bbb;">
+      <input type="checkbox" style="width:18px;height:18px;accent-color:#D4AF37;"> config.js rempli (réseaux, avis, noms véhicules)
+    </label>
+    <label style="display:flex;gap:12px;align-items:center;cursor:pointer;padding:10px 14px;background:#111;border-radius:6px;font-size:14px;color:#bbb;">
+      <input type="checkbox" style="width:18px;height:18px;accent-color:#D4AF37;"> Tous les fichiers uploadés dans public_html/
+    </label>
+    <label style="display:flex;gap:12px;align-items:center;cursor:pointer;padding:10px 14px;background:#111;border-radius:6px;font-size:14px;color:#bbb;">
+      <input type="checkbox" style="width:18px;height:18px;accent-color:#D4AF37;"> Formspree configuré (FORMSPREE_ID dans config.js)
+    </label>
+    <label style="display:flex;gap:12px;align-items:center;cursor:pointer;padding:10px 14px;background:#111;border-radius:6px;font-size:14px;color:#bbb;">
+      <input type="checkbox" style="width:18px;height:18px;accent-color:#D4AF37;"> Google Maps embed copié dans config.js
+    </label>
+    <label style="display:flex;gap:12px;align-items:center;cursor:pointer;padding:10px 14px;background:#111;border-radius:6px;font-size:14px;color:#bbb;">
+      <input type="checkbox" style="width:18px;height:18px;accent-color:#D4AF37;"> Site testé dans Chrome → tout s'affiche correctement
+    </label>
+  </div>
+
+  <div class="alert alert-gold" style="margin-top:32px;">
+    <span class="alert-icon">📞</span>
+    <div>
+      <strong>Besoin d'aide ?</strong> Contactez le développeur du site pour toute question technique.
+      Pour modifier les tarifs ou les textes de description, ouvrez <code>index.html</code> dans le Bloc-notes
+      et utilisez <kbd style="background:#222;padding:2px 6px;border-radius:3px;">Ctrl+F</kbd> pour chercher le texte à changer.
+    </div>
+  </div>
+
+</div>
+
+<footer-guide>
+  GT Detailing — Guide de personnalisation · EI Albert Kedilerli · SIRET 99403619200015
+</footer-guide>
+
+</body>
+</html>
