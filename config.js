@@ -12,7 +12,7 @@
 var INSTAGRAM = "https://www.instagram.com/gtdetailing";   // ← mettez votre lien Instagram
 var TIKTOK    = "https://www.tiktok.com/@gtdetailing";     // ← mettez votre lien TikTok
 var FACEBOOK  = "";                                         // ← optionnel, laissez "" si pas de Facebook
-var GOOGLE_MAPS_EMBED = "https://maps.google.com/maps?q=Monaco,+Menton,+Nice,+France&t=&z=10&ie=UTF8&iwloc=&output=embed"; // Zone d'intervention
+var GOOGLE_MAPS_EMBED = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92197.9!2d7.30!3d43.73!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdc28189e8327f%3A0x408ab2ae4bb2570!2sMonaco!5e0!3m2!1sfr!2sfr!4v1715000000000"; // Zone d'intervention Monaco · Nice · Menton
 
 
 /* ─── 2. VOS AVIS GOOGLE ─────────────────────────────────────── */
