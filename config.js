@@ -65,7 +65,7 @@ var SLIDERS = [
   { titre: "Lamborghini Revuelto",    tag: "Intérieur / Extérieur" },
   { titre: "Porsche Cayenne Turbo S", tag: "Intérieur Complet"     },
   { titre: "Mercedes CLA",            tag: "Détailing complet"     },
-  { titre: "Lamborghini Huracán",     tag: "Lavage premium"        }
+  { titre: "Renault Twingo",     tag: "Intérieur Classique"        }
 ];
 
 
