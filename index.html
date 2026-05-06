@@ -93,10 +93,10 @@
       --black-deep:  #0A0A0A;
       --black-card:  #111111;
       --black-card2: #161616;
-      --gold:        #D4AF37;
-      --gold-bright: #FFD700;
-      --gold-dark:   #A8841C;
-      --gold-dim:    rgba(212, 175, 55, 0.15);
+      --gold:        #F2C809;
+      --gold-bright: #F7D800;
+      --gold-dark:   #C9A800;
+      --gold-dim:    rgba(242, 200, 9, 0.15);
       --white:       #FFFFFF;
       --grey-light:  #CCCCCC;
       --grey-mid:    #888888;
@@ -230,7 +230,7 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
       transition: left 0.6s ease;
     }
-    .btn-gold:hover { background-position: 100% 0; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4); }
+    .btn-gold:hover { background-position: 100% 0; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(242, 200, 9, 0.4); }
     .btn-gold:hover::before { left: 100%; }
 
     .btn-ghost {
@@ -276,7 +276,7 @@
 
     #nav.scrolled {
       background: rgba(0, 0, 0, 0.97);
-      box-shadow: 0 1px 0 rgba(212, 175, 55, 0.15), 0 4px 24px rgba(0,0,0,0.6);
+      box-shadow: 0 1px 0 rgba(242, 200, 9, 0.15), 0 4px 24px rgba(0,0,0,0.6);
       backdrop-filter: blur(12px);
     }
 
@@ -452,7 +452,7 @@
       top: 0; right: 12%;
       width: 1px;
       height: 100%;
-      background: linear-gradient(to bottom, transparent 0%, rgba(212,175,55,0.5) 30%, rgba(212,175,55,0.15) 70%, transparent 100%);
+      background: linear-gradient(to bottom, transparent 0%, rgba(242,200,9,0.5) 30%, rgba(242,200,9,0.15) 70%, transparent 100%);
       transform: skewX(-8deg);
       transform-origin: top;
     }
@@ -510,8 +510,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(212,175,55,0.08);
-      border: 1px solid rgba(212,175,55,0.3);
+      background: rgba(242,200,9,0.08);
+      border: 1px solid rgba(242,200,9,0.3);
       border-radius: 100px;
       padding: 8px 20px;
       margin-bottom: 32px;
@@ -625,7 +625,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
 
     .services-header {
@@ -672,13 +672,13 @@
       background: var(--black-card2);
       z-index: 1;
     }
-    .service-card:hover::before { border-color: rgba(212,175,55,0.35); }
+    .service-card:hover::before { border-color: rgba(242,200,9,0.35); }
     .service-card:hover::after { width: 100%; }
 
     /* Gold glow on hover */
     .service-card:hover .service-icon-wrap {
-      background: rgba(212,175,55,0.12);
-      box-shadow: 0 0 24px rgba(212,175,55,0.15);
+      background: rgba(242,200,9,0.12);
+      box-shadow: 0 0 24px rgba(242,200,9,0.15);
     }
     .service-card:hover .service-icon-wrap svg {
       filter: drop-shadow(0 0 6px rgba(255,215,0,0.5));
@@ -686,7 +686,7 @@
 
     .service-icon-wrap {
       width: 58px; height: 58px;
-      background: rgba(212,175,55,0.07);
+      background: rgba(242,200,9,0.07);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -710,7 +710,7 @@
       user-select: none;
       transition: color 0.4s ease;
     }
-    .service-card:hover .service-card-number { color: rgba(212,175,55,0.06); }
+    .service-card:hover .service-card-number { color: rgba(242,200,9,0.06); }
 
     .service-card-title {
       font-family: var(--font-head);
@@ -772,7 +772,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
 
     .tarifs-header { text-align: center; margin-bottom: clamp(32px, 5vw, 56px); }
@@ -781,7 +781,7 @@
       display: flex;
       justify-content: center;
       margin-bottom: clamp(32px, 5vw, 60px);
-      border: 1px solid rgba(212,175,55,0.25);
+      border: 1px solid rgba(242,200,9,0.25);
       border-radius: var(--radius);
       overflow: hidden;
       width: fit-content;
@@ -801,8 +801,8 @@
       cursor: pointer;
       transition: color 0.3s ease, background 0.3s ease;
     }
-    .tarifs-tab-btn + .tarifs-tab-btn { border-left: 1px solid rgba(212,175,55,0.25); }
-    .tarifs-tab-btn.active { background: rgba(212,175,55,0.1); color: var(--gold); }
+    .tarifs-tab-btn + .tarifs-tab-btn { border-left: 1px solid rgba(242,200,9,0.25); }
+    .tarifs-tab-btn.active { background: rgba(242,200,9,0.1); color: var(--gold); }
     .tarifs-tab-btn:hover:not(.active) { color: var(--white); background: rgba(255,255,255,0.03); }
 
     .tarifs-panel { display: none; }
@@ -927,7 +927,7 @@
       font-style: italic;
       margin-top: 24px;
       padding: 16px 24px;
-      border: 1px dashed rgba(212,175,55,0.2);
+      border: 1px dashed rgba(242,200,9,0.2);
       border-radius: var(--radius);
       max-width: 640px;
       margin-left: auto;
@@ -940,7 +940,7 @@
       justify-content: center;
       gap: 0;
       margin: 0 auto 28px;
-      border: 1px solid rgba(212,175,55,0.35);
+      border: 1px solid rgba(242,200,9,0.35);
       border-radius: 999px;
       overflow: hidden;
       width: fit-content;
@@ -964,7 +964,7 @@
       color: #000;
     }
     .vehicle-btn:not(.active):hover {
-      background: rgba(212,175,55,0.08);
+      background: rgba(242,200,9,0.08);
       color: var(--white);
     }
 
@@ -980,7 +980,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
 
     .urgency-banner {
@@ -988,8 +988,8 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(255,215,0,0.06));
-      border: 1px solid rgba(212,175,55,0.35);
+      background: linear-gradient(135deg, rgba(242,200,9,0.12), rgba(255,215,0,0.06));
+      border: 1px solid rgba(242,200,9,0.35);
       border-radius: var(--radius);
       padding: 14px 24px;
       margin-bottom: clamp(32px, 5vw, 56px);
@@ -1075,7 +1075,7 @@
     .form-field textarea:focus {
       outline: none;
       border-color: var(--gold);
-      background: rgba(212,175,55,0.04);
+      background: rgba(242,200,9,0.04);
     }
     .form-field input[type="date"]::-webkit-calendar-picker-indicator {
       filter: invert(0.5) sepia(1) saturate(4) hue-rotate(5deg);
@@ -1118,7 +1118,7 @@
     .radio-option input[type="radio"] { display: none; }
     .radio-option.selected {
       border-color: var(--gold);
-      background: rgba(212,175,55,0.09);
+      background: rgba(242,200,9,0.09);
       color: var(--gold);
     }
 
@@ -1129,13 +1129,13 @@
       gap: 14px;
       padding: 16px;
       background: rgba(255,255,255,0.03);
-      border: 1px dashed rgba(212,175,55,0.25);
+      border: 1px dashed rgba(242,200,9,0.25);
       border-radius: var(--radius);
       cursor: pointer;
       transition: border-color 0.3s ease, background 0.3s ease;
       overflow: hidden;
     }
-    .file-input-wrap:hover { border-color: var(--gold); background: rgba(212,175,55,0.04); }
+    .file-input-wrap:hover { border-color: var(--gold); background: rgba(242,200,9,0.04); }
     .file-input-wrap input[type="file"] {
       position: absolute;
       inset: 0;
@@ -1163,7 +1163,7 @@
       content: '';
       flex: 1;
       height: 1px;
-      background: rgba(212,175,55,0.15);
+      background: rgba(242,200,9,0.15);
     }
     .form-separator span {
       font-size: 11px;
@@ -1179,8 +1179,8 @@
       display: none;
       margin-top: 16px;
       padding: 16px 20px;
-      background: rgba(212,175,55,0.08);
-      border: 1px solid rgba(212,175,55,0.3);
+      background: rgba(242,200,9,0.08);
+      border: 1px solid rgba(242,200,9,0.3);
       border-radius: var(--radius);
       text-align: center;
       color: var(--gold);
@@ -1201,7 +1201,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
 
     .portfolio-header { text-align: center; margin-bottom: clamp(40px, 6vw, 72px); }
@@ -1260,7 +1260,7 @@
       transform: translateX(-50%);
       z-index: 3;
       pointer-events: none;
-      box-shadow: 0 0 12px rgba(212,175,55,0.35);
+      box-shadow: 0 0 12px rgba(242,200,9,0.35);
     }
 
     .ba-handle {
@@ -1274,16 +1274,16 @@
       align-items: center;
       justify-content: center;
       z-index: 4;
-      box-shadow: 0 0 0 4px rgba(212,175,55,0.2), 0 4px 20px rgba(0,0,0,0.6);
+      box-shadow: 0 0 0 4px rgba(242,200,9,0.2), 0 4px 20px rgba(0,0,0,0.6);
       cursor: ew-resize;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
     .ba-handle:hover {
-      box-shadow: 0 0 0 6px rgba(212,175,55,0.3), 0 6px 28px rgba(0,0,0,0.7);
+      box-shadow: 0 0 0 6px rgba(242,200,9,0.3), 0 6px 28px rgba(0,0,0,0.7);
     }
     .ba-handle.dragging {
       transform: translate(-50%, -50%) scale(1.12);
-      box-shadow: 0 0 0 8px rgba(212,175,55,0.25), 0 8px 32px rgba(0,0,0,0.7);
+      box-shadow: 0 0 0 8px rgba(242,200,9,0.25), 0 8px 32px rgba(0,0,0,0.7);
     }
 
     .portfolio-item-meta {
@@ -1320,7 +1320,7 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gold);
-      border-bottom: 1px solid rgba(212,175,55,0.3);
+      border-bottom: 1px solid rgba(242,200,9,0.3);
       padding-bottom: 4px;
       transition: color 0.3s ease, border-color 0.3s ease;
     }
@@ -1338,7 +1338,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
 
     .apropos-grid {
@@ -1362,7 +1362,7 @@
     .apropos-photo {
       aspect-ratio: 4 / 5;
       background: var(--black-card);
-      border: 1px solid rgba(212,175,55,0.25);
+      border: 1px solid rgba(242,200,9,0.25);
       border-radius: var(--radius);
       display: flex;
       flex-direction: column;
@@ -1378,8 +1378,8 @@
       position: absolute;
       width: 28px; height: 28px;
     }
-    .apropos-photo::before { top: 14px; left: 14px; border-top: 1px solid rgba(212,175,55,0.5); border-left: 1px solid rgba(212,175,55,0.5); }
-    .apropos-photo::after  { bottom: 14px; right: 14px; border-bottom: 1px solid rgba(212,175,55,0.5); border-right: 1px solid rgba(212,175,55,0.5); }
+    .apropos-photo::before { top: 14px; left: 14px; border-top: 1px solid rgba(242,200,9,0.5); border-left: 1px solid rgba(242,200,9,0.5); }
+    .apropos-photo::after  { bottom: 14px; right: 14px; border-bottom: 1px solid rgba(242,200,9,0.5); border-right: 1px solid rgba(242,200,9,0.5); }
     .apropos-photo-icon { opacity: 0.12; }
     .apropos-photo-label {
       font-size: 10px;
@@ -1390,7 +1390,7 @@
     .apropos-photo-comment {
       font-size: 9px;
       letter-spacing: 0.15em;
-      color: rgba(212,175,55,0.3);
+      color: rgba(242,200,9,0.3);
       font-family: monospace;
     }
 
@@ -1437,7 +1437,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
     .avis-header { text-align: center; margin-bottom: clamp(40px, 6vw, 72px); }
 
@@ -1474,7 +1474,7 @@
       position: relative;
     }
     .avis-card:hover {
-      border-color: rgba(212,175,55,0.3);
+      border-color: rgba(242,200,9,0.3);
       transform: translateY(-3px);
     }
     .avis-card::before {
@@ -1483,7 +1483,7 @@
       top: 8px; right: 22px;
       font-family: var(--font-head);
       font-size: 80px;
-      color: rgba(212,175,55,0.08);
+      color: rgba(242,200,9,0.08);
       line-height: 1;
     }
 
@@ -1548,7 +1548,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
     .social-header { text-align: center; margin-bottom: clamp(40px, 6vw, 64px); }
 
@@ -1565,8 +1565,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(212,175,55,0.1);
-      border: 1px solid rgba(212,175,55,0.3);
+      background: rgba(242,200,9,0.1);
+      border: 1px solid rgba(242,200,9,0.3);
       color: var(--gold);
     }
     .social-handle {
@@ -1601,14 +1601,14 @@
       position: absolute;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      color: rgba(212,175,55,0.25);
+      color: rgba(242,200,9,0.25);
       z-index: 1;
       transition: opacity 0.3s ease, transform 0.4s ease;
     }
     .ig-tile-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(212,175,55,0.85), rgba(255,215,0,0.7));
+      background: linear-gradient(135deg, rgba(242,200,9,0.85), rgba(255,215,0,0.7));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1637,7 +1637,7 @@
     .social-divider {
       width: 80px;
       height: 1px;
-      background: rgba(212,175,55,0.25);
+      background: rgba(242,200,9,0.25);
       margin: 0 auto clamp(40px, 5vw, 56px);
     }
 
@@ -1655,7 +1655,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
     .faq-header { text-align: center; margin-bottom: clamp(40px, 6vw, 64px); }
 
@@ -1700,7 +1700,7 @@
 
     .faq-arrow {
       width: 28px; height: 28px;
-      border: 1px solid rgba(212,175,55,0.4);
+      border: 1px solid rgba(242,200,9,0.4);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -1742,7 +1742,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(242,200,9,0.3), transparent);
     }
     .contact-header { text-align: center; margin-bottom: clamp(40px, 6vw, 64px); }
 
@@ -1778,8 +1778,8 @@
     .contact-icon {
       width: 38px; height: 38px;
       border-radius: 8px;
-      background: rgba(212,175,55,0.08);
-      border: 1px solid rgba(212,175,55,0.2);
+      background: rgba(242,200,9,0.08);
+      border: 1px solid rgba(242,200,9,0.2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1837,7 +1837,7 @@
 
     .map-wrap {
       background: var(--black-card);
-      border: 1px solid rgba(212,175,55,0.25);
+      border: 1px solid rgba(242,200,9,0.25);
       border-radius: var(--radius);
       aspect-ratio: 21 / 7;
       display: flex;
@@ -1849,8 +1849,8 @@
       overflow: hidden;
       margin-top: 32px;
       background-image:
-        linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(242,200,9,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(242,200,9,0.04) 1px, transparent 1px);
       background-size: 40px 40px;
     }
     .map-wrap::before,
@@ -1859,9 +1859,9 @@
       position: absolute;
       width: 28px; height: 28px;
     }
-    .map-wrap::before { top: 14px; left: 14px; border-top: 1px solid rgba(212,175,55,0.5); border-left: 1px solid rgba(212,175,55,0.5); }
-    .map-wrap::after  { bottom: 14px; right: 14px; border-bottom: 1px solid rgba(212,175,55,0.5); border-right: 1px solid rgba(212,175,55,0.5); }
-    .map-wrap-icon { color: rgba(212,175,55,0.4); }
+    .map-wrap::before { top: 14px; left: 14px; border-top: 1px solid rgba(242,200,9,0.5); border-left: 1px solid rgba(242,200,9,0.5); }
+    .map-wrap::after  { bottom: 14px; right: 14px; border-bottom: 1px solid rgba(242,200,9,0.5); border-right: 1px solid rgba(242,200,9,0.5); }
+    .map-wrap-icon { color: rgba(242,200,9,0.4); }
     .map-wrap-text {
       font-size: 11px;
       letter-spacing: 0.3em;
@@ -1881,7 +1881,7 @@
       padding: clamp(60px, 7vw, 96px) 0 clamp(28px, 3vw, 40px);
       position: relative;
       z-index: 1;
-      border-top: 1px solid rgba(212,175,55,0.15);
+      border-top: 1px solid rgba(242,200,9,0.15);
     }
 
     .footer-top {
@@ -1907,7 +1907,7 @@
     .footer-social {
       width: 38px; height: 38px;
       border-radius: 50%;
-      border: 1px solid rgba(212,175,55,0.25);
+      border: 1px solid rgba(242,200,9,0.25);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1982,7 +1982,7 @@
       padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
       background: rgba(0, 0, 0, 0.95);
       backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(212,175,55,0.25);
+      border-top: 1px solid rgba(242,200,9,0.25);
       box-shadow: 0 -8px 24px rgba(0,0,0,0.6);
     }
     #stickyCta .btn {
@@ -2023,7 +2023,7 @@
       .hero-corner-tl, .hero-corner-br { display: none; }
       .hero-diag-3 { display: none; }
       .tarifs-tabs { flex-direction: column; width: 100%; }
-      .tarifs-tab-btn + .tarifs-tab-btn { border-left: none; border-top: 1px solid rgba(212,175,55,0.25); }
+      .tarifs-tab-btn + .tarifs-tab-btn { border-left: none; border-top: 1px solid rgba(242,200,9,0.25); }
       .vehicle-toggle { flex-direction: column; border-radius: 12px; }
       .vehicle-btn { padding: 12px 20px; }
       .form-grid { grid-template-columns: 1fr; }
@@ -2159,8 +2159,8 @@
           <div class="service-icon-wrap">
             <!-- Seat / interior icon -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M4 20h20M6 20V12c0-1.1.9-2 2-2h4l2-4h4l1 4h2c1.1 0 2 .9 2 2v8" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 20v-6h8v6" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 20h20M6 20V12c0-1.1.9-2 2-2h4l2-4h4l1 4h2c1.1 0 2 .9 2 2v8" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 20v-6h8v6" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M7 23h2M19 23h2" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
@@ -2178,11 +2178,11 @@
           <div class="service-icon-wrap">
             <!-- Car wash / water drop icon -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 18h22M5 18V13l3-5h12l3 5v5" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 18h22M5 18V13l3-5h12l3 5v5" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="8.5" cy="20.5" r="1.5" stroke="#FFD700" stroke-width="1.5"/>
               <circle cx="19.5" cy="20.5" r="1.5" stroke="#FFD700" stroke-width="1.5"/>
-              <path d="M14 4v5M11 6l3-3 3 3" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 9h8" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14 4v5M11 6l3-3 3 3" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 9h8" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
           <h3 class="service-card-title">Lavage extérieur</h3>
@@ -2199,8 +2199,8 @@
           <div class="service-icon-wrap">
             <!-- Diamond / shield icon -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M14 3L5 10l9 15 9-15-9-7z" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M5 10h18M10 10l4-7 4 7" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 3L5 10l9 15 9-15-9-7z" stroke="#F2C809" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M5 10h18M10 10l4-7 4 7" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M9 10l5 12 5-12" stroke="#FFD700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
             </svg>
           </div>
@@ -2218,11 +2218,11 @@
           <div class="service-icon-wrap">
             <!-- Polish / swirl icon -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="14" cy="14" r="9" stroke="#D4AF37" stroke-width="1.5"/>
-              <path d="M14 5a9 9 0 0 1 6.36 15.36" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="14" cy="14" r="9" stroke="#F2C809" stroke-width="1.5"/>
+              <path d="M14 5a9 9 0 0 1 6.36 15.36" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round"/>
               <path d="M10 14a4 4 0 0 1 4-4 4 4 0 0 1 2.83 6.83" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
-              <circle cx="14" cy="14" r="2" fill="#D4AF37" opacity="0.4"/>
-              <path d="M14 3v2M14 23v2M3 14h2M23 14h2" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+              <circle cx="14" cy="14" r="2" fill="#F2C809" opacity="0.4"/>
+              <path d="M14 3v2M14 23v2M3 14h2M23 14h2" stroke="#F2C809" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
             </svg>
           </div>
           <h3 class="service-card-title">Polissage / Correction peinture</h3>
@@ -2239,10 +2239,10 @@
           <div class="service-icon-wrap">
             <!-- Droplet / clean icon -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M14 4C14 4 6 12.5 6 17a8 8 0 0 0 16 0c0-4.5-8-13-8-13z" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M14 4C14 4 6 12.5 6 17a8 8 0 0 0 16 0c0-4.5-8-13-8-13z" stroke="#F2C809" stroke-width="1.5" stroke-linejoin="round"/>
               <path d="M10 18a4 4 0 0 0 4 3" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M14 8l1 2M14 8l-1 2" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
-              <path d="M18 14l1.5-1.5M10 14l-1.5-1.5" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+              <path d="M14 8l1 2M14 8l-1 2" stroke="#F2C809" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+              <path d="M18 14l1.5-1.5M10 14l-1.5-1.5" stroke="#F2C809" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
             </svg>
           </div>
           <h3 class="service-card-title">Décontamination</h3>
@@ -2259,8 +2259,8 @@
           <div class="service-icon-wrap">
             <!-- Star / complete icon -->
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M14 3l2.8 5.7L23 9.5l-4.5 4.4 1.1 6.2L14 17.2l-5.6 2.9 1.1-6.2L5 9.5l6.2-.8L14 3z" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M14 3l2.8 5.7L23 9.5l-4.5 4.4 1.1 6.2L14 17.2l-5.6 2.9 1.1-6.2L5 9.5l6.2-.8L14 3z" fill="#D4AF37" fill-opacity="0.08"/>
+              <path d="M14 3l2.8 5.7L23 9.5l-4.5 4.4 1.1 6.2L14 17.2l-5.6 2.9 1.1-6.2L5 9.5l6.2-.8L14 3z" stroke="#F2C809" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M14 3l2.8 5.7L23 9.5l-4.5 4.4 1.1 6.2L14 17.2l-5.6 2.9 1.1-6.2L5 9.5l6.2-.8L14 3z" fill="#F2C809" fill-opacity="0.08"/>
               <path d="M14 8v6M11 14h6" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
@@ -3050,7 +3050,7 @@
 
         <!-- Photo placeholder — PHOTO ÉQUIPE — remplacer ce bloc par <img src="equipe.jpg" alt="GT Detailing"> -->
         <div class="apropos-photo reveal">
-          <svg class="apropos-photo-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1" aria-hidden="true">
+          <svg class="apropos-photo-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#F2C809" stroke-width="1" aria-hidden="true">
             <rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/>
           </svg>
           <span class="apropos-photo-label">Photo équipe</span>
@@ -3681,7 +3681,7 @@
       let W, H, particles = [], animId;
 
       const PARTICLE_COUNT = 70;
-      const GOLD_COLORS = ['rgba(212,175,55,', 'rgba(255,215,0,', 'rgba(184,142,10,', 'rgba(240,190,60,'];
+      const GOLD_COLORS = ['rgba(242,200,9,', 'rgba(255,215,0,', 'rgba(184,142,10,', 'rgba(240,190,60,'];
 
       function resize() {
         W = canvas.width  = canvas.offsetWidth;
@@ -3770,7 +3770,7 @@
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = 'rgba(212,175,55,' + alpha + ')';
+              ctx.strokeStyle = 'rgba(242,200,9,' + alpha + ')';
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
