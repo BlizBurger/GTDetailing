@@ -62,8 +62,8 @@ var FORMSPREE_ID = "";   // Ex: "xpzgkwqr"
 
 // Remplacez par les vrais noms de vos véhicules détaillés
 var SLIDERS = [
-  { titre: "Ferrari 488",         tag: "Traitement céramique"  },
-  { titre: "Porsche 911",         tag: "Correction peinture"   },
+  { titre: "Lamborghini Revuelto", tag: "Intérieur / Extérieur"  },
+  { titre: "Porsche Cayenne Turbo S",         tag: "Intérieur Complet"   },
   { titre: "Range Rover",         tag: "Détailing complet"     },
   { titre: "Lamborghini Huracán", tag: "Lavage premium"        }
 ];
