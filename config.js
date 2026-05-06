@@ -9,8 +9,8 @@
 
 /* ─── 1. VOS RÉSEAUX SOCIAUX ─────────────────────────────────── */
 
-var INSTAGRAM = "https://www.instagram.com/gtdetailing";   // ← mettez votre lien Instagram
-var TIKTOK    = "https://www.tiktok.com/@gtdetailing";     // ← mettez votre lien TikTok
+var INSTAGRAM = "https://www.instagram.com/gtdetailingmc";   // ← mettez votre lien Instagram
+var TIKTOK    = "https://www.tiktok.com/@gtdetailingmc";     // ← mettez votre lien TikTok
 var FACEBOOK  = "";                                         // ← optionnel, laissez "" si pas de Facebook
 var GOOGLE_MAPS_EMBED = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92197.9!2d7.30!3d43.73!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdc28189e8327f%3A0x408ab2ae4bb2570!2sMonaco!5e0!3m2!1sfr!2sfr!4v1715000000000"; // Zone d'intervention Monaco · Nice · Menton
 
@@ -18,34 +18,34 @@ var GOOGLE_MAPS_EMBED = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d92
 /* ─── 2. VOS AVIS GOOGLE ─────────────────────────────────────── */
 
 // Lien vers votre page d'avis Google Business
-var GOOGLE_AVIS_URL = "https://www.google.com/maps/place/GT+Detailing";
+var GOOGLE_AVIS_URL = "https://share.google/MYMaxRemyFrVpLP0r";
 
-// Vos vrais avis (remplacez le texte, le prénom et la ville)
+// Vos vrais avis Google
 var AVIS = [
   {
-    texte:  "Travail absolument irréprochable sur ma 911. Albert est passionné, méticuleux et le résultat dépasse mes attentes. Service à domicile parfait.",
-    prenom: "Marc",
+    texte:  "Excellent service : le travail est soigné, minutieux et d'une qualité remarquable. Ma voiture n'a jamais été aussi propre et brillante. Je recommande vivement !",
+    prenom: "Gabriele",
     ville:  "Monaco"
   },
   {
-    texte:  "Traitement céramique sur ma Range Rover, le rendu est bluffant. Eau qui perle, brillance incroyable. Très professionnel, je recommande sans hésiter.",
-    prenom: "Sophie",
+    texte:  "Detailing complet de ma BMW M850i, service parfait et personnel agréable. Je recommande fortement.",
+    prenom: "Elias",
     ville:  "Nice"
   },
   {
-    texte:  "Pack complet Perfect sur mon SUV — intérieur impeccable, extérieur comme neuf. Albert prend vraiment le temps de bien faire les choses.",
-    prenom: "Julien",
+    texte:  "J'ai fait nettoyer mes tapis de voiture, ils sont revenus comme neuf. Je recommande fortement. Service de qualité, sérieux et ponctuel.",
+    prenom: "Pierre",
     ville:  "Menton"
   },
   {
-    texte:  "Polissage et correction peinture parfaitement maîtrisés. Les micro-rayures sur ma Ferrari ont disparu. Un vrai professionnel.",
-    prenom: "Antoine",
-    ville:  "Cannes"
+    texte:  "Je n'avais pas nettoyé ma voiture depuis 2 ans. Au final j'ai été bluffé, c'est comme si ma voiture était neuve. Le retour client est très réactif et professionnel, je conseille fortement.",
+    prenom: "Luis",
+    ville:  "Monaco"
   },
   {
-    texte:  "Ponctuel, soigné, attentionné. L'intérieur cuir de ma berline est revenu à un état neuf après le pack Perfect. Bravo Albert.",
-    prenom: "Claire",
-    ville:  "Antibes"
+    texte:  "Got my car detailed and the difference is incredible. The interior looks and smells brand new, and the exterior has that amazing deep gloss back. They paid attention to every single detail! Highly recommend.",
+    prenom: "X.",
+    ville:  "Nice"
   }
 ];
 
