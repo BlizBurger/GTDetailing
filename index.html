@@ -968,55 +968,6 @@
       color: var(--white);
     }
 
-    /* ===== MARQUES PARTENAIRES ===== */
-    #marques {
-      padding: clamp(32px, 4vw, 48px) 0;
-      background: #0a0a0a;
-      border-top: 1px solid rgba(242,200,9,0.1);
-      border-bottom: 1px solid rgba(242,200,9,0.1);
-      overflow: hidden;
-    }
-    .marques-label {
-      text-align: center;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 24px;
-    }
-    .marques-track {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: clamp(32px, 6vw, 80px);
-      flex-wrap: wrap;
-      padding: 0 24px;
-    }
-    .marque-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.45;
-      transition: opacity .3s;
-      filter: grayscale(1) brightness(2);
-      height: 36px;
-    }
-    .marque-item:hover { opacity: 0.85; }
-    .marque-item img {
-      height: 100%;
-      width: auto;
-      max-width: 120px;
-      object-fit: contain;
-    }
-    .marque-item .marque-fallback {
-      font-family: var(--font-head);
-      font-size: 18px;
-      letter-spacing: .1em;
-      color: var(--white);
-      white-space: nowrap;
-    }
-
     /* ===== RÉSERVATION ===== */
     #reserver {
       padding: var(--section-pad) 0;
@@ -2330,29 +2281,6 @@
         </a>
       </div>
 
-    </div>
-  </section>
-
-
-  <!-- ===== MARQUES PARTENAIRES ===== -->
-  <section id="marques" aria-label="Produits professionnels utilisés">
-    <div class="marques-label">Produits professionnels utilisés</div>
-    <div class="marques-track">
-      <div class="marque-item" id="marque-valet">
-        <span class="marque-fallback">ValetPRO</span>
-      </div>
-      <div class="marque-item" id="marque-proelite">
-        <span class="marque-fallback">ProElite</span>
-      </div>
-      <div class="marque-item" id="marque-alchemy">
-        <span class="marque-fallback">ALCHEMY</span>
-      </div>
-      <div class="marque-item" id="marque-carpro">
-        <span class="marque-fallback">CARPRO</span>
-      </div>
-      <div class="marque-item" id="marque-soft99">
-        <span class="marque-fallback">SOFT99</span>
-      </div>
     </div>
   </section>
 
@@ -4394,26 +4322,6 @@
           })(igTiles[t], t + 1);
         }
       }
-
-      /* 9. Logos marques partenaires */
-      var marques = [
-        { id: 'marque-valet',    file: 'logo-valet.png'    },
-        { id: 'marque-proelite', file: 'logo-proelite.png' },
-        { id: 'marque-alchemy',  file: 'logo-alchemy.png'  },
-        { id: 'marque-carpro',   file: 'logo-carpro.png'   },
-        { id: 'marque-soft99',   file: 'logo-soft99.png'   }
-      ];
-      marques.forEach(function (m) {
-        tryImg(m.file, function () {
-          var el = document.getElementById(m.id);
-          if (!el) return;
-          var img = document.createElement('img');
-          img.src = m.file;
-          img.alt = m.id.replace('marque-', '');
-          el.innerHTML = '';
-          el.appendChild(img);
-        });
-      });
 
       applyConfig();
     })();
