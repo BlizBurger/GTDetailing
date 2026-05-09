@@ -416,3 +416,222 @@
     }
   </style>
 </head>
+<body>
+
+  <!-- CSS-only menu toggle -->
+  <input type="checkbox" id="menu-open">
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-mobile">
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#reserver">Réserver</a>
+    <a href="#contact">Contact</a>
+    <a href="#reserver" class="btn btn-gold">Réserver maintenant</a>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+
+        <a href="#hero" class="nav-logo" aria-label="GT Detailing — Accueil">
+          GT <span>DETAILING</span>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#reserver">Réserver</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="#reserver" class="btn btn-gold">Réserver maintenant</a>
+        </div>
+
+        <label for="menu-open" class="hamburger-label" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="GT Detailing — Détailing automobile Côte d'Azur">
+
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-line1" aria-hidden="true"></div>
+    <div class="hero-line2" aria-hidden="true"></div>
+    <div class="hero-corner-tl" aria-hidden="true"></div>
+    <div class="hero-corner-br" aria-hidden="true"></div>
+
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        <span class="hero-badge-text">Détailing Professionnel · Côte d'Azur</span>
+      </div>
+
+      <h1 class="hero-title">
+        L'EXCELLENCE DU
+        <span class="gold">DÉTAILING</span>
+      </h1>
+
+      <p class="hero-sub">Monaco &nbsp;·&nbsp; Nice &nbsp;·&nbsp; Menton &nbsp;·&nbsp; Côte d'Azur</p>
+
+      <div class="hero-ctas">
+        <a href="#reserver" class="btn btn-gold">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Réserver
+        </a>
+        <a href="#services" class="btn btn-ghost">Voir nos services</a>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-txt">Scroll</span>
+      <div class="hero-scroll-bar"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section section-dark" aria-labelledby="services-title">
+    <div class="wrap">
+
+      <div class="s-header center">
+        <span class="tag">Ce que nous faisons</span>
+        <h2 class="h2" id="services-title">NOS <span>SERVICES</span></h2>
+        <p class="sub">Un soin d'exception pour chaque véhicule. Du lavage minutieux au détailing complet, nous traitons votre voiture comme une œuvre d'art.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- 01 Lavage intérieur -->
+        <article class="svc">
+          <span class="svc-num" aria-hidden="true">01</span>
+          <div class="svc-icon">
+            <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M4 20h20M6 20V12c0-1.1.9-2 2-2h4l2-4h4l1 4h2c1.1 0 2 .9 2 2v8" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 20v-6h8v6" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 23h2M19 23h2" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Lavage intérieur complet</h3>
+          <p class="svc-desc">Aspiration, dépoussiérage, nettoyage des plastiques, des vitres et des sièges. Un habitacle impeccable, comme à la sortie du showroom.</p>
+          <a href="#tarifs" class="svc-link" aria-label="En savoir plus sur le lavage intérieur">
+            En savoir plus
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- 02 Lavage extérieur -->
+        <article class="svc">
+          <span class="svc-num" aria-hidden="true">02</span>
+          <div class="svc-icon">
+            <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M3 18h22M5 18V13l3-5h12l3 5v5" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="8.5" cy="20.5" r="1.5" stroke="#F2C809" stroke-width="1.5"/>
+              <circle cx="19.5" cy="20.5" r="1.5" stroke="#F2C809" stroke-width="1.5"/>
+              <path d="M14 4v5M11 6l3-3 3 3M10 9h8" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Lavage extérieur</h3>
+          <p class="svc-desc">Prélavage mousse active, lavage manuel soigneux, nettoyage des jantes, rinçage haute pression et séchage microfibre. Brillance garantie.</p>
+          <a href="#tarifs" class="svc-link" aria-label="En savoir plus sur le lavage extérieur">
+            En savoir plus
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- 03 Traitement céramique -->
+        <article class="svc">
+          <span class="svc-num" aria-hidden="true">03</span>
+          <div class="svc-icon">
+            <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 3L5 10l9 15 9-15-9-7z" stroke="#F2C809" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M5 10h18M10 10l4-7 4 7" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 10l5 12 5-12" stroke="#F2C809" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Traitement céramique</h3>
+          <p class="svc-desc">Protection longue durée de la carrosserie par revêtement céramique nano-technologique. Hydrophobicité maximale, brillance intense.</p>
+          <a href="#reserver" class="svc-link" aria-label="Demander un devis céramique">
+            Demander un devis
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- 04 Polissage -->
+        <article class="svc">
+          <span class="svc-num" aria-hidden="true">04</span>
+          <div class="svc-icon">
+            <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="9" stroke="#F2C809" stroke-width="1.5"/>
+              <path d="M14 5a9 9 0 0 1 6.36 15.36" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 14a4 4 0 0 1 4-4 4 4 0 0 1 2.83 6.83" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="14" cy="14" r="2" fill="#F2C809" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Polissage</h3>
+          <p class="svc-desc">Élimination des micro-rayures, tourbillons et défauts de surface. Polissage professionnel pour retrouver l'éclat et la brillance d'origine.</p>
+          <a href="#reserver" class="svc-link" aria-label="Demander un devis polissage">
+            Demander un devis
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- 05 Décontamination -->
+        <article class="svc">
+          <span class="svc-num" aria-hidden="true">05</span>
+          <div class="svc-icon">
+            <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 4C14 4 6 12.5 6 17a8 8 0 0 0 16 0c0-4.5-8-13-8-13z" stroke="#F2C809" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M10 18a4 4 0 0 0 4 3" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Décontamination</h3>
+          <p class="svc-desc">Traitement chimique et mécanique pour éliminer les contaminants ferreux, la sève, les insectes et les résidus industriels incrustés.</p>
+          <a href="#tarifs" class="svc-link" aria-label="En savoir plus sur la décontamination">
+            En savoir plus
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- 06 Détailing complet -->
+        <article class="svc">
+          <span class="svc-num" aria-hidden="true">06</span>
+          <div class="svc-icon">
+            <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 3l2.8 5.7L23 9.5l-4.5 4.4 1.1 6.2L14 17.2l-5.6 2.9 1.1-6.2L5 9.5l6.2-.8L14 3z" stroke="#F2C809" stroke-width="1.5" stroke-linejoin="round" fill="#F2C809" fill-opacity="0.07"/>
+              <path d="M14 8v6M11 14h6" stroke="#F2C809" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="svc-title">Détailing complet</h3>
+          <p class="svc-desc">Le traitement ultime — intérieur + extérieur + décontamination + protection céramique. Votre véhicule sublimé à l'état de l'art.</p>
+          <a href="#reserver" class="svc-link" aria-label="Demander un devis détailing complet">
+            Demander un devis
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+      </div>
+
+      <div style="text-align:center;margin-top:clamp(36px,5vw,60px);">
+        <a href="#reserver" class="btn btn-gold">
+          Réserver une prestation
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
