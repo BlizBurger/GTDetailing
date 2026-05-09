@@ -1042,3 +1042,242 @@
 
     </div>
   </section>
+
+
+  <!-- ===== RÉSERVATION ===== -->
+  <section id="reserver" aria-labelledby="reserver-title">
+    <div class="wrap">
+
+      <div class="urgency">
+        <span class="urgency-dot" aria-hidden="true"></span>
+        <span>Disponibilités limitées cette semaine — Réservez maintenant</span>
+      </div>
+
+      <div class="s-header center">
+        <span class="tag">Prise de rendez-vous</span>
+        <h2 class="h2" id="reserver-title">RÉ<span>SERVER</span></h2>
+        <p class="sub">Remplissez le formulaire — nous vous confirmons votre créneau sous 24 heures.</p>
+      </div>
+
+      <div class="forms-wrap">
+
+        <!-- Formulaire 1 : Réservation standard -->
+        <form class="form-card" id="bookingForm" action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate>
+          <h3 class="form-title">Réservation</h3>
+          <p class="form-sub">Pour une prestation standard du catalogue tarifs ci-dessus.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="b-prenom">Prénom *</label>
+              <input type="text" id="b-prenom" name="Prenom" placeholder="Jean" required>
+            </div>
+            <div class="field">
+              <label for="b-nom">Nom *</label>
+              <input type="text" id="b-nom" name="Nom" placeholder="Dupont" required>
+            </div>
+            <div class="field">
+              <label for="b-email">Email *</label>
+              <input type="email" id="b-email" name="Email" placeholder="jean@exemple.com" required>
+            </div>
+            <div class="field">
+              <label for="b-tel">Téléphone *</label>
+              <input type="tel" id="b-tel" name="Telephone" placeholder="+33 6 00 00 00 00" required>
+            </div>
+            <div class="field full">
+              <label for="b-service">Service souhaité *</label>
+              <select id="b-service" name="Service" required>
+                <option value="" disabled selected>— Choisissez un service —</option>
+                <optgroup label="Intérieur">
+                  <option value="Intérieur Classique">Intérieur Classique</option>
+                  <option value="Intérieur Premium">Intérieur Premium</option>
+                  <option value="Intérieur Perfect">Intérieur Perfect</option>
+                </optgroup>
+                <optgroup label="Extérieur">
+                  <option value="Extérieur Classique">Extérieur Classique</option>
+                  <option value="Extérieur Premium">Extérieur Premium</option>
+                  <option value="Extérieur Perfect">Extérieur Perfect</option>
+                </optgroup>
+                <optgroup label="Packs Complets">
+                  <option value="Pack Complet Classique">Pack Complet Classique</option>
+                  <option value="Pack Complet Premium">Pack Complet Premium</option>
+                  <option value="Pack Complet Perfect">Pack Complet Perfect</option>
+                </optgroup>
+                <optgroup label="Sur devis">
+                  <option value="Polissage / Correction peinture">Polissage / Correction peinture</option>
+                  <option value="Traitement céramique">Traitement céramique</option>
+                  <option value="Détailing complet">Détailing complet</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="field">
+              <label for="b-date">Date souhaitée *</label>
+              <input type="date" id="b-date" name="Date" required>
+            </div>
+            <div class="field">
+              <label for="b-zone">Localisation</label>
+              <input type="text" id="b-zone" name="Localisation" placeholder="Monaco, Nice, Menton…">
+            </div>
+            <div class="field full">
+              <label for="b-message">Message (optionnel)</label>
+              <textarea id="b-message" name="Message" placeholder="Marque, modèle, état du véhicule, demandes particulières…"></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-gold">
+              Envoyer ma demande
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="form-or" aria-hidden="true"><span>Ou</span></div>
+
+        <!-- Formulaire 2 : Devis sur mesure -->
+        <form class="form-card" id="quoteForm" action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate>
+          <h3 class="form-title">Demande de devis</h3>
+          <p class="form-sub">Pour un polissage, traitement céramique ou prestation sur mesure.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="q-nom">Nom complet *</label>
+              <input type="text" id="q-nom" name="Nom" placeholder="Jean Dupont" required>
+            </div>
+            <div class="field">
+              <label for="q-email">Email *</label>
+              <input type="email" id="q-email" name="Email" placeholder="jean@exemple.com" required>
+            </div>
+            <div class="field">
+              <label for="q-tel">Téléphone *</label>
+              <input type="tel" id="q-tel" name="Telephone" placeholder="+33 6 00 00 00 00" required>
+            </div>
+            <div class="field">
+              <label for="q-vehicule">Véhicule *</label>
+              <input type="text" id="q-vehicule" name="Vehicule" placeholder="Ferrari 488, Range Rover…" required>
+            </div>
+            <div class="field full">
+              <label for="q-desc">Description *</label>
+              <textarea id="q-desc" name="Description" placeholder="État du véhicule, attentes, contexte d'utilisation…" style="min-height:120px;" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-gold">
+              Demander mon devis
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section id="portfolio" class="section section-darker" aria-labelledby="portfolio-title">
+    <div class="wrap">
+
+      <div class="s-header center">
+        <span class="tag">Notre travail</span>
+        <h2 class="h2" id="portfolio-title">AVANT / <span>APRÈS</span></h2>
+        <p class="sub">La transformation en images. Chaque véhicule reçoit un soin d'exception.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- Mercedes CLA -->
+        <div class="ba-item">
+          <div class="ba-wrap">
+            <div class="ba-before">
+              <img src="avant-1.jpg" alt="Mercedes CLA avant détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">AVANT</span>
+            </div>
+            <div class="ba-after">
+              <img src="apres-1.jpg" alt="Mercedes CLA après détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">APRÈS</span>
+            </div>
+            <div class="ba-divider" aria-hidden="true"></div>
+          </div>
+          <div class="ba-meta">
+            <span class="ba-car">Mercedes CLA</span>
+            <span class="ba-service">Intérieur / Extérieur</span>
+          </div>
+        </div>
+
+        <!-- Lamborghini Revuelto -->
+        <div class="ba-item">
+          <div class="ba-wrap">
+            <div class="ba-before">
+              <img src="avant-2.jpg" alt="Lamborghini Revuelto avant détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">AVANT</span>
+            </div>
+            <div class="ba-after">
+              <img src="apres-2.jpg" alt="Lamborghini Revuelto après détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">APRÈS</span>
+            </div>
+            <div class="ba-divider" aria-hidden="true"></div>
+          </div>
+          <div class="ba-meta">
+            <span class="ba-car">Lamborghini Revuelto</span>
+            <span class="ba-service">Traitement céramique</span>
+          </div>
+        </div>
+
+        <!-- Renault Twingo -->
+        <div class="ba-item">
+          <div class="ba-wrap">
+            <div class="ba-before">
+              <img src="avant-3.jpg" alt="Renault Twingo avant détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">AVANT</span>
+            </div>
+            <div class="ba-after">
+              <img src="apres-3.jpg" alt="Renault Twingo après détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">APRÈS</span>
+            </div>
+            <div class="ba-divider" aria-hidden="true"></div>
+          </div>
+          <div class="ba-meta">
+            <span class="ba-car">Renault Twingo</span>
+            <span class="ba-service">Intérieur Classique</span>
+          </div>
+        </div>
+
+        <!-- Porsche Cayenne Turbo S -->
+        <div class="ba-item">
+          <div class="ba-wrap">
+            <div class="ba-before">
+              <img src="avant-4.jpg" alt="Porsche Cayenne Turbo S avant détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">AVANT</span>
+            </div>
+            <div class="ba-after">
+              <img src="apres-4.jpg" alt="Porsche Cayenne Turbo S après détailing" loading="lazy" onerror="this.style.display='none'">
+              <svg class="ba-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8.5" cy="8.5" r="2"/><polyline points="22 17 16 11 5 22"/></svg>
+              <span class="ba-lbl">APRÈS</span>
+            </div>
+            <div class="ba-divider" aria-hidden="true"></div>
+          </div>
+          <div class="ba-meta">
+            <span class="ba-car">Porsche Cayenne Turbo S</span>
+            <span class="ba-service">Intérieur Complet</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portfolio-footer">
+        <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+          Voir plus sur Instagram
+        </a>
+      </div>
+
+    </div>
+  </section>
