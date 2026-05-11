@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide d'utilisation — GT Detailing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'Outfit', sans-serif;
+      background:#0a0a0a; color:#ccc;
+      font-size:15px; line-height:1.75;
+    }
+    a { color:#F2C809; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    /* ── HEADER ── */
+    .guide-header {
+      background:#050505;
+      border-bottom:2px solid #F2C809;
+      padding:40px 0 36px;
+      text-align:center;
+    }
+    .guide-header h1 {
+      font-family:'Bebas Neue', sans-serif;
+      font-size:clamp(36px,6vw,64px);
+      letter-spacing:.08em; color:#fff;
+      margin-bottom:6px;
+    }
+    .guide-header h1 span { color:#F2C809; }
+    .guide-header p { color:#888; font-size:14px; letter-spacing:.1em; text-transform:uppercase; }
+
+    /* ── LAYOUT ── */
+    .container { max-width:860px; margin:0 auto; padding:0 24px; }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding:48px 0 40px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .section:last-child { border-bottom:none; }
+
+    .section-num {
+      font-family:'Bebas Neue', sans-serif;
+      font-size:72px; color:rgba(242,200,9,.1);
+      line-height:1; display:block; margin-bottom:-12px;
+    }
+    .section-title {
+      font-family:'Bebas Neue', sans-serif;
+      font-size:clamp(28px,4vw,42px);
+      letter-spacing:.06em; color:#fff;
+      margin-bottom:20px;
+    }
+    .section-title span { color:#F2C809; }
+
+    /* ── STEPS ── */
+    .steps { display:flex; flex-direction:column; gap:14px; margin-top:24px; }
+    .step {
+      display:grid; grid-template-columns:36px 1fr;
+      gap:16px; align-items:start;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:6px; padding:16px 20px;
+    }
+    .step-n {
+      width:36px; height:36px; border-radius:50%;
+      background:#F2C809; color:#000;
+      font-weight:700; font-size:14px;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; margin-top:2px;
+    }
+    .step-text strong { color:#fff; font-size:15px; display:block; margin-bottom:4px; }
+    .step-text span { color:#999; font-size:14px; }
+
+    /* ── FILE LIST ── */
+    .file-grid {
+      display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr));
+      gap:10px; margin-top:24px;
+    }
+    .file-card {
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-left:3px solid #F2C809;
+      border-radius:4px; padding:14px 16px;
+    }
+    .file-card code {
+      font-family:monospace; font-size:14px; color:#F2C809;
+      display:block; margin-bottom:4px;
+    }
+    .file-card span { font-size:13px; color:#888; }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background:rgba(242,200,9,.07);
+      border:1px solid rgba(242,200,9,.25);
+      border-radius:6px; padding:18px 22px;
+      margin-top:20px;
+      display:flex; gap:14px; align-items:flex-start;
+    }
+    .callout-icon { font-size:22px; flex-shrink:0; }
+    .callout-text strong { color:#F2C809; display:block; margin-bottom:4px; font-size:14px; }
+    .callout-text span { color:#aaa; font-size:14px; line-height:1.65; }
+
+    .callout.info { background:rgba(99,179,237,.07); border-color:rgba(99,179,237,.25); }
+    .callout.info .callout-text strong { color:#63b3ed; }
+
+    /* ── TABLE ── */
+    table { width:100%; border-collapse:collapse; margin-top:20px; }
+    th {
+      background:rgba(242,200,9,.1); color:#F2C809;
+      font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+      padding:10px 14px; text-align:left; font-weight:600;
+    }
+    td { padding:11px 14px; font-size:14px; color:#bbb; border-bottom:1px solid rgba(255,255,255,.05); }
+    tr:hover td { background:rgba(255,255,255,.02); color:#fff; }
+    td code { font-family:monospace; color:#F2C809; font-size:13px; }
+
+    /* ── BADGE ── */
+    .badge {
+      display:inline-block; padding:3px 10px;
+      border-radius:20px; font-size:11px; font-weight:600;
+      letter-spacing:.08em; text-transform:uppercase;
+    }
+    .badge-gold { background:rgba(242,200,9,.15); color:#F2C809; border:1px solid rgba(242,200,9,.3); }
+    .badge-grey { background:rgba(255,255,255,.06); color:#888; border:1px solid rgba(255,255,255,.1); }
+
+    /* ── FOOTER ── */
+    .guide-footer {
+      text-align:center; padding:40px 24px;
+      font-size:13px; color:#555;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    .guide-footer strong { color:#F2C809; }
+
+    @media(max-width:600px) {
+      .file-grid { grid-template-columns:1fr; }
+      .step { grid-template-columns:32px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="guide-header">
+  <div class="container">
+    <h1>GT <span>Detailing</span></h1>
+    <p>Guide d'utilisation du site web &mdash; Version 1.0</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ═══ SECTION 1 — DOCUMENTS REQUIS ═══ -->
+  <section class="section">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Documents <span>requis</span></h2>
+    <p>Avant de mettre le site en ligne, rassemblez ces fichiers sur votre ordinateur. Les noms doivent être <strong style="color:#fff">exactement</strong> ceux indiqués ci-dessous.</p>
+
+    <h3 style="margin:28px 0 12px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#F2C809">Fichiers du site</h3>
+    <div class="file-grid">
+      <div class="file-card">
+        <code>index.html</code>
+        <span>Le site web (fourni par nous)</span>
+      </div>
+      <div class="file-card">
+        <code>logo.png</code>
+        <span>Votre logo, fond transparent de préférence</span>
+      </div>
+      <div class="file-card">
+        <code>equipe.jpg</code>
+        <span>Photo de vous ou de l'équipe (section "À propos")</span>
+      </div>
+    </div>
+
+    <h3 style="margin:28px 0 12px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#F2C809">Photos Avant / Après (Portfolio)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom du fichier</th>
+          <th>Contenu</th>
+          <th>Véhicule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>avant-1.jpg</code></td><td>Photo AVANT</td><td>Lamborghini Revuelto</td></tr>
+        <tr><td><code>apres-1.jpg</code></td><td>Photo APRÈS</td><td>Lamborghini Revuelto</td></tr>
+        <tr><td><code>avant-2.jpg</code></td><td>Photo AVANT</td><td>Porsche Cayenne Turbo S</td></tr>
+        <tr><td><code>apres-2.jpg</code></td><td>Photo APRÈS</td><td>Porsche Cayenne Turbo S</td></tr>
+        <tr><td><code>avant-3.jpg</code></td><td>Photo AVANT</td><td>Mercedes CLA</td></tr>
+        <tr><td><code>apres-3.jpg</code></td><td>Photo APRÈS</td><td>Mercedes CLA</td></tr>
+        <tr><td><code>avant-4.jpg</code></td><td>Photo AVANT</td><td>Renault Twingo</td></tr>
+        <tr><td><code>apres-4.jpg</code></td><td>Photo APRÈS</td><td>Renault Twingo</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin:28px 0 12px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#F2C809">Photos Instagram (grille décorative)</h3>
+    <div class="file-grid">
+      <div class="file-card">
+        <code>insta-1.jpg</code>
+        <span>Photo Instagram n°1 (format carré idéal)</span>
+      </div>
+      <div class="file-card">
+        <code>insta-2.jpg</code>
+        <span>Photo Instagram n°2</span>
+      </div>
+      <div class="file-card">
+        <code>insta-3.jpg</code>
+        <span>Photo Instagram n°3</span>
+      </div>
+      <div class="file-card">
+        <code>insta-4.jpg</code>
+        <span>Photo Instagram n°4</span>
+      </div>
+      <div class="file-card">
+        <code>insta-5.jpg</code>
+        <span>Photo Instagram n°5</span>
+      </div>
+      <div class="file-card">
+        <code>insta-6.jpg</code>
+        <span>Photo Instagram n°6</span>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:24px">
+      <span class="callout-icon">💡</span>
+      <div class="callout-text">
+        <strong>Conseil photos</strong>
+        <span>Renommez vos photos <em>avant</em> de les uploader. Le site les cherche par leur nom exact. Si un fichier manque ou est mal nommé, l'emplacement reste simplement vide &mdash; le site ne casse pas.</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SECTION 2 — FORMULAIRE DE CONTACT ═══ -->
+  <section class="section">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Recevoir les <span>emails</span> du formulaire</h2>
+    <p>Le formulaire de réservation du site utilise <strong style="color:#fff">Formspree</strong> (service gratuit) pour envoyer les demandes directement dans votre boîte mail.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-text">
+          <strong>Créer un compte gratuit</strong>
+          <span>Rendez-vous sur <a href="https://formspree.io" target="_blank">formspree.io</a> et inscrivez-vous avec votre adresse email professionnelle.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-text">
+          <strong>Créer un nouveau formulaire</strong>
+          <span>Cliquez sur "New Form" &rarr; donnez-lui un nom (ex: "GT Detailing Contact") &rarr; validez.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-text">
+          <strong>Copier l'ID du formulaire</strong>
+          <span>Vous verrez une URL du type <code style="color:#F2C809;font-family:monospace">https://formspree.io/f/<strong>abcd1234</strong></code>. Copiez la partie en gras (ex: <code style="color:#F2C809;font-family:monospace">abcd1234</code>).</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-text">
+          <strong>L'intégrer dans le site</strong>
+          <span>Dans le fichier <code style="color:#F2C809;font-family:monospace">index.html</code>, faites Ctrl+F &rarr; recherchez <code style="color:#F2C809;font-family:monospace">FORMSPREE_ID</code> &rarr; remplacez par votre ID. Sauvegardez.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout info" style="margin-top:20px">
+      <span class="callout-icon">📬</span>
+      <div class="callout-text">
+        <strong>Plan gratuit suffisant</strong>
+        <span>Le plan gratuit Formspree permet 50 soumissions/mois, ce qui est largement suffisant pour commencer. Pas de carte bancaire requise.</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SECTION 3 — MISE EN LIGNE HOSTINGER ═══ -->
+  <section class="section">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Mettre le site en ligne <span>sur Hostinger</span></h2>
+    <p>Une fois tous vos fichiers prêts et renommés, voici comment les uploader sur Hostinger en moins de 5 minutes.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-text">
+          <strong>Connectez-vous à Hostinger</strong>
+          <span>Allez sur <a href="https://www.hostinger.fr" target="_blank">hostinger.fr</a> &rarr; Mon compte &rarr; Hébergement &rarr; sélectionnez votre hébergement.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-text">
+          <strong>Ouvrir le Gestionnaire de fichiers</strong>
+          <span>Dans votre panneau hPanel, cliquez sur <strong style="color:#fff">"Gestionnaire de fichiers"</strong> (ou File Manager).</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-text">
+          <strong>Naviguer dans public_html</strong>
+          <span>Dans le gestionnaire, double-cliquez sur le dossier <code style="color:#F2C809;font-family:monospace">public_html</code>. C'est là que se trouvent tous les fichiers de votre site.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-text">
+          <strong>Supprimer les anciens fichiers (si besoin)</strong>
+          <span>Si un ancien site est déjà en ligne, supprimez l'ancien <code style="color:#F2C809;font-family:monospace">index.html</code> avant d'uploader le nouveau.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">5</div>
+        <div class="step-text">
+          <strong>Uploader tous vos fichiers</strong>
+          <span>Cliquez sur <strong style="color:#fff">"Téléverser"</strong> (ou Upload) &rarr; sélectionnez <em>tous</em> vos fichiers d'un coup (<code style="color:#F2C809;font-family:monospace">index.html</code> + toutes les images). Attendez la fin du chargement.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">6</div>
+        <div class="step-text">
+          <strong>Vérifier le résultat</strong>
+          <span>Ouvrez votre navigateur et tapez votre nom de domaine. Votre site est en ligne !</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+      <span class="callout-icon">⚠️</span>
+      <div class="callout-text">
+        <strong>Tous les fichiers dans le même dossier</strong>
+        <span>Le fichier <code style="color:#F2C809;font-family:monospace">index.html</code> et toutes vos images (<code style="color:#F2C809;font-family:monospace">logo.png</code>, <code style="color:#F2C809;font-family:monospace">avant-1.jpg</code>…) doivent être au même niveau dans <code style="color:#F2C809;font-family:monospace">public_html/</code>, pas dans des sous-dossiers.</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SECTION 4 — LISTE DE CONTRÔLE ═══ -->
+  <section class="section">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Liste de <span>contrôle</span></h2>
+    <p>Avant d'envoyer le lien à vos clients, vérifiez que tout fonctionne :</p>
+
+    <table style="margin-top:20px">
+      <thead>
+        <tr><th>Élément</th><th>Vérification</th><th>Statut</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Logo</td><td>Visible dans la barre de navigation et le footer</td><td><span class="badge badge-grey">À vérifier</span></td></tr>
+        <tr><td>Portfolio</td><td>Les 4 sliders avant/après fonctionnent (glissez la barre)</td><td><span class="badge badge-grey">À vérifier</span></td></tr>
+        <tr><td>Grille Instagram</td><td>Les 6 photos s'affichent correctement</td><td><span class="badge badge-grey">À vérifier</span></td></tr>
+        <tr><td>Formulaire contact</td><td>Envoyez un message test &rarr; vous le recevez par email</td><td><span class="badge badge-grey">À vérifier</span></td></tr>
+        <tr><td>Liens sociaux</td><td>Instagram et TikTok ouvrent les bons profils</td><td><span class="badge badge-grey">À vérifier</span></td></tr>
+        <tr><td>Carte Google Maps</td><td>La carte s'affiche dans la section Contact</td><td><span class="badge badge-grey">À vérifier</span></td></tr>
+        <tr><td>Mobile</td><td>Le site s'affiche bien sur votre téléphone</td><td><span class="badge badge-grey">À vérifier</span></td></tr>
+        <tr><td>Bouton Réserver</td><td>Redirige vers la section Contact</td><td><span class="badge badge-gold">✓ Déjà configuré</span></td></tr>
+        <tr><td>Liens avis Google</td><td>Ouvrent votre page d'avis Google</td><td><span class="badge badge-gold">✓ Déjà configuré</span></td></tr>
+        <tr><td>Tarifs</td><td>Les 3 accordéons s'ouvrent, les onglets changent</td><td><span class="badge badge-gold">✓ Déjà configuré</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- ═══ SECTION 5 — MODIFIER LE CONTENU ═══ -->
+  <section class="section">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Modifier le <span>contenu</span> plus tard</h2>
+    <p>Si vous souhaitez modifier un texte, un prix ou une photo, voici comment faire :</p>
+
+    <div class="steps" style="margin-top:20px">
+      <div class="step">
+        <div class="step-n">→</div>
+        <div class="step-text">
+          <strong>Modifier un texte ou un prix</strong>
+          <span>Ouvrez <code style="color:#F2C809;font-family:monospace">index.html</code> avec <strong style="color:#fff">Bloc-notes</strong> (Windows) ou <strong style="color:#fff">TextEdit</strong> (Mac). Faites Ctrl+F, cherchez le texte à changer, modifiez-le, sauvegardez, re-uploadez sur Hostinger.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">→</div>
+        <div class="step-text">
+          <strong>Changer une photo</strong>
+          <span>Renommez votre nouvelle photo avec le même nom (ex: <code style="color:#F2C809;font-family:monospace">avant-1.jpg</code>), puis re-uploadez-la sur Hostinger. Elle remplace automatiquement l'ancienne.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">→</div>
+        <div class="step-text">
+          <strong>Pour tout autre modification complexe</strong>
+          <span>Contactez-nous directement. Nous intervenons rapidement pour toute mise à jour de contenu, nouveau service, changement de tarif ou ajout de section.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="guide-footer">
+  <p>Site réalisé pour <strong>GT Detailing</strong> &mdash; Monaco · Nice · Menton</p>
+  <p style="margin-top:6px">Pour toute question, contactez votre développeur web.</p>
+</footer>
+
+</body>
+</html>
