@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GT Detailing — Guide de personnalisation</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src 'none'; connect-src 'none'; script-src 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, nofollow">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
@@ -146,7 +151,7 @@
 
       <div class="alert alert-gold" style="margin-top:12px;">
         <span class="alert-icon">💡</span>
-        <span>Conseil : utilisez <a href="https://tinypng.com" target="_blank" style="color:#D4AF37;">tinypng.com</a> pour compresser vos images avant de les uploader (gratuit, ça accélère le site).</span>
+        <span>Conseil : utilisez <a href="https://tinypng.com" target="_blank" rel="noopener noreferrer" style="color:#D4AF37;">tinypng.com</a> pour compresser vos images avant de les uploader (gratuit, ça accélère le site).</span>
       </div>
     </div>
   </div>
@@ -254,7 +259,7 @@
         <div style="display:flex;flex-direction:column;gap:10px;">
           <div style="display:flex;gap:12px;align-items:flex-start;">
             <div style="width:24px;height:24px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;">1</div>
-            <p style="color:#bbb;font-size:14px;">Allez sur <a href="https://formspree.io" target="_blank" style="color:#D4AF37;">formspree.io</a> → créer un compte avec <strong style="color:#fff;">albert@gtdetailingmc.com</strong></p>
+            <p style="color:#bbb;font-size:14px;">Allez sur <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" style="color:#D4AF37;">formspree.io</a> → créer un compte avec <strong style="color:#fff;">votre adresse email professionnelle</strong></p>
           </div>
           <div style="display:flex;gap:12px;align-items:flex-start;">
             <div style="width:24px;height:24px;border-radius:50%;background:#D4AF37;color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;">2</div>
@@ -282,7 +287,7 @@
       <div class="card">
         <h3>Obtenir le code iframe</h3>
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">1.</div><p style="color:#bbb;font-size:14px;">Allez sur <a href="https://www.google.fr/maps" target="_blank" style="color:#D4AF37;">google.fr/maps</a> → cherchez "Monaco" ou votre adresse</p></div>
+          <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">1.</div><p style="color:#bbb;font-size:14px;">Allez sur <a href="https://www.google.fr/maps" target="_blank" rel="noopener noreferrer" style="color:#D4AF37;">google.fr/maps</a> → cherchez "Monaco" ou votre adresse</p></div>
           <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">2.</div><p style="color:#bbb;font-size:14px;">Cliquez <strong style="color:#fff;">Partager</strong> → onglet <strong style="color:#fff;">"Intégrer une carte"</strong> → <strong style="color:#fff;">"Copier le HTML"</strong></p></div>
           <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">3.</div><p style="color:#bbb;font-size:14px;">Le code copié ressemble à :<br><code style="color:#888;font-size:12px;">&lt;iframe src="https://www.google.com/maps/embed?pb=..." ...&gt;</code><br>Prenez <strong style="color:#fff;">uniquement la valeur de src</strong> (le lien entre les guillemets)</p></div>
           <div style="display:flex;gap:12px;"><div style="color:#D4AF37;font-weight:700;flex-shrink:0;">4.</div><p style="color:#bbb;font-size:14px;">Collez ce lien dans <code style="color:#D4AF37;">config.js</code> à la ligne <code style="color:#D4AF37;">var GOOGLE_MAPS_EMBED = "..."</code></p></div>
@@ -309,7 +314,7 @@
           <h3>Option B — Automatique <span class="badge badge-gold">Recommandé</span></h3>
           <p style="color:#bbb;font-size:13px;margin-bottom:10px;">Elfsight Google Reviews affiche vos vrais avis en temps réel, mis à jour automatiquement.</p>
           <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:#888;">
-            <span>1. Allez sur <a href="https://elfsight.com" target="_blank" style="color:#D4AF37;">elfsight.com</a> (gratuit jusqu'à 200 vues/mois)</span>
+            <span>1. Allez sur <a href="https://elfsight.com" target="_blank" rel="noopener noreferrer" style="color:#D4AF37;">elfsight.com</a> (gratuit jusqu'à 200 vues/mois)</span>
             <span>2. Cherchez "Google Reviews" → configurez</span>
             <span>3. Copiez le code qu'ils donnent</span>
             <span>4. Collez-le dans Hostinger à la place du carrousel d'avis</span>
@@ -358,7 +363,7 @@
 </div>
 
 <footer-guide>
-  GT Detailing — Guide de personnalisation · EI Albert Kedilerli · SIRET 99403619200015
+  GT Detailing — Guide de personnalisation
 </footer-guide>
 
 </body>

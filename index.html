@@ -12,8 +12,9 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Security headers via meta tags -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Gn5idNOdGJaMG2XbHGbkT9R/jNXGnQFmrc1Ed497nC8='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https://formspree.io; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Gn5idNOdGJaMG2XbHGbkT9R/jNXGnQFmrc1Ed497nC8=' 'sha256-NSqZ9PU+gl47mQn03Q9QTxeI3Mn/QWgyVfMl1a9LV1o='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https://formspree.io; upgrade-insecure-requests;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 
@@ -2728,7 +2729,7 @@
 
     <div class="avis-card avis-card--cta">
       <p class="avis-cta-title">Votre expérience mérite d'être partagée.</p>
-      <a href="https://share.google/7ClUWTkRPTxp1n9uy" target="_blank" rel="noopener" class="btn-gold">Laisser un avis Google</a>
+      <a href="https://share.google/7ClUWTkRPTxp1n9uy" target="_blank" rel="noopener noreferrer" class="btn-gold">Laisser un avis Google</a>
     </div>
 
   </div>
@@ -2740,8 +2741,7 @@
 <section id="apropos">
   <div class="container apropos-inner">
     <div class="apropos-img-wrap">
-      <img src="equipe.jpg" alt="L'équipe GT Detailing" class="apropos-img"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <img src="equipe.jpg" alt="L'équipe GT Detailing" class="apropos-img" id="apropos-img">
       <div class="apropos-img-placeholder" style="display:none">
         <span>GT</span>
       </div>
@@ -2790,36 +2790,36 @@
   <div class="container social-header">
     <span class="section-tag">Suivez-nous</span>
     <h2 class="section-title">Instagram</h2>
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="social-handle">@gtdetailingmc</a>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="social-handle">@gtdetailingmc</a>
   </div>
   <div class="insta-grid">
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="insta-cell">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
       <img src="insta-1.jpg" alt="GT Detailing Instagram 1" loading="lazy">
       <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
     </a>
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="insta-cell">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
       <img src="insta-2.jpg" alt="GT Detailing Instagram 2" loading="lazy">
       <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
     </a>
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="insta-cell">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
       <img src="insta-3.jpg" alt="GT Detailing Instagram 3" loading="lazy">
       <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
     </a>
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="insta-cell">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
       <img src="insta-4.jpg" alt="GT Detailing Instagram 4" loading="lazy">
       <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
     </a>
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="insta-cell">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
       <img src="insta-5.jpg" alt="GT Detailing Instagram 5" loading="lazy">
       <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
     </a>
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="insta-cell">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
       <img src="insta-6.jpg" alt="GT Detailing Instagram 6" loading="lazy">
       <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
     </a>
   </div>
   <div class="container" style="text-align:center;margin-top:2.5rem">
-    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" class="btn-ghost">Voir le profil complet</a>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="btn-ghost">Voir le profil complet</a>
   </div>
 </section>
 
@@ -2878,20 +2878,21 @@
       <span class="section-tag">Parlons-en</span>
       <h2 class="section-title" style="margin-bottom:2rem">Réserver / Devis</h2>
 
+      <!-- IMPORTANT: Replace FORMSPREE_ID with your real Formspree form ID (see LISEZ-MOI.html) -->
       <form class="contact-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
         <div class="form-row">
           <div class="form-field">
             <label for="cf-nom">Prénom & Nom</label>
-            <input type="text" id="cf-nom" name="nom" placeholder="Albert D." required>
+            <input type="text" id="cf-nom" name="nom" placeholder="Albert D." required autocomplete="name">
           </div>
           <div class="form-field">
             <label for="cf-tel">Téléphone</label>
-            <input type="tel" id="cf-tel" name="telephone" placeholder="+33 6 00 00 00 00">
+            <input type="tel" id="cf-tel" name="telephone" placeholder="+33 6 00 00 00 00" autocomplete="tel">
           </div>
         </div>
         <div class="form-field">
           <label for="cf-email">Email</label>
-          <input type="email" id="cf-email" name="email" placeholder="votre@email.com" required>
+          <input type="email" id="cf-email" name="email" placeholder="votre@email.com" required autocomplete="email">
         </div>
         <div class="form-row">
           <div class="form-field">
@@ -2932,21 +2933,21 @@
           <span class="contact-info-icon">📸</span>
           <div>
             <strong>Instagram</strong>
-            <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener">@gtdetailingmc</a>
+            <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer">@gtdetailingmc</a>
           </div>
         </div>
         <div class="contact-info-item">
           <span class="contact-info-icon">🎵</span>
           <div>
             <strong>TikTok</strong>
-            <a href="https://www.tiktok.com/@gtdetailingmc?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">@gtdetailingmc</a>
+            <a href="https://www.tiktok.com/@gtdetailingmc?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">@gtdetailingmc</a>
           </div>
         </div>
         <div class="contact-info-item">
           <span class="contact-info-icon">★</span>
           <div>
             <strong>Note Google</strong>
-            <a href="https://share.google/7ClUWTkRPTxp1n9uy" target="_blank" rel="noopener">5/5 · Laisser un avis</a>
+            <a href="https://share.google/7ClUWTkRPTxp1n9uy" target="_blank" rel="noopener noreferrer">5/5 · Laisser un avis</a>
           </div>
         </div>
       </div>
@@ -2970,8 +2971,7 @@
 <footer id="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="logo.png" alt="GT Detailing" class="footer-logo"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="logo.png" alt="GT Detailing" class="footer-logo" id="footer-logo-img">
       <span class="footer-logo-txt" style="display:none">GT DETAILING</span>
       <p class="footer-tagline">L'art du détail parfait.<br>Monaco · Nice · Menton.</p>
     </div>
@@ -2985,10 +2985,10 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="footer-social">
-      <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener" aria-label="Instagram">
+      <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       </a>
-      <a href="https://www.tiktok.com/@gtdetailingmc?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok">
+      <a href="https://www.tiktok.com/@gtdetailingmc?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
       </a>
     </div>
@@ -3007,8 +3007,19 @@
       this.closest('.ba').style.setProperty('--p', this.value + '%');
     });
   });
-  var li = document.getElementById('nav-logo-img');
-  if(li) li.addEventListener('error', function(){ this.style.display='none'; var t=document.getElementById('nav-logo-txt'); if(t) t.style.display='block'; });
+</script>
+<script>
+  (function(){
+    var imgs=[
+      {id:'nav-logo-img',next:'nav-logo-txt',display:'block'},
+      {id:'apropos-img',next:'apropos-img-placeholder',display:'flex'},
+      {id:'footer-logo-img',next:'footer-logo-txt',display:'block'}
+    ];
+    imgs.forEach(function(o){
+      var el=document.getElementById(o.id);
+      if(el){el.addEventListener('error',function(){this.style.display='none';var n=document.getElementById(o.next);if(n)n.style.display=o.display;});}
+    });
+  })();
 </script>
 
 </body>
