@@ -11,6 +11,12 @@
   <meta property="og:description" content="Détailing automobile haut de gamme à Monaco, Nice, Menton.">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Security headers via meta tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Gn5idNOdGJaMG2XbHGbkT9R/jNXGnQFmrc1Ed497nC8='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https://formspree.io; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"GT Detailing",
    "telephone":"+33647869180","email":"albert@gtdetailingmc.com",
@@ -1956,8 +1962,8 @@
 
     <!-- Logo centré -->
     <a href="#hero" class="nav-logo" aria-label="GT Detailing">
-      <img src="logo.png" alt="GT Detailing" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span style="display:none;font-family:var(--H);font-size:1.1rem;letter-spacing:.15em;color:var(--gold)">GT DETAILING</span>
+      <img src="logo.png" alt="GT Detailing" id="nav-logo-img">
+      <span id="nav-logo-txt" style="display:none;font-family:var(--H);font-size:1.1rem;letter-spacing:.15em;color:var(--gold)">GT DETAILING</span>
     </a>
 
     <!-- Liens droite -->
@@ -2191,8 +2197,7 @@
         <div class="ba-handle">
           <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
         </div>
-        <input type="range" class="ba-range" min="0" max="100" value="50"
-          oninput="this.closest('.ba').style.setProperty('--p', this.value+'%')">
+        <input type="range" class="ba-range" min="0" max="100" value="50">
         <span class="ba-label ba-label-b">AVANT</span>
         <span class="ba-label ba-label-a">APRÈS</span>
       </div>
@@ -2217,8 +2222,7 @@
         <div class="ba-handle">
           <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
         </div>
-        <input type="range" class="ba-range" min="0" max="100" value="50"
-          oninput="this.closest('.ba').style.setProperty('--p', this.value+'%')">
+        <input type="range" class="ba-range" min="0" max="100" value="50">
         <span class="ba-label ba-label-b">AVANT</span>
         <span class="ba-label ba-label-a">APRÈS</span>
       </div>
@@ -2243,8 +2247,7 @@
         <div class="ba-handle">
           <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
         </div>
-        <input type="range" class="ba-range" min="0" max="100" value="50"
-          oninput="this.closest('.ba').style.setProperty('--p', this.value+'%')">
+        <input type="range" class="ba-range" min="0" max="100" value="50">
         <span class="ba-label ba-label-b">AVANT</span>
         <span class="ba-label ba-label-a">APRÈS</span>
       </div>
@@ -2269,8 +2272,7 @@
         <div class="ba-handle">
           <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
         </div>
-        <input type="range" class="ba-range" min="0" max="100" value="50"
-          oninput="this.closest('.ba').style.setProperty('--p', this.value+'%')">
+        <input type="range" class="ba-range" min="0" max="100" value="50">
         <span class="ba-label ba-label-b">AVANT</span>
         <span class="ba-label ba-label-a">APRÈS</span>
       </div>
@@ -2998,6 +3000,16 @@
 
 <!-- Sticky CTA mobile -->
 <a href="#contact" class="sticky-cta">Réserver</a>
+
+<script>
+  document.querySelectorAll('.ba-range').forEach(function(r){
+    r.addEventListener('input', function(){
+      this.closest('.ba').style.setProperty('--p', this.value + '%');
+    });
+  });
+  var li = document.getElementById('nav-logo-img');
+  if(li) li.addEventListener('error', function(){ this.style.display='none'; var t=document.getElementById('nav-logo-txt'); if(t) t.style.display='block'; });
+</script>
 
 </body>
 </html>
