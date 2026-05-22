@@ -205,7 +205,9 @@
     font-family:var(--H); font-size:20px;
     letter-spacing:.14em; color:#fff;
     white-space:nowrap;
+    display:flex; align-items:center;
   }
+  .nav-logo img { height:44px; width:auto; max-width:160px; display:block; object-fit:contain; }
   .nav-logo span { color:var(--gold); }
   .nav-logo small {
     display:block; font-family:var(--B);
@@ -1179,7 +1181,7 @@
     .stat-item + .stat-item { border-left:none; border-top:1px solid rgba(0,0,0,.1); }
     .stats-grid { grid-template-columns:1fr; }
     #stickyCta { display:block; }
-    body { padding-bottom:74px; }
+    body { padding-bottom:90px; }
   }
   @media (max-width:640px) {
     :root { --nav-h:62px; }
@@ -1191,6 +1193,9 @@
     .fg-full { grid-column:1; }
     .social-platforms { flex-direction:column; }
   }
+
+  /* Offset ancres pour nav fixe */
+  section[id] { scroll-margin-top:var(--nav-h); }
 
   /* Nav scroll — CSS scroll-driven */
   @supports (animation-timeline: scroll()) {
@@ -1751,7 +1756,7 @@
   }
   @media (max-width:768px) {
     .sticky-cta { display:block; }
-    body { padding-bottom:56px; }
+    body { padding-bottom:90px; }
     .form-row { grid-template-columns:1fr; }
     .avis-grid { grid-template-columns:1fr; }
     .footer-inner { grid-template-columns:1fr; }
