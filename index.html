@@ -1814,7 +1814,7 @@
   /* Tous les panels cachés par défaut */
   .tt-panel {
     display:none;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr); max-width:720px; margin-left:auto; margin-right:auto;
     gap:3px;
   }
 
@@ -1998,7 +1998,7 @@
     <!-- Panneau gauche — texte -->
     <div class="hero-left">
       <p class="hero-eyebrow">Monaco · Nice · Menton</p>
-      <h1 class="hero-title">L'art du<br><em>détail</em><br>parfait.</h1>
+      <h1 class="hero-title">L'art du<br><em>detail</em><br>dans le detail.</h1>
       <p class="hero-sub">Detailing haut de gamme pour véhicules d'exception.<br>Chaque prestation, une obsession du résultat.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn-gold">Réserver</a>
@@ -2042,7 +2042,7 @@
 <section id="stats">
   <div class="container stats-grid">
     <div class="stat-item">
-      <span class="stat-n">200<sup>+</sup></span>
+      <span class="stat-n">+100</span>
       <span class="stat-l">Véhicules traités</span>
     </div>
     <div class="stat-sep"></div>
@@ -2050,11 +2050,7 @@
       <span class="stat-n">5<sup>★</sup></span>
       <span class="stat-l">Note Google</span>
     </div>
-    <div class="stat-sep"></div>
-    <div class="stat-item">
-      <span class="stat-n">3</span>
-      <span class="stat-l">Années d'expérience</span>
-    </div>
+
     <div class="stat-sep"></div>
     <div class="stat-item">
       <span class="stat-n">100<sup>%</sup></span>
@@ -2071,15 +2067,13 @@
     <div class="manifeste-tag">Notre philosophie</div>
     <h2 class="manifeste-title">Nous ne nettoyons pas.<br>Nous <em>révélons</em>.</h2>
     <p class="manifeste-text">
-      GT Detailing est né d'une conviction : chaque véhicule mérite d'être traité
-      comme une œuvre d'art. Nos techniciens certifiés appliquent des produits
-      professionnels haut de gamme pour restituer — ou sublimer — l'éclat d'origine.
+      GT Detailing est né d'une conviction : chaque véhicule mérite d'être traité comme une œuvre d'art. Notre équipe applique les meilleurs produits du marché pour restituer ou sublimer l'éclat d'origine de votre véhicule.
     </p>
     <div class="manifeste-pills">
-      <span class="pill">Produits certifiés</span>
-      <span class="pill">Techniciens formés</span>
-      <span class="pill">Déplacement inclus</span>
+      <span class="pill">Produits haut de gamme</span>
+      <span class="pill">Techniciens minutieux</span>
       <span class="pill">Résultats garantis</span>
+      <span class="pill">Déplacement inclus*</span>
     </div>
   </div>
 </section>
@@ -2101,17 +2095,16 @@
           <span class="svc-num">01</span>
           <div class="svc-info">
             <span class="svc-name">Lavage Intérieur</span>
-            <span class="svc-tagline">Aspiration · Shampooing · Désodorisation</span>
+            <span class="svc-tagline">Aspiration · Traitement plastiques-cuirs · Protection</span>
           </div>
           <span class="svc-arrow">↓</span>
         </summary>
         <div class="svc-body">
-          <p>Aspiration complète des tapis et sièges, nettoyage en profondeur des surfaces plastiques et cuir, shampooing des moquettes, désodorisation. Votre habitacle retrouve sa pureté d'origine.</p>
+          <p>Aspiration complète de l'habitacle, nettoyage en profondeur des surfaces plastiques et cuir, shampouinage des textiles (tapis et sièges), pose d'une protection sur les cuirs et plastiques contre l'usure prématurée et les UV.</p>
           <ul class="svc-feats">
             <li>Aspiration haute puissance</li>
-            <li>Extraction vapeur</li>
-            <li>Traitement cuir ou tissu</li>
-            <li>Désodorisation ozone</li>
+            <li>Traitement cuir-plastique-textile</li>
+            <li>Protections</li>
           </ul>
         </div>
       </details>
@@ -2121,17 +2114,17 @@
           <span class="svc-num">02</span>
           <div class="svc-info">
             <span class="svc-name">Lavage Extérieur</span>
-            <span class="svc-tagline">Carrosserie · Jantes · Vitres</span>
+            <span class="svc-tagline">Jantes · Lavage · Protection</span>
           </div>
           <span class="svc-arrow">↓</span>
         </summary>
         <div class="svc-body">
-          <p>Lavage à la main sans contact abrasif, décontamination de la carrosserie, nettoyage des jantes et pneus, polish des vitres. Un résultat showroom à chaque prestation.</p>
+          <p>Nettoyage complet des jantes et pneus, prélavage sans contact, lavage manuel, application d'une protection durable de 1 à 6 mois, finition brillant pneus et nettoyage des vitres pour un rendu propre et éclatant.</p>
           <ul class="svc-feats">
-            <li>Lavage deux seaux</li>
-            <li>Décontamination ferreux</li>
-            <li>Nettoyage jantes</li>
-            <li>Lustrage vitres</li>
+            <li>Nettoyage jantes-pneus</li>
+            <li>Prélavage et lavage</li>
+            <li>Protection</li>
+            <li>Brillance</li>
           </ul>
         </div>
       </details>
@@ -2146,12 +2139,12 @@
           <span class="svc-arrow">↓</span>
         </summary>
         <div class="svc-body">
-          <p>La combinaison parfaite : intérieur et extérieur traités lors d'une même intervention. Idéal pour une remise en état totale ou avant une vente.</p>
+          <p>La combinaison parfaite : un nettoyage complet intérieur et extérieur réalisé lors d'une seule intervention. Idéal pour une remise à neuf, avant une vente, ou simplement pour conserver votre véhicule propre et entretenu.</p>
           <ul class="svc-feats">
             <li>Intérieur complet</li>
             <li>Extérieur complet</li>
-            <li>Finition cire carnauba</li>
-            <li>Rapport qualité-prix optimal</li>
+            <li>Protection de 3 à 6 mois</li>
+            <li>Véhicule comme neuf</li>
           </ul>
         </div>
       </details>
@@ -2160,18 +2153,36 @@
         <summary class="svc-summary">
           <span class="svc-num">04</span>
           <div class="svc-info">
-            <span class="svc-name">Protection Céramique</span>
-            <span class="svc-tagline">Nano-revêtement longue durée</span>
+            <span class="svc-name">Polissage</span>
+            <span class="svc-tagline">Suppression des micro-rayures</span>
           </div>
           <span class="svc-arrow">↓</span>
         </summary>
         <div class="svc-body">
-          <p>Application d'un revêtement céramique nano-technologique qui crée une couche protectrice ultra-dure. Protection contre UV, rayures légères, contaminants et oxydation pendant 2 à 5 ans.</p>
+          <p>Élimination des micro-rayures, hologrammes et défauts afin de redonner toute la brillance et la profondeur à votre carrosserie. Finition lisse, effet miroir pour un rendu comme neuf. Idéal avant la pose d'un traitement céramique ou une Wax.</p>
           <ul class="svc-feats">
-            <li>Protection 2–5 ans</li>
-            <li>Effet hydrophobe extrême</li>
-            <li>Résistance UV et oxydation</li>
-            <li>Brillance amplifiée</li>
+            <li>Élimination des micro-rayures</li>
+            <li>Effet miroir</li>
+            <li>Correction des défauts</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc-item">
+        <summary class="svc-summary">
+          <span class="svc-num">05</span>
+          <div class="svc-info">
+            <span class="svc-name">Protection Céramique</span>
+            <span class="svc-tagline">Protection longue durée</span>
+          </div>
+          <span class="svc-arrow">↓</span>
+        </summary>
+        <div class="svc-body">
+          <p>Application d'un revêtement céramique haute performance offrant une protection durable contre les UV, la saleté, l'oxydation et les agressions extérieures. Apporte une brillance intense et un effet hydrophobe pour un entretien facilité.</p>
+          <ul class="svc-feats">
+            <li>Protection durable 2 à 5 ans</li>
+            <li>Effet hydrophobe intense</li>
+            <li>Résistance UV &amp; oxydation</li>
           </ul>
         </div>
       </details>
@@ -2213,8 +2224,7 @@
     <div class="port-info">
       <span class="port-num">01</span>
       <h3 class="port-title">Lamborghini<br>Revuelto</h3>
-      <p class="port-tag">Intérieur · Extérieur</p>
-      <p class="port-desc">Detailing complet sur cette icône italienne. Correction de peinture 2 étapes, protection céramique sur carrosserie et vitres, intérieur traité au soin du cuir Alcantara.</p>
+
     </div>
   </div>
 
@@ -2238,8 +2248,7 @@
     <div class="port-info">
       <span class="port-num">02</span>
       <h3 class="port-title">Porsche<br>Cayenne Turbo S</h3>
-      <p class="port-tag">Intérieur Complet</p>
-      <p class="port-desc">Shampooing extraction profonde des sièges en cuir sport, nettoyage vapeur des inserts carbone, traitement protecteur sur tous les matériaux intérieurs.</p>
+
     </div>
   </div>
 
@@ -2263,8 +2272,7 @@
     <div class="port-info">
       <span class="port-num">03</span>
       <h3 class="port-title">Mercedes<br>CLA</h3>
-      <p class="port-tag">Détailing Complet</p>
-      <p class="port-desc">Remise en état totale intérieure et extérieure. Décontamination de la carrosserie, polissage une étape, finition cire carnauba. Résultat miroir garanti.</p>
+
     </div>
   </div>
 
@@ -2288,8 +2296,7 @@
     <div class="port-info">
       <span class="port-num">04</span>
       <h3 class="port-title">Renault<br>Twingo</h3>
-      <p class="port-tag">Intérieur Classique</p>
-      <p class="port-desc">Preuve que le soin du détail ne dépend pas du prix du véhicule. Aspiration, shampooing tapis, nettoyage plastiques. Un intérieur comme neuf.</p>
+
     </div>
   </div>
 
@@ -2313,9 +2320,9 @@
   <div class="container">
 
     <div class="section-header" style="text-align:center;max-width:640px;margin:0 auto clamp(40px,6vw,64px)">
-      <span class="section-tag">Transparence totale</span>
+      <span class="section-tag">Nos Tarifs</span>
       <h2 class="section-title">Nos <em>Tarifs</em></h2>
-      <p style="margin-top:14px;color:#999;font-size:15px">Des prestations d'exception à des tarifs clairs.<br>Produits professionnels inclus.</p>
+      <p style="margin-top:14px;color:#999;font-size:15px">Des prestations d'exception à des tarifs clairs.</p>
     </div>
 
     <!-- Tabs véhicule -->
@@ -2337,324 +2344,231 @@
       <!-- CITADINE + INTÉRIEUR -->
       <div class="tt-panel p-cit-int">
         <div class="tt-card">
-          <h3 class="tt-card-name">Intérieur Classique</h3>
-          <div class="tt-price">60<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Aspiration complète</li>
-            <li>Nettoyage plastiques</li>
-            <li>Vitres intérieures</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
-        </div>
-        <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
           <h3 class="tt-card-name">Intérieur Premium</h3>
           <div class="tt-price">90<sup>€</sup></div>
           <ul class="tt-feats">
             <li>Aspiration haute puissance</li>
-            <li>Shampooing tapis</li>
-            <li>Nettoyage plastiques & cuir</li>
-            <li>Vitres intérieures</li>
+            <li>Shampoing des tapis</li>
+            <li>Nettoyage approfondi des plastiques</li>
+            <li>Nettoyage des vitres intérieures</li>
           </ul>
-          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
-        <div class="tt-card">
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
           <h3 class="tt-card-name">Intérieur Perfect</h3>
           <div class="tt-price">120<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Extraction vapeur complète</li>
-            <li>Traitement cuir ou tissu</li>
-            <li>Désodorisation ozone</li>
-            <li>Vitres + joints</li>
+            <li>Tout le pack Premium</li>
+            <li>Nettoyage en profondeur des sièges textiles et cuirs</li>
+            <li>Protection et nourrissage des cuirs</li>
+            <li>Protection des plastiques</li>
           </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
         </div>
       </div>
 
       <!-- CITADINE + EXTÉRIEUR -->
       <div class="tt-panel p-cit-ext">
         <div class="tt-card">
-          <h3 class="tt-card-name">Extérieur Classique</h3>
-          <div class="tt-price">50<sup>€</sup></div>
+          <h3 class="tt-card-name">Extérieur Premium</h3>
+          <div class="tt-price">40<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Jantes & pneus</li>
-            <li>Vitres extérieures</li>
+            <li>Prélavage à la mousse active</li>
+            <li>Lavage manuel soigné</li>
+            <li>Nettoyage approfondi des jantes et pneus</li>
+            <li>Pose d'une cire à effet déperlant</li>
+            <li>Brillance des pneus</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Extérieur Premium</h3>
-          <div class="tt-price">80<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Extérieur Perfect</h3>
+          <div class="tt-price">50<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Décontamination ferreux</li>
-            <li>Jantes & pneus</li>
-            <li>Finition cire</li>
+            <li>Tout le pack Extérieur Premium</li>
+            <li>Protection Wax longue durée de 1 à 6 mois</li>
+            <li>Rénovation des plastiques extérieurs</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Extérieur Perfect</h3>
-          <div class="tt-price">110<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Décontamination complète</li>
-            <li>Finition cire carnauba</li>
-            <li>Lustrage vitres</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
       <!-- CITADINE + PACKS -->
       <div class="tt-panel p-cit-pak">
         <div class="tt-card">
-          <h3 class="tt-card-name">Pack Complet Classique</h3>
-          <div class="tt-price">100<sup>€</sup></div>
+          <h3 class="tt-card-name">Pack Complet Premium</h3>
+          <div class="tt-price">110<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Intérieur Classique</li>
-            <li>Extérieur Classique</li>
+            <li>Intérieur Premium + Extérieur Premium en une seule intervention</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Pack Complet Premium</h3>
-          <div class="tt-price">160<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Pack Complet Perfect</h3>
+          <div class="tt-price">150<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Intérieur Premium</li>
-            <li>Extérieur Premium</li>
+            <li>Intérieur Perfect + Extérieur Perfect en une seule intervention</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Pack Complet Perfect</h3>
-          <div class="tt-price">220<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Intérieur Perfect</li>
-            <li>Extérieur Perfect</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
       <!-- BERLINE + INTÉRIEUR -->
       <div class="tt-panel p-ber-int">
         <div class="tt-card">
-          <h3 class="tt-card-name">Intérieur Classique</h3>
-          <div class="tt-price">80<sup>€</sup></div>
+          <h3 class="tt-card-name">Intérieur Premium</h3>
+          <div class="tt-price">100<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Aspiration complète</li>
-            <li>Nettoyage plastiques</li>
-            <li>Vitres intérieures</li>
+            <li>Aspiration haute puissance</li>
+            <li>Shampoing des tapis</li>
+            <li>Nettoyage approfondi des plastiques</li>
+            <li>Nettoyage des vitres intérieures</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Intérieur Premium</h3>
-          <div class="tt-price">120<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Intérieur Perfect</h3>
+          <div class="tt-price">130<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Aspiration haute puissance</li>
-            <li>Shampooing tapis & sièges</li>
-            <li>Nettoyage plastiques & cuir</li>
-            <li>Vitres intérieures</li>
+            <li>Tout le pack Premium</li>
+            <li>Nettoyage en profondeur des sièges textiles et cuirs</li>
+            <li>Protection et nourrissage des cuirs</li>
+            <li>Protection des plastiques</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Intérieur Perfect</h3>
-          <div class="tt-price">160<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Extraction vapeur complète</li>
-            <li>Traitement cuir ou tissu</li>
-            <li>Désodorisation ozone</li>
-            <li>Vitres + joints</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
       <!-- BERLINE + EXTÉRIEUR -->
       <div class="tt-panel p-ber-ext">
         <div class="tt-card">
-          <h3 class="tt-card-name">Extérieur Classique</h3>
-          <div class="tt-price">70<sup>€</sup></div>
+          <h3 class="tt-card-name">Extérieur Premium</h3>
+          <div class="tt-price">45<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Jantes & pneus</li>
-            <li>Vitres extérieures</li>
+            <li>Prélavage à la mousse active</li>
+            <li>Lavage manuel soigné</li>
+            <li>Nettoyage approfondi des jantes et pneus</li>
+            <li>Pose d'une cire à effet déperlant</li>
+            <li>Brillance des pneus</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Extérieur Premium</h3>
-          <div class="tt-price">110<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Extérieur Perfect</h3>
+          <div class="tt-price">55<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Décontamination ferreux</li>
-            <li>Jantes & pneus</li>
-            <li>Finition cire</li>
+            <li>Tout le pack Extérieur Premium</li>
+            <li>Protection Wax longue durée de 1 à 6 mois</li>
+            <li>Rénovation des plastiques extérieurs</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Extérieur Perfect</h3>
-          <div class="tt-price">150<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Décontamination complète</li>
-            <li>Finition cire carnauba</li>
-            <li>Lustrage vitres</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
       <!-- BERLINE + PACKS -->
       <div class="tt-panel p-ber-pak">
         <div class="tt-card">
-          <h3 class="tt-card-name">Pack Complet Classique</h3>
-          <div class="tt-price">140<sup>€</sup></div>
+          <h3 class="tt-card-name">Pack Complet Premium</h3>
+          <div class="tt-price">120<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Intérieur Classique</li>
-            <li>Extérieur Classique</li>
+            <li>Intérieur Premium + Extérieur Premium en une seule intervention</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Pack Complet Premium</h3>
-          <div class="tt-price">220<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Pack Complet Perfect</h3>
+          <div class="tt-price">170<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Intérieur Premium</li>
-            <li>Extérieur Premium</li>
+            <li>Intérieur Perfect + Extérieur Perfect en une seule intervention</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Pack Complet Perfect</h3>
-          <div class="tt-price">300<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Intérieur Perfect</li>
-            <li>Extérieur Perfect</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
       <!-- SUV + INTÉRIEUR -->
       <div class="tt-panel p-suv-int">
         <div class="tt-card">
-          <h3 class="tt-card-name">Intérieur Classique</h3>
-          <div class="tt-price">100<sup>€</sup></div>
+          <h3 class="tt-card-name">Intérieur Premium</h3>
+          <div class="tt-price">110<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Aspiration complète</li>
-            <li>Nettoyage plastiques</li>
-            <li>Vitres intérieures</li>
+            <li>Aspiration haute puissance</li>
+            <li>Shampoing des tapis</li>
+            <li>Nettoyage approfondi des plastiques</li>
+            <li>Nettoyage des vitres intérieures</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Intérieur Premium</h3>
-          <div class="tt-price">150<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Intérieur Perfect</h3>
+          <div class="tt-price">140<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Aspiration haute puissance</li>
-            <li>Shampooing tapis, sièges, coffre</li>
-            <li>Nettoyage plastiques & cuir</li>
-            <li>Vitres intérieures</li>
+            <li>Tout le pack Premium</li>
+            <li>Nettoyage en profondeur des sièges textiles et cuirs</li>
+            <li>Protection et nourrissage des cuirs</li>
+            <li>Protection des plastiques</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Intérieur Perfect</h3>
-          <div class="tt-price">200<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Extraction vapeur complète</li>
-            <li>Traitement cuir ou tissu</li>
-            <li>Désodorisation ozone</li>
-            <li>Vitres + joints</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
       <!-- SUV + EXTÉRIEUR -->
       <div class="tt-panel p-suv-ext">
         <div class="tt-card">
-          <h3 class="tt-card-name">Extérieur Classique</h3>
-          <div class="tt-price">90<sup>€</sup></div>
+          <h3 class="tt-card-name">Extérieur Premium</h3>
+          <div class="tt-price">60<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Jantes & pneus</li>
-            <li>Vitres extérieures</li>
+            <li>Prélavage à la mousse active</li>
+            <li>Lavage manuel soigné</li>
+            <li>Nettoyage approfondi des jantes et pneus</li>
+            <li>Pose d'une cire à effet déperlant</li>
+            <li>Brillance des pneus</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Extérieur Premium</h3>
-          <div class="tt-price">140<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Extérieur Perfect</h3>
+          <div class="tt-price">70<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Décontamination ferreux</li>
-            <li>Jantes & pneus</li>
-            <li>Finition cire</li>
+            <li>Tout le pack Extérieur Premium</li>
+            <li>Protection Wax longue durée de 1 à 6 mois</li>
+            <li>Rénovation des plastiques extérieurs</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Extérieur Perfect</h3>
-          <div class="tt-price">190<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Lavage deux seaux</li>
-            <li>Décontamination complète</li>
-            <li>Finition cire carnauba</li>
-            <li>Lustrage vitres</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
       <!-- SUV + PACKS -->
       <div class="tt-panel p-suv-pak">
         <div class="tt-card">
-          <h3 class="tt-card-name">Pack Complet Classique</h3>
-          <div class="tt-price">180<sup>€</sup></div>
+          <h3 class="tt-card-name">Pack Complet Premium</h3>
+          <div class="tt-price">140<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Intérieur Classique</li>
-            <li>Extérieur Classique</li>
+            <li>Intérieur Premium + Extérieur Premium en une seule intervention</li>
           </ul>
           <a href="#contact" class="tt-btn">Réserver</a>
         </div>
         <div class="tt-card tt-card--pop">
-          <span class="tt-pop-badge">★ Populaire</span>
-          <h3 class="tt-card-name">Pack Complet Premium</h3>
-          <div class="tt-price">280<sup>€</sup></div>
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Pack Complet Perfect</h3>
+          <div class="tt-price">190<sup>€</sup></div>
           <ul class="tt-feats">
-            <li>Intérieur Premium</li>
-            <li>Extérieur Premium</li>
+            <li>Intérieur Perfect + Extérieur Perfect en une seule intervention</li>
           </ul>
           <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
-        </div>
-        <div class="tt-card">
-          <h3 class="tt-card-name">Pack Complet Perfect</h3>
-          <div class="tt-price">380<sup>€</sup></div>
-          <ul class="tt-feats">
-            <li>Intérieur Perfect</li>
-            <li>Extérieur Perfect</li>
-          </ul>
-          <a href="#contact" class="tt-btn">Réserver</a>
         </div>
       </div>
 
     </div><!-- /.tt-panels -->
 
-    <p class="tt-note"><em>Tarifs indicatifs — devis personnalisé sur demande selon l'état du véhicule.</em></p>
+    <p class="tt-note"><em>Tarifs indicatifs – Le tarif peut varier selon l'état du véhicule.</em></p>
 
     <div style="text-align:center;margin-top:clamp(32px,4vw,48px)">
       <a href="#contact" class="btn-gold">Demander un devis personnalisé &rarr;</a>
@@ -2670,7 +2584,7 @@
 <section id="avis">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Ce qu'ils disent</span>
+      <span class="section-tag">L'art du detail dans le detail</span>
       <h2 class="section-title">Avis Clients</h2>
     </div>
   </div>
@@ -2753,7 +2667,7 @@
         <span>GT</span>
       </div>
       <div class="apropos-badge">
-        <span class="apropos-badge-n">200<sup>+</sup></span>
+        <span class="apropos-badge-n">+100</span>
         <span class="apropos-badge-l">Clients satisfaits</span>
       </div>
     </div>
@@ -2773,8 +2687,8 @@
         <div class="apropos-val">
           <span class="apropos-val-icon">◈</span>
           <div>
-            <strong>Déplacement à domicile</strong>
-            <span>Monaco, Nice, Menton</span>
+            <strong>Déplacement à domicile ou prise en charge du véhicule</strong>
+            <span>Cannes, Nice, Monaco, Menton</span>
           </div>
         </div>
         <div class="apropos-val">
@@ -2782,6 +2696,13 @@
           <div>
             <strong>Résultats garantis</strong>
             <span>Satisfaction ou retouche offerte</span>
+          </div>
+        </div>
+        <div class="apropos-val">
+          <span class="apropos-val-icon">◈</span>
+          <div>
+            <strong>Produits de qualité</strong>
+            <span>Spécialement conçus pour vos véhicules</span>
           </div>
         </div>
       </div>
@@ -2852,17 +2773,17 @@
 
       <details class="faq-item">
         <summary class="faq-q">Faut-il préparer quoi que ce soit ?</summary>
-        <div class="faq-a">Non. Il vous suffit de nous indiquer l'adresse et d'avoir un espace suffisant autour du véhicule. Nous apportons tout le matériel et les produits.</div>
+        <div class="faq-a">Un espace sécurisé permettant de travailler autour du véhicule sans gêner. Idéalement à proximité d'une prise électrique et d'un point d'eau, mais cela reste optionnel.</div>
       </details>
 
       <details class="faq-item">
         <summary class="faq-q">Vos produits sont-ils sans risque pour la peinture ?</summary>
-        <div class="faq-a">Absolument. Nous utilisons exclusivement des produits professionnels certifiés, sans agents abrasifs pour les lavages standard. Nos polissages sont réalisés après mesure de l'épaisseur de peinture.</div>
+        <div class="faq-a">Nous utilisons uniquement des produits professionnels de haute qualité, respectueux de l'environnement et adaptés aux matériaux de votre véhicule. Chaque produit est soigneusement sélectionné et testé afin d'assurer une finition propre, durable et un résultat proche du neuf.</div>
       </details>
 
       <details class="faq-item">
-        <summary class="faq-q">Quelle est la différence entre un lavage et un détailing ?</summary>
-        <div class="faq-a">Un lavage retire la saleté en surface. Le détailing va en profondeur : décontamination, correction des défauts de peinture, protection longue durée. C'est un soin complet, pas un simple nettoyage.</div>
+        <summary class="faq-q">Quels services proposez-vous ?</summary>
+        <div class="faq-a">Nous proposons le nettoyage intérieur et extérieur, le polissage, le traitement céramique et la rénovation de phares. Consultez notre section Services pour le détail de chaque prestation.</div>
       </details>
 
       <details class="faq-item">
@@ -2913,6 +2834,7 @@
               <option>Lavage Intérieur</option>
               <option>Lavage Extérieur</option>
               <option>Détailing Complet</option>
+              <option>Polissage</option>
               <option>Protection Céramique</option>
               <option>Autre / Devis</option>
             </select>
@@ -2933,7 +2855,7 @@
           <span class="contact-info-icon">📍</span>
           <div>
             <strong>Zone d'intervention</strong>
-            <span>Monaco · Nice · Menton</span>
+            <span>Cannes · Nice · Monaco · Menton</span>
           </div>
         </div>
         <div class="contact-info-item">
@@ -3003,9 +2925,25 @@
   <div class="footer-bottom">
     <span>&copy; 2025 GT Detailing — Tous droits réservés</span>
     <span style="color:rgba(255,255,255,.2);margin:0 10px">·</span>
+    <span><a href="#politique" class="footer-credit" style="color:rgba(255,255,255,.3)">Politique de confidentialité</a></span>
+    <span style="color:rgba(255,255,255,.2);margin:0 10px">·</span>
     <span>Site réalisé par <a href="mailto:a1exb0nes.studio@gmail.com" class="footer-credit">A1B0.studio</a></span>
   </div>
 </footer>
+
+<!-- Politique de confidentialité -->
+<section id="politique" style="background:#050505;border-top:1px solid rgba(255,255,255,.06);padding:clamp(48px,6vw,80px) 0">
+  <div class="container" style="max-width:760px">
+    <h2 style="font-family:var(--H);font-size:clamp(28px,4vw,42px);letter-spacing:.06em;color:#fff;margin-bottom:2rem">Politique de <em style="color:var(--gold)">confidentialité</em></h2>
+    <div style="color:#999;font-size:14px;line-height:1.9;display:flex;flex-direction:column;gap:1.4rem">
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Collecte des données</strong>Le formulaire de contact collecte uniquement les informations que vous fournissez volontairement (nom, email, téléphone, véhicule, message). Ces données sont utilisées exclusivement pour répondre à vos demandes de réservation ou de devis.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Utilisation des données</strong>Vos informations ne sont jamais vendues, partagées ou cédées à des tiers. Elles sont conservées le temps nécessaire au traitement de votre demande.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Service de formulaire</strong>Le formulaire de contact utilise Formspree (formspree.io), un service tiers. Les données soumises transitent par leurs serveurs. Consultez la politique de confidentialité de Formspree pour plus d'informations.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Cookies</strong>Ce site n'utilise aucun cookie de suivi ou de publicité.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Vos droits</strong>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous via le formulaire de contact.</div>
+    </div>
+  </div>
+</section>
 
 <!-- Sticky CTA mobile -->
 <a href="#contact" class="sticky-cta">Réserver</a>
