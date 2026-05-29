@@ -270,6 +270,15 @@
     padding:calc(var(--nav-h) + 60px) clamp(24px,6vw,100px) 60px;
     position:relative; z-index:2;
   }
+  .hero-bg-img {
+    position:absolute; inset:0; z-index:0;
+    background:url('avant-1.jpg') center/cover no-repeat;
+    opacity:.08;
+    filter:blur(14px);
+    transform:scale(1.08);
+    pointer-events:none;
+  }
+  .hero-left > *:not(.hero-bg-img) { position:relative; z-index:1; }
   .hero-eyebrow { margin-bottom:32px; }
   .hero-title {
     font-family:var(--H);
@@ -1999,6 +2008,8 @@
 
     <!-- Panneau gauche — texte -->
     <div class="hero-left">
+      <!-- Background image overlay — remplacez hero-bg.jpg par votre photo -->
+      <div class="hero-bg-img" aria-hidden="true"></div>
       <p class="hero-eyebrow">Cannes · Monaco · Nice · Menton</p>
       <h1 class="hero-title">L'art du<br><em>detail</em><br>dans le detail.</h1>
       <p class="hero-sub">Detailing haut de gamme pour véhicules d'exception.<br>Chaque prestation, une obsession du résultat.</p>
@@ -2225,7 +2236,6 @@
     </div>
     <div class="port-info">
       <span class="port-num">01</span>
-      <h3 class="port-title">Lamborghini<br>Revuelto</h3>
 
     </div>
   </div>
@@ -2249,7 +2259,6 @@
     </div>
     <div class="port-info">
       <span class="port-num">02</span>
-      <h3 class="port-title">Porsche<br>Cayenne Turbo S</h3>
 
     </div>
   </div>
@@ -2273,7 +2282,6 @@
     </div>
     <div class="port-info">
       <span class="port-num">03</span>
-      <h3 class="port-title">Mercedes<br>CLA</h3>
 
     </div>
   </div>
@@ -2297,7 +2305,6 @@
     </div>
     <div class="port-info">
       <span class="port-num">04</span>
-      <h3 class="port-title">Renault<br>Twingo</h3>
 
     </div>
   </div>

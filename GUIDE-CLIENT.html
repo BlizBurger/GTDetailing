@@ -746,6 +746,99 @@
   </section>
 
 
+  <!-- ═══ SECTION 3B — GOOGLE MAPS ═══ -->
+  <section class="section">
+    <span class="section-num">03<span style="font-size:40px">b</span></span>
+    <h2 class="section-title">Modifier la <span>carte Google Maps</span></h2>
+    <p>La carte Google Maps visible sur votre site doit pointer sur votre adresse exacte. Voici comment obtenir l'URL d'intégration et l'insérer dans le site.</p>
+
+    <h3 style="margin:28px 0 16px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#F2C809">Partie A — Obtenir l'URL depuis Google Maps</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-text">
+          <strong>Aller sur Google Maps</strong>
+          <span>Ouvrez votre navigateur et rendez-vous sur <strong style="color:#fff">maps.google.com</strong>. Connectez-vous avec votre compte Google si nécessaire.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-text">
+          <strong>Rechercher votre adresse</strong>
+          <span>Dans la barre de recherche en haut, tapez votre adresse exacte (ex: <code style="font-family:monospace;color:#F2C809">10 Avenue de Monaco, Monaco</code>). Appuyez sur Entrée. Une épingle rouge apparaît sur la carte.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-text">
+          <strong>Ouvrir le menu Partager</strong>
+          <span>Cliquez sur le nom du lieu dans le panneau de gauche. Puis cliquez sur le bouton <strong style="color:#fff">"Partager"</strong> (icône avec une flèche). Une fenêtre s'ouvre.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-text">
+          <strong>Choisir "Intégrer une carte"</strong>
+          <span>Dans la fenêtre, cliquez sur l'onglet <strong style="color:#fff">"Intégrer une carte"</strong>. Vous voyez un code HTML qui ressemble à :<br><br>
+          <code style="font-family:monospace;font-size:13px;display:block;padding:10px 14px;background:rgba(255,255,255,.04);border-radius:4px;margin-top:8px;word-break:break-all;color:#aaa">&lt;iframe src="<span style="color:#F2C809">https://www.google.com/maps/embed?pb=...</span>" ...&gt;</code>
+          </span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">5</div>
+        <div class="step-text">
+          <strong>Copier uniquement l'URL</strong>
+          <span>Repérez la partie qui commence par <code style="font-family:monospace;color:#F2C809">https://www.google.com/maps/embed?pb=</code> et se termine avant le premier <code style="font-family:monospace">"</code>. Sélectionnez uniquement cette URL et copiez-la (Ctrl+C).</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin:36px 0 16px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#F2C809">Partie B — Insérer l'URL dans index.html</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-text">
+          <strong>Ouvrir index.html avec Bloc-notes</strong>
+          <span>Clic droit sur <code style="font-family:monospace;color:#F2C809">index.html</code> → "Ouvrir avec" → <strong style="color:#fff">Bloc-notes</strong> (Windows) ou <strong style="color:#fff">TextEdit</strong> (Mac).</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-text">
+          <strong>Rechercher l'ancienne URL Maps</strong>
+          <span>Faites <strong style="color:#fff">Ctrl+H</strong> (Rechercher et remplacer). Dans le champ "Rechercher", tapez :<br>
+          <code style="font-family:monospace;color:#F2C809;display:block;margin:8px 0;padding:8px 12px;background:rgba(242,200,9,.07);border-radius:4px">https://www.google.com/maps/embed?pb=</code>
+          Votre éditeur trouvera la ligne de la carte.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-text">
+          <strong>Remplacer l'URL complète</strong>
+          <span>La ligne trouvée ressemble à :<br>
+          <code style="font-family:monospace;font-size:12px;display:block;padding:8px 12px;background:rgba(255,255,255,.04);border-radius:4px;margin:8px 0;word-break:break-all;color:#777">src="https://www.google.com/maps/embed?pb=<span style="color:#e55">!1m18!1m12!...</span>"</code>
+          Sélectionnez uniquement l'URL (tout ce qui est entre les guillemets <code style="font-family:monospace">src="..."</code>) et collez votre nouvelle URL à la place.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-text">
+          <strong>Sauvegarder et re-uploader</strong>
+          <span>Faites <strong style="color:#fff">Ctrl+S</strong> pour sauvegarder. Puis uploadez ce <code style="font-family:monospace;color:#F2C809">index.html</code> mis à jour sur Hostinger dans <code style="font-family:monospace">public_html/</code>, en remplaçant l'ancien. La carte se mettra à jour immédiatement.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+      <span class="callout-icon">⚠️</span>
+      <div class="callout-text">
+        <strong>La carte n'affiche pas votre adresse ?</strong>
+        <span>Vérifiez que vous avez bien copié l'URL depuis l'onglet <strong style="color:#fff">"Intégrer une carte"</strong> et non depuis "Partager un lien". Les deux URLs sont différentes — seule celle de "Intégrer" fonctionne dans un site web.</span>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ═══ SECTION 4 — LISTE DE CONTRÔLE ═══ -->
   <section class="section">
     <span class="section-num">04</span>
