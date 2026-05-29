@@ -1,0 +1,2984 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GT Detailing — Détailing Automobile Monaco · Nice · Menton</title>
+  <meta name="description" content="GT Detailing — Spécialiste du détailing automobile haut de gamme. Monaco, Nice, Menton, Côte d'Azur.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GT Detailing — L'Excellence du Détailing sur la Côte d'Azur">
+  <meta property="og:description" content="Détailing automobile haut de gamme à Monaco, Nice, Menton.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Security headers via meta tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Gn5idNOdGJaMG2XbHGbkT9R/jNXGnQFmrc1Ed497nC8=' 'sha256-NSqZ9PU+gl47mQn03Q9QTxeI3Mn/QWgyVfMl1a9LV1o='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https://formspree.io; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"GT Detailing",
+   "telephone":"+33647869180","email":"albert@gtdetailingmc.com",
+   "founder":"Albert Kedilerli","priceRange":"€€€",
+   "areaServed":[{"@type":"City","name":"Monaco"},{"@type":"City","name":"Nice"},{"@type":"City","name":"Menton"}],
+   "sameAs":["https://www.instagram.com/gtdetailingmc","https://www.tiktok.com/@gtdetailingmc"]}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+  /* ═══════════════════════════════════════════
+     RESET & BASE
+  ═══════════════════════════════════════════ */
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; font-size:16px; }
+  body {
+    background:#050505; color:#d4d4d4;
+    font-family:'Outfit',sans-serif;
+    font-size:15px; line-height:1.72;
+    font-weight:400; letter-spacing:.01em;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* Textes courants bien lisibles */
+  p { line-height:1.78; color:#c8c8c8; font-weight:400; }
+  strong { color:#fff; font-weight:600; }
+
+  /* Boutons — police Outfit cohérente */
+  .btn-gold, .btn-ghost {
+    font-family:'Outfit',sans-serif;
+    font-size:12px; font-weight:600;
+    letter-spacing:.2em;
+  }
+  .btn-gold { padding:15px 40px; }
+  .btn-ghost { padding:14px 36px; }
+  img { display:block; max-width:100%; }
+  a { text-decoration:none; color:inherit; }
+  ul { list-style:none; }
+  input[type="checkbox"],
+  input[type="radio"] { position:absolute; opacity:0; pointer-events:none; }
+
+  /* ═══════════════════════════════════════════
+     VARIABLES
+  ═══════════════════════════════════════════ */
+  :root {
+    --gold:      #F2C809;
+    --gold2:     #FFD800;
+    --gold-dim:  rgba(242,200,9,.12);
+    --gold-glow: rgba(242,200,9,.3);
+    --ink:       #050505;
+    --ink2:      #0D0D0D;
+    --ink3:      #141414;
+    --ink4:      #1C1C1C;
+    --grey:      #666;
+    --grey2:     #999;
+    --grey3:     #CCC;
+    --white:     #fff;
+    --H:         'Bebas Neue',sans-serif;
+    --B:         'Outfit',sans-serif;
+    --nav-h:     72px;
+    --ease:      cubic-bezier(0.16,1,0.3,1);
+    --ease2:     cubic-bezier(0.76,0,0.24,1);
+  }
+
+  /* ═══════════════════════════════════════════
+     UTILITAIRES
+  ═══════════════════════════════════════════ */
+  .wrap { width:100%; max-width:1320px; margin:0 auto; padding:0 clamp(20px,5vw,80px); }
+  .wrap-xl { width:100%; max-width:1560px; margin:0 auto; padding:0 clamp(20px,4vw,60px); }
+
+  .eyebrow {
+    display:inline-flex; align-items:center; gap:14px;
+    font-size:10px; font-weight:700; letter-spacing:.4em;
+    text-transform:uppercase; color:var(--gold);
+  }
+  .eyebrow::before {
+    content:''; display:block;
+    width:32px; height:1px; background:var(--gold); flex-shrink:0;
+  }
+
+  .display {
+    font-family:var(--H);
+    font-size:clamp(52px,8vw,110px);
+    line-height:.88; letter-spacing:.03em;
+  }
+  .display span { color:var(--gold); }
+
+  .display-xl {
+    font-family:var(--H);
+    font-size:clamp(70px,12vw,160px);
+    line-height:.82; letter-spacing:.02em;
+  }
+  .display-xl span { color:var(--gold); }
+
+  .lead {
+    font-size:clamp(15px,1.6vw,18px);
+    color:var(--grey3); font-weight:300; line-height:1.75;
+    max-width:520px;
+  }
+
+  .btn {
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--B); font-size:12px; font-weight:700;
+    letter-spacing:.16em; text-transform:uppercase;
+    padding:15px 36px; border-radius:2px;
+    transition:all .35s var(--ease);
+    white-space:nowrap; position:relative; overflow:hidden;
+  }
+  .btn-gold {
+    background:var(--gold); color:#000;
+  }
+  .btn-gold::before {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.25) 50%,transparent 100%);
+    transform:translateX(-100%); transition:transform .5s ease;
+  }
+  .btn-gold:hover { background:var(--gold2); transform:translateY(-2px); box-shadow:0 10px 32px rgba(242,200,9,.35); }
+  .btn-gold:hover::before { transform:translateX(100%); }
+  .btn-outline {
+    background:transparent; color:#fff;
+    border:1px solid rgba(255,255,255,.25);
+  }
+  .btn-outline:hover { border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
+  .btn-outline-gold {
+    background:transparent; color:var(--gold);
+    border:1px solid var(--gold);
+  }
+  .btn-outline-gold:hover { background:var(--gold); color:#000; }
+
+  .gold-line {
+    width:64px; height:2px;
+    background:linear-gradient(90deg,var(--gold),var(--gold2));
+  }
+
+  .section-sep {
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(242,200,9,.2),transparent);
+  }
+
+  /* ═══════════════════════════════════════════
+     NAV — LOGO CENTRÉ
+  ═══════════════════════════════════════════ */
+  #nav {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    height:var(--nav-h);
+    transition:background .5s, box-shadow .5s, backdrop-filter .5s;
+  }
+  #nav.scrolled {
+    background:rgba(5,5,5,.96);
+    box-shadow:0 1px 0 rgba(242,200,9,.15), 0 4px 32px rgba(0,0,0,.7);
+    backdrop-filter:blur(16px);
+  }
+  .nav-inner {
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    height:var(--nav-h);
+  }
+  .nav-left, .nav-right {
+    display:flex; align-items:center; gap:clamp(16px,2.5vw,36px);
+  }
+  .nav-right { justify-content:flex-end; }
+  .nav-link {
+    font-size:11px; font-weight:600; letter-spacing:.18em;
+    text-transform:uppercase; color:rgba(255,255,255,.6);
+    position:relative; padding-bottom:3px;
+    transition:color .25s;
+  }
+  .nav-link::after {
+    content:''; position:absolute; bottom:0; left:0;
+    width:0; height:1px; background:var(--gold);
+    transition:width .4s var(--ease);
+  }
+  .nav-link:hover { color:#fff; }
+  .nav-link:hover::after { width:100%; }
+
+  .nav-logo {
+    text-align:center;
+    font-family:var(--H); font-size:20px;
+    letter-spacing:.14em; color:#fff;
+    white-space:nowrap;
+    display:flex; align-items:center;
+  }
+  .nav-logo img { height:44px; width:auto; max-width:160px; display:block; object-fit:contain; }
+  .nav-logo span { color:var(--gold); }
+  .nav-logo small {
+    display:block; font-family:var(--B);
+    font-size:8px; letter-spacing:.35em;
+    text-transform:uppercase; color:var(--grey);
+    font-weight:400; margin-top:1px;
+  }
+
+  .nav-cta-wrap { display:flex; justify-content:flex-end; }
+
+  /* Hamburger */
+  .hamburger {
+    display:none; flex-direction:column; gap:5px;
+    padding:8px; cursor:pointer;
+  }
+  .hamburger span {
+    display:block; width:22px; height:1.5px; background:#fff;
+    border-radius:2px;
+    transition:transform .4s var(--ease), opacity .3s, width .3s;
+  }
+  #menu-open:checked ~ #nav .hamburger span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+  #menu-open:checked ~ #nav .hamburger span:nth-child(2) { opacity:0; width:0; }
+  #menu-open:checked ~ #nav .hamburger span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+
+  /* Mobile overlay */
+  .nav-overlay {
+    position:fixed; inset:0; z-index:999;
+    background:var(--ink);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:28px;
+    opacity:0; visibility:hidden;
+    transition:opacity .45s, visibility .45s;
+  }
+  #menu-open:checked ~ .nav-overlay { opacity:1; visibility:visible; }
+  .nav-overlay a {
+    font-family:var(--H); font-size:clamp(40px,9vw,64px);
+    letter-spacing:.06em; color:#fff;
+    transition:color .2s;
+  }
+  .nav-overlay a:hover { color:var(--gold); }
+  .nav-overlay .btn { margin-top:10px; font-size:14px; padding:16px 44px; }
+
+  /* ═══════════════════════════════════════════
+     HERO — SPLIT DIAGONAL
+  ═══════════════════════════════════════════ */
+  #hero {
+    position:relative; min-height:100svh;
+    display:flex; align-items:stretch;
+    overflow:hidden; background:var(--ink);
+  }
+  .hero-split {
+    display:grid; grid-template-columns:58% 42%;
+    width:100%; position:relative;
+  }
+
+  /* Left panel */
+  .hero-left {
+    display:flex; flex-direction:column;
+    justify-content:center;
+    padding:calc(var(--nav-h) + 60px) clamp(24px,6vw,100px) 60px;
+    position:relative; z-index:2;
+  }
+  .hero-bg-img {
+    position:absolute; inset:0; z-index:0;
+    background:url('avant-1.jpg') center/cover no-repeat;
+    opacity:.08;
+    filter:blur(14px);
+    transform:scale(1.08);
+    pointer-events:none;
+  }
+  .hero-left > *:not(.hero-bg-img) { position:relative; z-index:1; }
+  .hero-eyebrow { margin-bottom:32px; }
+  .hero-title {
+    font-family:var(--H);
+    font-size:clamp(64px,9.5vw,138px);
+    line-height:.84; letter-spacing:.02em;
+    margin-bottom:32px;
+  }
+  .hero-title .line-gold { color:var(--gold); display:block; }
+  .hero-title .line-outline {
+    -webkit-text-stroke:1px rgba(255,255,255,.3);
+    color:transparent; display:block;
+  }
+  .hero-desc { margin-bottom:44px; }
+  .hero-ctas { display:flex; gap:14px; flex-wrap:wrap; }
+
+  /* Right panel */
+  .hero-right {
+    position:relative; overflow:hidden;
+    background:var(--ink2);
+    clip-path:polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .hero-right-bg {
+    position:absolute; inset:-20px;
+    background:radial-gradient(ellipse 80% 70% at 60% 50%, rgba(242,200,9,.08) 0%, transparent 65%);
+    animation:heroBreathe 7s ease-in-out infinite;
+  }
+  @keyframes heroBreathe { 0%,100%{opacity:.6} 50%{opacity:1} }
+
+  .hero-stats {
+    position:absolute; bottom:60px; left:14%;
+    display:flex; flex-direction:column; gap:36px;
+  }
+  .hero-stat {}
+  .hero-stat-n {
+    font-family:var(--H);
+    font-size:clamp(52px,7vw,80px);
+    line-height:.9; color:var(--gold);
+    display:block;
+  }
+  .hero-stat-l {
+    font-size:10px; font-weight:600;
+    letter-spacing:.28em; text-transform:uppercase;
+    color:var(--grey2); margin-top:4px; display:block;
+  }
+  .hero-stat-sep {
+    width:1px; height:40px;
+    background:linear-gradient(to bottom, rgba(242,200,9,.4), transparent);
+    margin-left:4px;
+  }
+
+  /* Diagonal gold accent */
+  .hero-diag {
+    position:absolute; top:0; right:42%;
+    width:1px; height:100%;
+    background:linear-gradient(to bottom, transparent, rgba(242,200,9,.5) 40%, rgba(242,200,9,.15) 80%, transparent);
+    transform:skewX(-4deg);
+    z-index:3; pointer-events:none;
+  }
+
+  /* Scroll cue */
+  .hero-scroll {
+    position:absolute; bottom:36px; left:clamp(24px,6vw,100px);
+    display:flex; align-items:center; gap:14px;
+    font-size:9px; font-weight:600; letter-spacing:.32em;
+    text-transform:uppercase; color:var(--grey);
+    z-index:4;
+    animation:fadeIn 1s var(--ease) 1.2s both;
+  }
+  .hero-scroll-bar {
+    width:40px; height:1px;
+    background:linear-gradient(to right, var(--gold), transparent);
+    animation:scrollPulse 2.5s ease-in-out infinite;
+  }
+  @keyframes scrollPulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+
+  /* ═══════════════════════════════════════════
+     MANIFESTE — LIGNE PLEINE LARGEUR
+  ═══════════════════════════════════════════ */
+  #manifeste {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink2);
+    border-top:1px solid rgba(242,200,9,.12);
+    overflow:hidden;
+  }
+  .manifeste-inner {
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:clamp(40px,6vw,100px);
+    align-items:center;
+  }
+  .manifeste-label { writing-mode:vertical-lr; transform:rotate(180deg); }
+  .manifeste-quote {
+    font-family:var(--H);
+    font-size:clamp(36px,5vw,72px);
+    line-height:.96; letter-spacing:.02em;
+    color:var(--grey3);
+  }
+  .manifeste-quote em {
+    font-style:normal; color:var(--gold);
+  }
+  .manifeste-quote strong {
+    font-family:var(--H); color:#fff;
+  }
+
+  /* ═══════════════════════════════════════════
+     SERVICES — LISTE ACCORDÉON NUMÉROTÉE
+  ═══════════════════════════════════════════ */
+  #services {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .services-header {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:clamp(32px,5vw,80px);
+    align-items:end;
+    margin-bottom:clamp(48px,7vw,96px);
+  }
+  .services-header .lead { margin-top:20px; }
+  .services-header-right {
+    display:flex; align-items:flex-end; justify-content:flex-end;
+  }
+
+  .svc-list { display:flex; flex-direction:column; }
+  .svc-item {
+    border-top:1px solid rgba(255,255,255,.06);
+    transition:background .3s;
+  }
+  .svc-item:last-child { border-bottom:1px solid rgba(255,255,255,.06); }
+
+  .svc-summary {
+    display:grid;
+    grid-template-columns:72px 1fr auto;
+    align-items:center; gap:24px;
+    padding:clamp(22px,3vw,32px) 0;
+    cursor:pointer; list-style:none;
+    transition:color .3s;
+  }
+  .svc-summary::-webkit-details-marker { display:none; }
+
+  .svc-num {
+    font-family:var(--H); font-size:clamp(36px,4vw,52px);
+    color:rgba(242,200,9,.18); line-height:1;
+    transition:color .35s;
+  }
+  details[open] .svc-num { color:var(--gold); }
+
+  .svc-name {
+    font-family:var(--H); font-size:clamp(22px,3vw,38px);
+    letter-spacing:.04em; color:#fff;
+    transition:color .3s;
+  }
+  details[open] .svc-name { color:var(--gold); }
+
+  .svc-plus {
+    width:36px; height:36px; border-radius:50%;
+    border:1px solid rgba(242,200,9,.35);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    transition:background .3s, transform .4s var(--ease), border-color .3s;
+  }
+  .svc-plus svg { width:12px; height:12px; color:var(--gold); transition:color .3s; }
+  details[open] .svc-plus {
+    background:var(--gold); border-color:var(--gold);
+    transform:rotate(45deg);
+  }
+  details[open] .svc-plus svg { color:#000; }
+
+  .svc-body {
+    padding:0 0 clamp(22px,3vw,32px) calc(72px + 24px);
+  }
+  .svc-body-spacer { /* aligns under number */ }
+  .svc-body-content {}
+  .svc-body-content p, .svc-body p {
+    font-size:15px; color:#b8b8b8;
+    line-height:1.85; font-weight:400;
+    max-width:560px; margin-bottom:20px; letter-spacing:.01em;
+  }
+
+  /* ═══════════════════════════════════════════
+     STATS BANDE
+  ═══════════════════════════════════════════ */
+  #stats {
+    padding:clamp(60px,8vw,100px) 0;
+    background:var(--gold);
+    position:relative; overflow:hidden;
+  }
+  #stats::before {
+    content:''; position:absolute; inset:0;
+    background:repeating-linear-gradient(
+      -45deg,
+      transparent, transparent 40px,
+      rgba(0,0,0,.04) 40px, rgba(0,0,0,.04) 41px
+    );
+  }
+  .stats-grid {
+    display:grid; grid-template-columns:repeat(3,1fr);
+    gap:2px; position:relative;
+  }
+  .stat-item {
+    padding:clamp(24px,4vw,40px) clamp(20px,3vw,40px);
+    text-align:center;
+    background:rgba(0,0,0,.06);
+  }
+  a.stat-item:hover .stat-n { color:var(--gold); }
+  a.stat-item:hover .stat-l { color:#fff; }
+  .stat-item + .stat-item { border-left:1px solid rgba(0,0,0,.1); }
+  .stat-n {
+    font-family:var(--H);
+    font-size:clamp(58px,9vw,110px);
+    line-height:.85; color:#000;
+    letter-spacing:.02em; display:block;
+    margin-bottom:8px;
+  }
+  .stat-l {
+    font-size:11px; font-weight:700;
+    letter-spacing:.22em; text-transform:uppercase;
+    color:rgba(0,0,0,.55);
+  }
+
+  /* ═══════════════════════════════════════════
+     PORTFOLIO — BANDES ALTERNANTES + SLIDER
+  ═══════════════════════════════════════════ */
+  #portfolio {
+    background:var(--ink2);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .portfolio-header {
+    padding:clamp(60px,8vw,100px) 0 clamp(40px,5vw,60px);
+  }
+  .portfolio-header .wrap {
+    display:flex; align-items:flex-end;
+    justify-content:space-between; gap:24px;
+    flex-wrap:wrap;
+  }
+
+  .strip {
+    display:grid; grid-template-columns:1fr 1fr;
+    min-height:520px; position:relative;
+  }
+  .strip:nth-child(odd) { direction:ltr; }
+  .strip:nth-child(even) { direction:rtl; }
+  .strip:nth-child(even) > * { direction:ltr; }
+
+  /* Before/After Slider */
+  .ba {
+    position:relative; overflow:hidden;
+    background:var(--ink3);
+    --p:50%;
+  }
+  .ba-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .ba-before { position:absolute; inset:0; }
+  .ba-before img { width:100%; height:100%; object-fit:cover; }
+  .ba-after {
+    position:absolute; inset:0;
+    clip-path:inset(0 calc(100% - var(--p)) 0 0);
+    transition:clip-path 0s;
+  }
+  .ba-after img { width:100%; height:100%; object-fit:cover; }
+  .ba-ph {
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--ink3);
+  }
+  .ba-ph-txt {
+    font-family:var(--H); font-size:clamp(32px,5vw,56px);
+    letter-spacing:.1em; color:rgba(242,200,9,.15);
+  }
+
+  /* Divider line */
+  .ba-line {
+    position:absolute; top:0; bottom:0;
+    left:var(--p); width:2px;
+    background:var(--gold);
+    box-shadow:0 0 16px rgba(242,200,9,.5);
+    transform:translateX(-50%);
+    z-index:3; pointer-events:none;
+  }
+  /* Handle */
+  .ba-handle {
+    position:absolute; top:50%;
+    left:var(--p); z-index:4;
+    transform:translate(-50%,-50%);
+    width:52px; height:52px; border-radius:50%;
+    background:var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 0 4px rgba(242,200,9,.25), 0 4px 24px rgba(0,0,0,.6);
+    pointer-events:none;
+    transition:box-shadow .2s;
+  }
+  .ba-handle svg { width:20px; height:20px; color:#000; }
+
+  /* Labels AVANT / APRÈS */
+  .ba-label-before, .ba-label-after {
+    position:absolute; bottom:18px;
+    font-size:10px; font-weight:700;
+    letter-spacing:.28em; text-transform:uppercase;
+    background:rgba(0,0,0,.55); padding:5px 12px;
+    border-radius:2px; z-index:2; pointer-events:none;
+  }
+  .ba-label-before { left:18px; color:var(--grey2); }
+  .ba-label-after  { right:18px; color:var(--gold); }
+
+  /* Range input overlay (transparent) */
+  .ba-range {
+    position:absolute; inset:0; z-index:5;
+    width:100%; height:100%;
+    opacity:0; cursor:ew-resize;
+    -webkit-appearance:none; appearance:none;
+    margin:0;
+  }
+  .ba-range::-webkit-slider-thumb { width:52px; height:100vh; cursor:ew-resize; }
+  .ba-range::-moz-range-thumb { width:52px; height:100vh; cursor:ew-resize; border:none; }
+
+  /* Strip info panel */
+  .strip-info {
+    display:flex; flex-direction:column;
+    justify-content:center;
+    padding:clamp(40px,6vw,80px) clamp(32px,5vw,72px);
+    background:var(--ink3);
+  }
+  .strip-num {
+    font-family:var(--H);
+    font-size:clamp(80px,10vw,130px);
+    color:rgba(242,200,9,.07);
+    line-height:.85; margin-bottom:-20px;
+    display:block;
+  }
+  .strip-car {
+    font-family:var(--H);
+    font-size:clamp(28px,4vw,52px);
+    letter-spacing:.04em; color:#fff;
+    margin-bottom:10px; line-height:1;
+  }
+  .strip-service {
+    font-size:11px; font-weight:700;
+    letter-spacing:.28em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:24px;
+  }
+  .strip-desc {
+    font-size:14px; color:var(--grey2);
+    line-height:1.75; font-weight:300;
+    max-width:360px; margin-bottom:32px;
+  }
+
+  /* ═══════════════════════════════════════════
+     TARIFS — ACCORDÉON ÉLÉGANT
+  ═══════════════════════════════════════════ */
+  #tarifs {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .tarifs-layout {
+    display:grid; grid-template-columns:1fr 2fr;
+    gap:clamp(40px,6vw,100px);
+    align-items:start;
+  }
+  .tarifs-sticky {
+    position:sticky; top:calc(var(--nav-h) + 32px);
+    display:flex; flex-direction:column; gap:24px;
+  }
+
+  .tarifs-accordion { display:flex; flex-direction:column; gap:2px; }
+  .tarif-group {
+    background:var(--ink3);
+    border-left:2px solid transparent;
+    transition:border-color .3s;
+  }
+  .tarif-group[open] { border-left-color:var(--gold); }
+
+  .tarif-summary {
+    display:flex; align-items:center; justify-content:space-between;
+    gap:20px; padding:22px 28px;
+    cursor:pointer; list-style:none;
+    font-family:var(--H); font-size:clamp(18px,2.2vw,24px);
+    letter-spacing:.05em; color:var(--grey3);
+    transition:color .3s;
+  }
+  .tarif-summary::-webkit-details-marker { display:none; }
+  .tarif-group[open] .tarif-summary { color:var(--gold); }
+
+  .tarif-icon {
+    width:30px; height:30px; border-radius:50%;
+    border:1px solid rgba(242,200,9,.3);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    transition:background .3s, border-color .3s, transform .4s var(--ease);
+  }
+  .tarif-icon svg { width:11px; height:11px; color:var(--gold); }
+  .tarif-group[open] .tarif-icon {
+    background:var(--gold); border-color:var(--gold);
+    transform:rotate(45deg);
+  }
+  .tarif-group[open] .tarif-icon svg { color:#000; }
+
+  .tarif-body { padding:0 28px 28px; }
+
+  .tarif-tabs {
+    display:flex; gap:0;
+    border:1px solid rgba(242,200,9,.2);
+    border-radius:2px; overflow:hidden;
+    margin-bottom:20px;
+  }
+  .tarif-tab-label {
+    flex:1; padding:10px 14px;
+    font-size:11px; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:var(--grey); cursor:pointer;
+    text-align:center;
+    transition:background .2s, color .2s;
+    user-select:none;
+  }
+  .tarif-tab-label:hover { background:var(--gold-dim); color:#fff; }
+
+  /* CSS tab system inside each accordion group */
+  .tarif-tab-input { position:absolute; opacity:0; pointer-events:none; }
+  #tt-cit-int:checked ~ .tarif-body label[for="tt-cit-int"],
+  #tt-cit-ext:checked ~ .tarif-body label[for="tt-cit-ext"],
+  #tt-cit-pak:checked ~ .tarif-body label[for="tt-cit-pak"],
+  #tt-ber-int:checked ~ .tarif-body label[for="tt-ber-int"],
+  #tt-ber-ext:checked ~ .tarif-body label[for="tt-ber-ext"],
+  #tt-ber-pak:checked ~ .tarif-body label[for="tt-ber-pak"],
+  #tt-suv-int:checked ~ .tarif-body label[for="tt-suv-int"],
+  #tt-suv-ext:checked ~ .tarif-body label[for="tt-suv-ext"],
+  #tt-suv-pak:checked ~ .tarif-body label[for="tt-suv-pak"] {
+    background:var(--gold); color:#000;
+  }
+
+  .tarif-panel { display:none; flex-direction:column; gap:10px; }
+  #tt-cit-int:checked ~ .tarif-body .tp-cit-int,
+  #tt-cit-ext:checked ~ .tarif-body .tp-cit-ext,
+  #tt-cit-pak:checked ~ .tarif-body .tp-cit-pak,
+  #tt-ber-int:checked ~ .tarif-body .tp-ber-int,
+  #tt-ber-ext:checked ~ .tarif-body .tp-ber-ext,
+  #tt-ber-pak:checked ~ .tarif-body .tp-ber-pak,
+  #tt-suv-int:checked ~ .tarif-body .tp-suv-int,
+  #tt-suv-ext:checked ~ .tarif-body .tp-suv-ext,
+  #tt-suv-pak:checked ~ .tarif-body .tp-suv-pak { display:flex; }
+
+  .t-row {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 18px; background:var(--ink4);
+    border-radius:2px; gap:12px;
+  }
+  .t-row-name {
+    font-size:13.5px; color:var(--grey3);
+    font-weight:400; flex:1;
+  }
+  .t-row-price {
+    font-family:var(--H); font-size:clamp(24px,3vw,32px);
+    color:var(--gold); letter-spacing:.03em; white-space:nowrap;
+  }
+  .t-row.pop { background:rgba(242,200,9,.07); border:1px solid rgba(242,200,9,.2); }
+  .t-row.pop .t-row-name::before {
+    content:'★ '; color:var(--gold); font-size:11px;
+  }
+  .tarif-note {
+    font-size:12px; color:var(--grey);
+    font-style:italic; margin-top:14px;
+    padding:12px 16px; border-left:2px solid rgba(242,200,9,.25);
+  }
+
+  /* ═══════════════════════════════════════════
+     RÉSERVATION
+  ═══════════════════════════════════════════ */
+  #reserver {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink2);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .reserver-layout {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:2px;
+  }
+  .form-panel {
+    background:var(--ink3);
+    padding:clamp(32px,5vw,64px);
+  }
+  .form-panel-title {
+    font-family:var(--H); font-size:clamp(24px,3vw,36px);
+    letter-spacing:.05em; margin-bottom:6px;
+  }
+  .form-panel-sub {
+    font-size:13px; color:var(--grey); margin-bottom:32px; line-height:1.6;
+  }
+  .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .fg-full { grid-column:1/-1; }
+  .field { display:flex; flex-direction:column; gap:7px; }
+  .field label {
+    font-size:10px; font-weight:700;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--grey);
+  }
+  .field input, .field select, .field textarea {
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:2px; padding:13px 16px;
+    color:#fff; font-family:var(--B); font-size:14px;
+    transition:border-color .3s, background .3s;
+    -webkit-appearance:none; appearance:none; width:100%;
+  }
+  .field input::placeholder, .field textarea::placeholder { color:rgba(255,255,255,.18); }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline:none; border-color:var(--gold);
+    background:rgba(242,200,9,.04);
+  }
+  .field select {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 14px center;
+    background-color:rgba(255,255,255,.04); padding-right:40px; cursor:pointer;
+  }
+  .field select option { background:#1a1a1a; color:#fff; }
+  .field textarea { resize:vertical; min-height:110px; }
+  .field input[type="date"]::-webkit-calendar-picker-indicator {
+    filter:invert(.5) sepia(1) saturate(4) hue-rotate(5deg); cursor:pointer;
+  }
+  .form-submit { margin-top:24px; }
+  .form-submit .btn { width:100%; justify-content:center; }
+
+  .urgency-bar {
+    display:flex; align-items:center; gap:12px;
+    background:rgba(242,200,9,.09);
+    border:1px solid rgba(242,200,9,.28);
+    border-radius:2px; padding:13px 20px;
+    margin-bottom:clamp(32px,4vw,56px);
+  }
+  .urgency-dot {
+    width:7px; height:7px; border-radius:50%;
+    background:var(--gold); flex-shrink:0;
+    animation:uPulse 1.8s ease-in-out infinite;
+  }
+  @keyframes uPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+  .urgency-bar span {
+    font-size:11.5px; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+  }
+
+  /* ═══════════════════════════════════════════
+     AVIS — CITATION GÉANTE
+  ═══════════════════════════════════════════ */
+  #avis {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .avis-featured {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:clamp(40px,6vw,100px);
+    align-items:center;
+    margin-bottom:clamp(48px,6vw,80px);
+    padding-bottom:clamp(48px,6vw,80px);
+    border-bottom:1px solid rgba(255,255,255,.05);
+  }
+  .avis-big-mark {
+    font-family:var(--H); font-size:clamp(120px,16vw,200px);
+    line-height:.7; color:rgba(242,200,9,.12);
+    margin-bottom:-20px; display:block;
+    user-select:none;
+  }
+  .avis-big-text {
+    font-family:var(--H);
+    font-size:clamp(22px,3.2vw,42px);
+    line-height:1.1; letter-spacing:.02em;
+    color:var(--grey3); margin-bottom:28px;
+  }
+  .avis-big-author {
+    display:flex; align-items:center; gap:14px;
+  }
+  .avis-av {
+    width:44px; height:44px; border-radius:50%;
+    background:linear-gradient(135deg,#C9A800,var(--gold));
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--H); font-size:18px; color:#000;
+    flex-shrink:0;
+  }
+  .avis-name { font-weight:600; font-size:14px; letter-spacing:.04em; }
+  .avis-city {
+    font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--gold);
+  }
+  .avis-stars { color:var(--gold); font-size:14px; letter-spacing:2px; margin-bottom:4px; }
+
+  .avis-right {
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .avis-mini {
+    background:var(--ink3);
+    padding:22px 24px;
+    border-left:2px solid transparent;
+    transition:border-color .3s, background .3s;
+  }
+  .avis-mini:hover { border-left-color:var(--gold); background:var(--ink4); }
+  .avis-mini-stars { color:var(--gold); font-size:12px; letter-spacing:1px; margin-bottom:8px; }
+  .avis-mini-txt {
+    font-size:13px; color:var(--grey2);
+    line-height:1.65; font-weight:300; margin-bottom:10px;
+  }
+  .avis-mini-author {
+    font-size:11px; font-weight:600;
+    color:var(--grey3); letter-spacing:.06em;
+  }
+  .avis-mini-city {
+    font-size:10px; color:var(--gold);
+    letter-spacing:.18em; text-transform:uppercase;
+  }
+  .avis-cta { text-align:center; margin-top:clamp(32px,4vw,48px); }
+
+  /* ═══════════════════════════════════════════
+     SOCIAL
+  ═══════════════════════════════════════════ */
+  #social {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink2);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .social-header {
+    display:flex; align-items:flex-end;
+    justify-content:space-between; gap:24px;
+    flex-wrap:wrap; margin-bottom:clamp(36px,5vw,56px);
+  }
+  .ig-grid {
+    display:grid; grid-template-columns:repeat(6,1fr);
+    gap:4px; margin-bottom:clamp(28px,4vw,40px);
+  }
+  .ig-tile {
+    aspect-ratio:1; background:var(--ink3);
+    position:relative; overflow:hidden; border-radius:2px;
+  }
+  .ig-tile img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .ig-ph {
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,var(--ink3),var(--ink4));
+  }
+  .ig-ph svg { color:rgba(242,200,9,.18); }
+  .ig-overlay {
+    position:absolute; inset:0;
+    background:rgba(242,200,9,.88);
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transition:opacity .3s;
+    font-size:12px; font-weight:700;
+    letter-spacing:.1em; color:#000;
+    gap:8px;
+  }
+  .ig-tile:hover .ig-overlay { opacity:1; }
+  .ig-tile:hover { transform:scale(1.02); transition:transform .35s var(--ease); }
+
+  .social-platforms {
+    display:flex; align-items:center;
+    justify-content:center; gap:clamp(24px,5vw,64px);
+    flex-wrap:wrap;
+  }
+  .platform-link {
+    display:flex; align-items:center; gap:14px;
+    padding:18px 32px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:2px;
+    font-family:var(--H); font-size:clamp(16px,2vw,22px);
+    letter-spacing:.08em; color:#fff;
+    transition:border-color .3s, color .3s, background .3s;
+  }
+  .platform-link:hover { border-color:var(--gold); color:var(--gold); background:rgba(242,200,9,.05); }
+  .platform-icon {
+    width:38px; height:38px; border-radius:8px;
+    background:rgba(242,200,9,.1);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold);
+  }
+
+  /* ═══════════════════════════════════════════
+     À PROPOS
+  ═══════════════════════════════════════════ */
+  #apropos {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .apropos-layout {
+    display:grid;
+    grid-template-columns:5fr 4fr;
+    gap:clamp(40px,6vw,100px);
+    align-items:center;
+  }
+  .apropos-text .lead { margin:20px 0 32px; }
+  .apropos-photo {
+    aspect-ratio:3/4; background:var(--ink3);
+    border:1px solid rgba(242,200,9,.2);
+    border-radius:2px; overflow:hidden;
+    position:relative;
+  }
+  .apropos-photo img {
+    width:100%; height:100%; object-fit:cover;
+    position:absolute; inset:0;
+  }
+  .apropos-photo-ph {
+    position:absolute; inset:0;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:10px;
+  }
+  .apropos-photo-ph span {
+    font-size:10px; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--grey);
+  }
+  .apropos-corner {
+    position:absolute; width:24px; height:24px;
+  }
+  .apropos-corner.tl { top:12px; left:12px; border-top:1px solid rgba(242,200,9,.4); border-left:1px solid rgba(242,200,9,.4); }
+  .apropos-corner.br { bottom:12px; right:12px; border-bottom:1px solid rgba(242,200,9,.4); border-right:1px solid rgba(242,200,9,.4); }
+
+  /* ═══════════════════════════════════════════
+     FAQ
+  ═══════════════════════════════════════════ */
+  #faq {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink2);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .faq-layout {
+    display:grid; grid-template-columns:1fr 2fr;
+    gap:clamp(40px,6vw,100px);
+    align-items:start;
+  }
+  .faq-sticky {
+    position:sticky; top:calc(var(--nav-h) + 32px);
+  }
+  .faq-list { display:flex; flex-direction:column; }
+  .faq-item {
+    border-bottom:1px solid rgba(255,255,255,.05);
+    transition:background .3s;
+  }
+  .faq-item:first-child { border-top:1px solid rgba(255,255,255,.05); }
+  .faq-q {
+    display:flex; align-items:center;
+    justify-content:space-between; gap:18px;
+    padding:22px 0; cursor:pointer;
+    list-style:none; color:var(--grey3);
+    font-size:clamp(14px,1.5vw,16px);
+    font-weight:400; transition:color .3s;
+  }
+  .faq-q::-webkit-details-marker { display:none; }
+  .faq-item[open] .faq-q { color:var(--gold); }
+  .faq-item:hover .faq-q { color:#fff; }
+  .faq-arrow {
+    width:24px; height:24px; border-radius:50%;
+    border:1px solid rgba(242,200,9,.3);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    transition:background .3s, transform .4s var(--ease), border-color .3s;
+  }
+  .faq-arrow svg { width:10px; height:10px; color:var(--gold); }
+  .faq-item[open] .faq-arrow {
+    background:var(--gold); border-color:var(--gold); transform:rotate(180deg);
+  }
+  .faq-item[open] .faq-arrow svg { color:#000; }
+  .faq-a {
+    font-size:15px; color:#b8b8b8;
+    line-height:1.85; font-weight:400;
+    padding-bottom:22px; letter-spacing:.01em;
+  }
+  .faq-a strong { color:#fff; font-weight:500; }
+  .faq-a a { color:var(--gold); text-decoration:underline; }
+
+  /* ═══════════════════════════════════════════
+     CONTACT
+  ═══════════════════════════════════════════ */
+  #contact {
+    padding:clamp(80px,10vw,140px) 0;
+    background:var(--ink);
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .contact-layout {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:2px; margin-bottom:2px;
+  }
+  .contact-left {
+    background:var(--ink3);
+    padding:clamp(36px,5vw,64px);
+  }
+  .contact-right {
+    background:var(--ink4);
+    padding:clamp(36px,5vw,64px);
+  }
+  .contact-left h3, .contact-right h3 {
+    font-family:var(--H);
+    font-size:clamp(22px,3vw,32px);
+    letter-spacing:.05em; margin-bottom:28px;
+  }
+  .c-list { display:flex; flex-direction:column; gap:22px; }
+  .c-item { display:flex; align-items:flex-start; gap:14px; }
+  .c-icon {
+    width:38px; height:38px; border-radius:8px;
+    background:rgba(242,200,9,.08);
+    border:1px solid rgba(242,200,9,.18);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold); flex-shrink:0;
+  }
+  .c-meta { display:flex; flex-direction:column; gap:2px; flex:1; }
+  .c-lbl {
+    font-size:10px; font-weight:700;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--grey);
+  }
+  .c-val { font-size:15px; color:#fff; word-break:break-word; }
+  .c-val a:hover { color:var(--gold); }
+  .c-sub { font-size:12px; color:var(--grey); line-height:1.5; }
+  .c-legal {
+    margin-top:28px; padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.05);
+    font-size:11px; color:var(--grey); line-height:1.8;
+  }
+  .map-wrap {
+    aspect-ratio:21/8; overflow:hidden;
+    border-top:1px solid rgba(242,200,9,.12);
+  }
+  .map-wrap iframe { width:100%; height:100%; border:0; display:block; }
+
+  /* ═══════════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════════ */
+  footer {
+    background:var(--ink2);
+    padding:clamp(56px,7vw,96px) 0 clamp(24px,3vw,36px);
+    border-top:1px solid rgba(242,200,9,.15);
+  }
+  .footer-grid {
+    display:grid; grid-template-columns:2fr 1fr 1fr;
+    gap:clamp(28px,5vw,64px);
+    margin-bottom:clamp(36px,5vw,52px);
+  }
+  .footer-logo {
+    font-family:var(--H); font-size:24px;
+    letter-spacing:.12em; margin-bottom:16px;
+  }
+  .footer-logo span { color:var(--gold); }
+  .footer-tagline {
+    font-size:13px; color:var(--grey);
+    line-height:1.75; max-width:300px;
+    margin-bottom:24px; font-weight:300;
+  }
+  .footer-socials { display:flex; gap:8px; }
+  .footer-soc {
+    width:36px; height:36px; border-radius:50%;
+    border:1px solid rgba(242,200,9,.22);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold); transition:all .3s;
+  }
+  .footer-soc:hover { background:var(--gold); color:#000; transform:translateY(-2px); }
+  .footer-col h4 {
+    font-size:10px; font-weight:700;
+    letter-spacing:.28em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:18px;
+  }
+  .footer-links { display:flex; flex-direction:column; gap:10px; }
+  .footer-links a {
+    font-size:13px; color:var(--grey2);
+    transition:color .3s, padding-left .3s;
+  }
+  .footer-links a:hover { color:var(--gold); padding-left:5px; }
+  .footer-bottom {
+    display:flex; align-items:center;
+    justify-content:space-between; flex-wrap:wrap;
+    gap:14px; padding-top:24px;
+    border-top:1px solid rgba(255,255,255,.05);
+    font-size:11px; color:var(--grey);
+    letter-spacing:.04em;
+  }
+  .footer-bottom-links { display:flex; gap:18px; flex-wrap:wrap; }
+  .footer-bottom-links a:hover { color:var(--gold); }
+
+  /* Mobile sticky CTA */
+  #stickyCta {
+    display:none; position:fixed; bottom:0; left:0; right:0;
+    z-index:900; padding:11px 16px calc(11px + env(safe-area-inset-bottom));
+    background:rgba(5,5,5,.97); backdrop-filter:blur(14px);
+    border-top:1px solid rgba(242,200,9,.2);
+    box-shadow:0 -8px 24px rgba(0,0,0,.6);
+  }
+  #stickyCta .btn { width:100%; justify-content:center; }
+
+  /* ═══════════════════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════════════════ */
+  @media (max-width:1024px) {
+    .hero-split { grid-template-columns:1fr; }
+    .hero-right { display:none; }
+    .hero-left { min-height:100svh; }
+    .nav-left, .nav-right, .nav-cta-wrap { display:none; }
+    .hamburger { display:flex; }
+    .nav-inner { grid-template-columns:auto 1fr auto; }
+    .nav-logo { text-align:left; }
+    .services-header { grid-template-columns:1fr; }
+    .services-header-right { justify-content:flex-start; }
+    .tarifs-layout { grid-template-columns:1fr; }
+    .tarifs-sticky { position:static; margin-bottom:32px; }
+    .avis-featured { grid-template-columns:1fr; }
+    .ig-grid { grid-template-columns:repeat(3,1fr); }
+    .footer-grid { grid-template-columns:1fr 1fr; }
+    .footer-brand { grid-column:1/-1; }
+    .apropos-layout { grid-template-columns:1fr; }
+    .manifeste-inner { grid-template-columns:1fr; }
+    .manifeste-label { writing-mode:horizontal-tb; transform:none; margin-bottom:16px; }
+  }
+  @media (max-width:768px) {
+    .strip { grid-template-columns:1fr; min-height:auto; }
+    .strip .ba { aspect-ratio:4/3; }
+    .strip:nth-child(even) .strip-info { order:-1; }
+    .reserver-layout { grid-template-columns:1fr; }
+    .faq-layout { grid-template-columns:1fr; }
+    .faq-sticky { position:static; margin-bottom:32px; }
+    .contact-layout { grid-template-columns:1fr; }
+    .stat-item + .stat-item { border-left:none; border-top:1px solid rgba(0,0,0,.1); }
+    .stats-grid { grid-template-columns:1fr; }
+    #stickyCta { display:block; }
+    body { padding-bottom:90px; }
+  }
+  @media (max-width:640px) {
+    :root { --nav-h:62px; }
+    .display-xl { font-size:clamp(58px,15vw,90px); }
+    .ig-grid { grid-template-columns:repeat(2,1fr); }
+    .footer-grid { grid-template-columns:1fr; }
+    .footer-bottom { flex-direction:column; align-items:flex-start; }
+    .form-grid { grid-template-columns:1fr; }
+    .fg-full { grid-column:1; }
+    .social-platforms { flex-direction:column; }
+  }
+
+  /* Offset ancres pour nav fixe */
+  section[id] { scroll-margin-top:var(--nav-h); }
+
+  /* Nav scroll — CSS scroll-driven */
+  @supports (animation-timeline: scroll()) {
+    #nav {
+      animation:navScroll linear both;
+      animation-timeline:scroll();
+      animation-range:0px 90px;
+    }
+    @keyframes navScroll {
+      from { background:transparent; box-shadow:none; backdrop-filter:none; }
+      to   { background:rgba(5,5,5,.96); box-shadow:0 1px 0 rgba(242,200,9,.15),0 4px 32px rgba(0,0,0,.7); backdrop-filter:blur(16px); }
+    }
+  }
+
+  /* ═══════════════════════════════════════════
+     CLASSES COMPLÉMENTAIRES (nouvelles sections)
+  ═══════════════════════════════════════════ */
+
+  /* Utilitaires globaux */
+  .section-header { margin-bottom:clamp(48px,7vw,80px); }
+  .section-tag {
+    display:inline-block;
+    font-size:10px; font-weight:700;
+    letter-spacing:.32em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:16px;
+  }
+  .section-title {
+    font-family:var(--H);
+    font-size:clamp(32px,5vw,64px);
+    letter-spacing:.03em; line-height:1;
+    color:#fff; margin:0;
+  }
+  .section-title em { font-style:normal; color:var(--gold); }
+  .btn-ghost {
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 36px;
+    border:1px solid rgba(242,200,9,.45); border-radius:2px;
+    font-size:11px; font-weight:700; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--gold);
+    transition:background .3s, color .3s, border-color .3s;
+  }
+  .btn-ghost:hover { background:rgba(242,200,9,.08); }
+
+  /* Nav overlay links */
+  .nav-overlay-close {
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    z-index:-1; cursor:default;
+  }
+  .nav-overlay-links {
+    display:flex; flex-direction:column; align-items:center;
+    justify-content:center; gap:clamp(16px,3vh,32px);
+    height:100%;
+  }
+  .nav-overlay-links a {
+    font-family:var(--H); font-size:clamp(28px,6vw,52px);
+    letter-spacing:.06em; color:#fff;
+    transition:color .25s;
+  }
+  .nav-overlay-links a:hover { color:var(--gold); }
+
+  /* Hero extras */
+  .hero-eyebrow {
+    font-size:10px; font-weight:700;
+    letter-spacing:.36em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:20px;
+  }
+  .hero-sub {
+    font-size:clamp(15px,1.4vw,17px); color:#b8b8b8;
+    line-height:1.85; font-weight:400;
+    max-width:460px; margin:20px 0 40px;
+    letter-spacing:.01em;
+  }
+  .hero-stat-div {
+    width:1px; height:60px;
+    background:rgba(255,255,255,.1);
+    flex-shrink:0;
+  }
+  .hero-stat-plus { font-size:.6em; vertical-align:super; }
+  .hero-scroll-line {
+    width:1px; height:40px;
+    background:linear-gradient(to bottom, var(--gold), transparent);
+    animation:scrollPulse 2.5s ease-in-out infinite;
+  }
+  .hero-scroll-text {
+    font-size:9px; font-weight:700; letter-spacing:.32em;
+    text-transform:uppercase; color:var(--grey);
+    writing-mode:vertical-lr;
+  }
+
+  /* Stats band separator */
+  .stat-sep {
+    width:1px; background:rgba(0,0,0,.15);
+    align-self:stretch;
+  }
+
+  /* Manifeste extras */
+  .manifeste-tag {
+    font-size:10px; font-weight:700;
+    letter-spacing:.32em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:20px;
+    display:block;
+  }
+  .manifeste-title {
+    font-family:var(--H);
+    font-size:clamp(36px,5vw,72px);
+    line-height:.96; letter-spacing:.02em;
+    color:var(--grey3); margin-bottom:24px;
+  }
+  .manifeste-title em { font-style:normal; color:var(--gold); }
+  .manifeste-text {
+    font-size:16px; color:#b8b8b8;
+    line-height:1.85; font-weight:400;
+    max-width:540px; margin-bottom:32px;
+    letter-spacing:.01em;
+  }
+  .manifeste-pills { display:flex; flex-wrap:wrap; gap:10px; }
+  .pill {
+    padding:8px 18px;
+    border:1px solid rgba(242,200,9,.28); border-radius:2px;
+    font-size:11px; font-weight:700;
+    letter-spacing:.16em; text-transform:uppercase;
+    color:rgba(242,200,9,.7);
+  }
+
+  /* Services extras */
+  .svc-info { display:flex; flex-direction:column; gap:4px; }
+  .svc-tagline {
+    font-size:11px; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase;
+    color:var(--grey); margin-top:4px;
+  }
+  .svc-arrow {
+    font-size:20px; color:var(--grey);
+    transition:transform .35s var(--ease), color .3s;
+    flex-shrink:0;
+  }
+  details[open] .svc-arrow { transform:rotate(180deg); color:var(--gold); }
+  .svc-feats {
+    display:flex; flex-wrap:wrap; gap:8px 12px;
+    list-style:none; padding:0; margin-top:16px;
+  }
+  .svc-feats li {
+    font-size:11px; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:var(--grey);
+    padding:6px 14px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:2px;
+  }
+
+  /* Portfolio strips (new naming) */
+  .port-strip {
+    display:grid; grid-template-columns:1fr 1fr;
+    min-height:520px;
+  }
+  .port-strip--alt { direction:rtl; }
+  .port-strip--alt > * { direction:ltr; }
+  .port-visual { position:relative; overflow:hidden; }
+  .port-visual .ba { height:100%; min-height:420px; }
+  .port-info {
+    display:flex; flex-direction:column; justify-content:center;
+    padding:clamp(40px,6vw,80px) clamp(32px,5vw,72px);
+    background:var(--ink3);
+  }
+  .port-num {
+    font-family:var(--H);
+    font-size:clamp(80px,10vw,130px);
+    color:rgba(242,200,9,.07);
+    line-height:.85; margin-bottom:-16px;
+    display:block;
+  }
+  .port-title {
+    font-family:var(--H);
+    font-size:clamp(28px,4vw,52px);
+    letter-spacing:.04em; color:#fff;
+    margin-bottom:10px; line-height:1;
+  }
+  .port-tag {
+    font-size:11px; font-weight:700;
+    letter-spacing:.28em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:20px;
+    display:block;
+  }
+  .port-desc {
+    font-size:15px; color:#b8b8b8;
+    line-height:1.85; font-weight:400;
+    max-width:360px; letter-spacing:.01em;
+  }
+
+  /* BA labels (renamed) */
+  .ba-label {
+    position:absolute; bottom:18px;
+    font-size:10px; font-weight:700;
+    letter-spacing:.28em; text-transform:uppercase;
+    background:rgba(0,0,0,.55); padding:5px 12px;
+    border-radius:2px; z-index:2; pointer-events:none;
+    color:var(--grey2);
+  }
+  .ba-label-b { left:18px; }
+  .ba-label-a { right:18px; color:var(--gold); }
+
+  /* BA before img direct child */
+  .ba-before { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+  /* Tarifs new structure */
+  .tarifs-note {
+    font-size:13px; color:var(--grey);
+    font-style:italic; margin-bottom:clamp(32px,4vw,48px);
+    padding-left:16px;
+    border-left:2px solid rgba(242,200,9,.25);
+  }
+  .tarif-cat {
+    background:var(--ink3);
+    border-left:2px solid transparent;
+    margin-bottom:3px;
+    transition:border-color .3s;
+  }
+  .tarif-cat[open] { border-left-color:var(--gold); }
+  .tarif-cat-sum {
+    display:flex; align-items:center;
+    gap:16px; padding:22px 28px;
+    cursor:pointer; list-style:none;
+  }
+  .tarif-cat-sum::-webkit-details-marker { display:none; }
+  .tarif-cat-icon { color:var(--gold); font-size:14px; flex-shrink:0; }
+  .tarif-cat-name {
+    font-family:var(--H); font-size:clamp(18px,2.2vw,26px);
+    letter-spacing:.05em; color:var(--grey3); flex:1;
+    transition:color .3s;
+  }
+  .tarif-cat[open] .tarif-cat-name { color:var(--gold); }
+  .tarif-cat-arrow {
+    font-size:18px; color:var(--grey);
+    transition:transform .35s var(--ease);
+    flex-shrink:0;
+  }
+  .tarif-cat[open] .tarif-cat-arrow { transform:rotate(180deg); color:var(--gold); }
+  .tarif-cat-body { padding:0 28px 28px; }
+
+  /* Tab buttons inside tarif */
+  .tarif-tab-btns {
+    display:flex; margin-bottom:24px;
+    border:1px solid rgba(242,200,9,.2); border-radius:2px; overflow:hidden;
+  }
+  .tarif-tab-btn {
+    flex:1; padding:10px 14px; text-align:center;
+    font-size:11px; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase;
+    color:var(--grey); cursor:pointer;
+    transition:background .2s, color .2s;
+  }
+  .tarif-tab-btn:hover { background:rgba(242,200,9,.1); color:#fff; }
+
+  /* CSS radio-driven tab panels for tarifs */
+  /* Lavage Intérieur */
+  #t-int-cit:checked ~ .tarif-cat-body label[for="t-int-cit"],
+  #t-int-ber:checked ~ .tarif-cat-body label[for="t-int-ber"],
+  #t-int-suv:checked ~ .tarif-cat-body label[for="t-int-suv"],
+  #t-ext-cit:checked ~ .tarif-cat-body label[for="t-ext-cit"],
+  #t-ext-ber:checked ~ .tarif-cat-body label[for="t-ext-ber"],
+  #t-ext-suv:checked ~ .tarif-cat-body label[for="t-ext-suv"],
+  #t-comp-cit:checked ~ .tarif-cat-body label[for="t-comp-cit"],
+  #t-comp-ber:checked ~ .tarif-cat-body label[for="t-comp-ber"],
+  #t-comp-suv:checked ~ .tarif-cat-body label[for="t-comp-suv"] {
+    background:var(--gold); color:#000;
+  }
+  .tarif-tab-panels { position:relative; }
+  .tarif-panel { display:none; }
+  .tarif-panel-cit { display:none; }
+  .tarif-panel-ber { display:none; }
+  .tarif-panel-suv { display:none; }
+  #t-int-cit:checked ~ .tarif-cat-body .tarif-panel-cit,
+  #t-ext-cit:checked ~ .tarif-cat-body .tarif-panel-cit,
+  #t-comp-cit:checked ~ .tarif-cat-body .tarif-panel-cit { display:block; }
+  #t-int-ber:checked ~ .tarif-cat-body .tarif-panel-ber,
+  #t-ext-ber:checked ~ .tarif-cat-body .tarif-panel-ber,
+  #t-comp-ber:checked ~ .tarif-cat-body .tarif-panel-ber { display:block; }
+  #t-int-suv:checked ~ .tarif-cat-body .tarif-panel-suv,
+  #t-ext-suv:checked ~ .tarif-cat-body .tarif-panel-suv,
+  #t-comp-suv:checked ~ .tarif-cat-body .tarif-panel-suv { display:block; }
+
+  .tarif-price-block {
+    display:flex; align-items:baseline; gap:16px;
+    margin-bottom:20px;
+  }
+  .tarif-price {
+    font-family:var(--H); font-size:clamp(52px,7vw,80px);
+    color:var(--gold); letter-spacing:.02em; line-height:1;
+  }
+  .tarif-price sup { font-size:.45em; vertical-align:super; }
+  .tarif-duration {
+    font-size:13px; color:var(--grey);
+    font-weight:600; letter-spacing:.1em;
+  }
+  .tarif-includes {
+    list-style:none; padding:0; margin:0;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .tarif-includes li {
+    font-size:13.5px; color:var(--grey2);
+    padding:10px 16px;
+    background:rgba(255,255,255,.04);
+    border-left:2px solid rgba(242,200,9,.2);
+  }
+  .tarifs-cta-row {
+    text-align:center; margin-top:clamp(36px,5vw,56px);
+  }
+
+  /* Avis new structure */
+  .avis-big {
+    background:rgba(0,0,0,.4);
+    border-top:1px solid rgba(242,200,9,.1);
+    border-bottom:1px solid rgba(242,200,9,.1);
+    padding:clamp(60px,8vw,100px) 0;
+    margin:clamp(48px,6vw,80px) 0;
+    overflow:hidden;
+  }
+  .avis-big-inner { max-width:800px; }
+  .avis-big-cite {
+    display:block; font-size:13px; color:var(--gold);
+    font-weight:600; letter-spacing:.1em; margin-top:16px;
+    font-style:normal;
+  }
+  .avis-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:3px;
+  }
+  .avis-card {
+    background:var(--ink3);
+    padding:28px 28px 24px;
+    border-left:2px solid transparent;
+    transition:border-color .3s, background .3s;
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .avis-card:hover { border-left-color:var(--gold); background:var(--ink4); }
+  .avis-card--cta {
+    background:rgba(242,200,9,.06);
+    border:1px solid rgba(242,200,9,.22);
+    align-items:center; justify-content:center;
+    text-align:center; gap:20px;
+  }
+  .avis-text {
+    font-size:14.5px; color:#b8b8b8;
+    line-height:1.8; font-weight:400; flex:1;
+    letter-spacing:.01em;
+  }
+  .avis-author { display:flex; flex-direction:column; gap:2px; }
+  .avis-name { font-size:13px; font-weight:600; color:#fff; letter-spacing:.04em; }
+  .avis-ville {
+    font-size:10px; text-transform:uppercase;
+    letter-spacing:.2em; color:var(--gold);
+  }
+  .avis-cta-title {
+    font-family:var(--H);
+    font-size:clamp(18px,2.5vw,26px);
+    letter-spacing:.04em; color:#fff; line-height:1.2;
+  }
+
+  /* À propos new structure */
+  .apropos-inner {
+    display:grid; grid-template-columns:5fr 4fr;
+    gap:clamp(40px,6vw,80px); align-items:center;
+  }
+  .apropos-img-wrap {
+    position:relative;
+    aspect-ratio:3/4; border-radius:2px; overflow:hidden;
+    border:1px solid rgba(242,200,9,.2);
+  }
+  .apropos-img { width:100%; height:100%; object-fit:cover; display:block; }
+  .apropos-img-placeholder {
+    position:absolute; inset:0;
+    background:var(--ink3);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--H); font-size:clamp(48px,8vw,96px);
+    color:rgba(242,200,9,.15);
+  }
+  .apropos-badge {
+    position:absolute; bottom:24px; right:-16px;
+    background:var(--gold);
+    padding:12px 20px; border-radius:2px;
+    text-align:center; box-shadow:0 8px 32px rgba(0,0,0,.5);
+  }
+  .apropos-badge-n {
+    display:block; font-family:var(--H);
+    font-size:clamp(28px,4vw,42px); color:#000;
+    line-height:1;
+  }
+  .apropos-badge-n sup { font-size:.5em; vertical-align:super; }
+  .apropos-badge-l {
+    font-size:10px; font-weight:700;
+    letter-spacing:.16em; text-transform:uppercase;
+    color:rgba(0,0,0,.65);
+  }
+  .apropos-content { display:flex; flex-direction:column; }
+  .apropos-vals { display:flex; flex-direction:column; gap:16px; margin-top:24px; }
+  .apropos-val {
+    display:flex; align-items:flex-start; gap:14px;
+    padding:14px 16px; background:rgba(255,255,255,.03);
+    border-left:2px solid rgba(242,200,9,.25);
+  }
+  .apropos-val-icon { color:var(--gold); font-size:16px; flex-shrink:0; margin-top:2px; }
+  .apropos-val div { display:flex; flex-direction:column; gap:2px; }
+  .apropos-val strong { font-size:13.5px; color:#fff; }
+  .apropos-val span { font-size:13px; color:#9a9a9a; font-weight:400; }
+
+  /* Social / Instagram new names */
+  .social-handle {
+    font-family:var(--H); font-size:clamp(16px,2vw,22px);
+    letter-spacing:.08em; color:var(--gold);
+    transition:opacity .3s;
+  }
+  .social-handle:hover { opacity:.75; }
+  .insta-grid {
+    display:grid; grid-template-columns:repeat(6,1fr);
+    gap:4px;
+  }
+  .insta-cell {
+    aspect-ratio:1; position:relative; overflow:hidden;
+    background:var(--ink3); border-radius:2px;
+    display:block;
+  }
+  .insta-cell img {
+    position:absolute; inset:0;
+    width:100%; height:100%; object-fit:cover;
+    transition:transform .4s var(--ease);
+  }
+  .insta-cell:hover img { transform:scale(1.06); }
+  .insta-overlay {
+    position:absolute; inset:0;
+    background:rgba(242,200,9,.88);
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transition:opacity .3s;
+  }
+  .insta-cell:hover .insta-overlay { opacity:1; }
+
+  /* FAQ inner new layout */
+  .faq-inner {
+    display:grid; grid-template-columns:1fr 2fr;
+    gap:clamp(40px,6vw,100px); align-items:start;
+  }
+  .faq-label {
+    position:sticky; top:calc(var(--nav-h) + 32px);
+    font-family:var(--H); font-size:clamp(48px,8vw,100px);
+    letter-spacing:.1em; color:rgba(242,200,9,.08);
+    line-height:1; writing-mode:vertical-lr;
+    transform:rotate(180deg);
+    user-select:none;
+  }
+  .faq-list { display:flex; flex-direction:column; }
+
+  /* Contact new structure */
+  .contact-inner {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:clamp(40px,6vw,80px); align-items:start;
+  }
+  .contact-form-wrap { display:flex; flex-direction:column; }
+  .contact-form { display:flex; flex-direction:column; gap:16px; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .form-field { display:flex; flex-direction:column; gap:7px; }
+  .form-field label {
+    font-size:10px; font-weight:700;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--grey);
+  }
+  .form-field input, .form-field select, .form-field textarea {
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:2px; padding:13px 16px;
+    color:#fff; font-family:var(--B); font-size:14px;
+    transition:border-color .3s, background .3s;
+    -webkit-appearance:none; appearance:none; width:100%;
+  }
+  .form-field input::placeholder, .form-field textarea::placeholder { color:rgba(255,255,255,.18); }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+    outline:none; border-color:var(--gold); background:rgba(242,200,9,.04);
+  }
+  .form-field select {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 14px center;
+    background-color:rgba(255,255,255,.04); padding-right:40px; cursor:pointer;
+  }
+  .form-field select option { background:#1a1a1a; color:#fff; }
+  .form-field textarea { resize:vertical; min-height:110px; }
+  .btn-full { width:100%; justify-content:center; display:flex; }
+  .contact-info-wrap { display:flex; flex-direction:column; gap:28px; }
+  .contact-infos { display:flex; flex-direction:column; gap:16px; }
+  .contact-info-item {
+    display:flex; align-items:flex-start; gap:14px;
+    padding:14px 16px; background:rgba(255,255,255,.03);
+    border-left:2px solid rgba(242,200,9,.2);
+  }
+  .contact-info-icon { font-size:20px; flex-shrink:0; }
+  .contact-info-item div { display:flex; flex-direction:column; gap:3px; }
+  .contact-info-item strong { font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--grey); }
+  .contact-info-item a, .contact-info-item span { font-size:14px; color:#fff; }
+  .contact-info-item a:hover { color:var(--gold); }
+  .contact-map { border-radius:4px; overflow:hidden; }
+
+  /* Footer new structure */
+  .footer-inner {
+    display:grid; grid-template-columns:2fr 1fr auto;
+    gap:clamp(24px,4vw,64px); align-items:start;
+    margin-bottom:clamp(36px,5vw,52px);
+  }
+  .footer-brand {}
+  .footer-logo { max-height:48px; margin-bottom:16px; display:block; }
+  .footer-logo-txt {
+    font-family:var(--H); font-size:24px;
+    letter-spacing:.12em; color:var(--gold);
+    margin-bottom:16px; display:block;
+  }
+  .footer-nav {
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .footer-nav a {
+    font-size:13px; color:var(--grey2);
+    transition:color .3s, padding-left .3s;
+  }
+  .footer-nav a:hover { color:var(--gold); padding-left:5px; }
+  .footer-social { display:flex; gap:10px; align-items:center; }
+  .footer-social a {
+    width:38px; height:38px; border-radius:50%;
+    border:1px solid rgba(242,200,9,.22);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold); transition:all .3s;
+  }
+  .footer-social a:hover { background:var(--gold); color:#000; transform:translateY(-2px); }
+  .footer-credit { color:rgba(255,255,255,.3); font-size:12px; letter-spacing:.04em; transition:color .2s; }
+  .footer-credit:hover { color:var(--gold); text-decoration:none; }
+
+  /* Sticky CTA — anchor tag */
+  .sticky-cta {
+    display:none;
+    position:fixed; bottom:0; left:0; right:0;
+    z-index:900; padding:14px 16px calc(14px + env(safe-area-inset-bottom));
+    background:var(--gold); color:#000;
+    font-size:11px; font-weight:700; letter-spacing:.22em;
+    text-transform:uppercase; text-align:center;
+    box-shadow:0 -4px 24px rgba(242,200,9,.35);
+    transition:background .2s;
+  }
+  .sticky-cta:hover { background:var(--gold2); }
+
+  /* Responsive extras */
+  @media (max-width:1024px) {
+    .port-strip { grid-template-columns:1fr; min-height:auto; }
+    .port-visual .ba { aspect-ratio:4/3; min-height:auto; }
+    .port-strip--alt .port-info { order:-1; }
+    .faq-inner { grid-template-columns:1fr; }
+    .faq-label { writing-mode:horizontal-tb; transform:none; font-size:clamp(36px,8vw,64px); }
+    .contact-inner { grid-template-columns:1fr; }
+    .apropos-inner { grid-template-columns:1fr; }
+    .footer-inner { grid-template-columns:1fr 1fr; }
+    .footer-brand { grid-column:1/-1; }
+    .insta-grid { grid-template-columns:repeat(3,1fr); }
+    .tarifs-note { margin-bottom:24px; }
+  }
+  @media (max-width:768px) {
+    .sticky-cta { display:block; }
+    body { padding-bottom:90px; }
+    .form-row { grid-template-columns:1fr; }
+    .avis-grid { grid-template-columns:1fr; }
+    .footer-inner { grid-template-columns:1fr; }
+    .apropos-badge { right:8px; }
+  }
+  @media (max-width:640px) {
+    .insta-grid { grid-template-columns:repeat(2,1fr); }
+    .manifeste-pills { gap:8px; }
+  }
+
+  /* ═══════════════════════════════════════════
+     TARIFS — 2D TABS (véhicule × service)
+  ═══════════════════════════════════════════ */
+
+  /* Les 6 radios sont cachés globalement */
+  #tv-cit,#tv-ber,#tv-suv,
+  #ts-int,#ts-ext,#ts-pak { display:none; }
+
+  /* Rangées de pills */
+  .tt-row {
+    display:flex; justify-content:center;
+    gap:10px; flex-wrap:wrap;
+    margin-bottom:12px;
+  }
+  .tt-row:last-of-type { margin-bottom:clamp(36px,5vw,56px); }
+
+  /* Pill générique */
+  .tt-pill {
+    padding:10px 24px; border-radius:50px;
+    border:1px solid rgba(255,255,255,.15);
+    font-size:11px; font-weight:700;
+    letter-spacing:.2em; text-transform:uppercase;
+    color:#888; cursor:pointer;
+    transition:background .2s, color .2s, border-color .2s;
+    user-select:none;
+  }
+  .tt-pill:hover { border-color:var(--gold); color:var(--gold); }
+
+  /* Pill active — véhicule */
+  #tv-cit:checked ~ section#tarifs label[for="tv-cit"],
+  #tv-ber:checked ~ section#tarifs label[for="tv-ber"],
+  #tv-suv:checked ~ section#tarifs label[for="tv-suv"] {
+    background:var(--gold); color:#000; border-color:var(--gold);
+  }
+  /* Pill active — service */
+  #ts-int:checked ~ section#tarifs label[for="ts-int"],
+  #ts-ext:checked ~ section#tarifs label[for="ts-ext"],
+  #ts-pak:checked ~ section#tarifs label[for="ts-pak"] {
+    background:var(--gold); color:#000; border-color:var(--gold);
+  }
+
+  /* Container panels */
+  .tt-panels { position:relative; }
+
+  /* Tous les panels cachés par défaut */
+  .tt-panel {
+    display:none;
+    grid-template-columns:repeat(2,1fr); max-width:720px; margin-left:auto; margin-right:auto;
+    gap:3px;
+  }
+
+  /* Affichage des 9 combinaisons */
+  #tv-cit:checked ~ section#tarifs .p-cit-int,
+  #tv-ber:checked ~ section#tarifs .p-ber-int,
+  #tv-suv:checked ~ section#tarifs .p-suv-int { /* hidden unless service also matches */ }
+
+  #tv-cit:checked ~ #ts-int:checked ~ section#tarifs .p-cit-int { display:grid; }
+  #tv-cit:checked ~ #ts-ext:checked ~ section#tarifs .p-cit-ext { display:grid; }
+  #tv-cit:checked ~ #ts-pak:checked ~ section#tarifs .p-cit-pak { display:grid; }
+  #tv-ber:checked ~ #ts-int:checked ~ section#tarifs .p-ber-int { display:grid; }
+  #tv-ber:checked ~ #ts-ext:checked ~ section#tarifs .p-ber-ext { display:grid; }
+  #tv-ber:checked ~ #ts-pak:checked ~ section#tarifs .p-ber-pak { display:grid; }
+  #tv-suv:checked ~ #ts-int:checked ~ section#tarifs .p-suv-int { display:grid; }
+  #tv-suv:checked ~ #ts-ext:checked ~ section#tarifs .p-suv-ext { display:grid; }
+  #tv-suv:checked ~ #ts-pak:checked ~ section#tarifs .p-suv-pak { display:grid; }
+
+  /* Carte */
+  .tt-card {
+    background:var(--ink3);
+    border:1px solid rgba(255,255,255,.06);
+    padding:clamp(28px,4vw,44px) clamp(24px,3vw,36px);
+    display:flex; flex-direction:column; gap:0;
+    position:relative;
+    transition:border-color .3s;
+  }
+  .tt-card:hover { border-color:rgba(242,200,9,.3); }
+
+  /* Carte populaire */
+  .tt-card--pop {
+    border-color:var(--gold);
+    background:rgba(242,200,9,.04);
+  }
+  .tt-card--pop:hover { border-color:var(--gold); }
+
+  .tt-pop-badge {
+    display:inline-block; margin-bottom:14px;
+    padding:4px 12px; border-radius:4px;
+    background:var(--gold); color:#000;
+    font-size:10px; font-weight:700;
+    letter-spacing:.18em; text-transform:uppercase;
+    width:fit-content;
+  }
+
+  .tt-card-name {
+    font-family:var(--H);
+    font-size:clamp(16px,2vw,22px);
+    letter-spacing:.06em; color:#fff;
+    margin-bottom:16px; line-height:1.1;
+    text-transform:uppercase;
+  }
+
+  .tt-price {
+    font-family:var(--H);
+    font-size:clamp(56px,7vw,80px);
+    color:var(--gold); line-height:1;
+    letter-spacing:.02em;
+    margin-bottom:24px;
+  }
+  .tt-price sup {
+    font-size:.42em; vertical-align:super;
+    color:var(--gold);
+  }
+
+  .tt-feats {
+    list-style:none; padding:0; margin:0 0 32px;
+    display:flex; flex-direction:column; gap:10px;
+    flex:1;
+  }
+  .tt-feats li {
+    font-size:13.5px; color:#999;
+    padding-left:18px; position:relative;
+    line-height:1.4;
+  }
+  .tt-feats li::before {
+    content:'✓'; position:absolute; left:0;
+    color:var(--gold); font-size:12px; font-weight:700;
+  }
+
+  /* Bouton carte */
+  .tt-btn {
+    display:block; width:100%; padding:14px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.2); border-radius:3px;
+    font-size:11px; font-weight:700;
+    letter-spacing:.22em; text-transform:uppercase;
+    color:#fff; margin-top:auto;
+    transition:background .2s, border-color .2s, color .2s;
+  }
+  .tt-btn:hover {
+    background:rgba(255,255,255,.06);
+    border-color:rgba(255,255,255,.4);
+  }
+  .tt-btn--gold {
+    background:var(--gold); color:#000; border-color:var(--gold);
+  }
+  .tt-btn--gold:hover { background:var(--gold2); border-color:var(--gold2); }
+
+  /* Note bas de section */
+  .tt-note {
+    text-align:center; margin-top:clamp(24px,3vw,36px);
+    font-size:13px; color:#555;
+    padding:14px 24px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:3px;
+    background:rgba(255,255,255,.02);
+  }
+
+  /* Responsive tarifs */
+  @media (max-width:768px) {
+    .tt-panel { grid-template-columns:1fr; }
+    .tt-card--pop { order:-1; }
+  }
+  @media (max-width:480px) {
+    .tt-pill { padding:9px 16px; font-size:10px; letter-spacing:.14em; }
+  }
+
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HAMBURGER TOGGLE (CSS-only)
+══════════════════════════════════════════════════════════════ -->
+<input type="checkbox" id="menu-open" hidden>
+
+<!-- Mobile overlay nav -->
+<div class="nav-overlay">
+  <label class="nav-overlay-close" for="menu-open" aria-label="Fermer"></label>
+  <nav class="nav-overlay-links">
+    <label for="menu-open"><a href="#services">Services</a></label>
+    <label for="menu-open"><a href="#portfolio">Portfolio</a></label>
+    <label for="menu-open"><a href="#tarifs">Tarifs</a></label>
+    <label for="menu-open"><a href="#avis">Avis</a></label>
+    <label for="menu-open"><a href="#apropos">À propos</a></label>
+    <label for="menu-open"><a href="#contact">Contact</a></label>
+  </nav>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAV — logo centré, liens gauche / droite
+══════════════════════════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner container">
+
+    <!-- Liens gauche -->
+    <div class="nav-left">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#tarifs">Tarifs</a>
+    </div>
+
+    <!-- Logo centré -->
+    <a href="#hero" class="nav-logo" aria-label="GT Detailing">
+      <img src="logo.png" alt="GT Detailing" id="nav-logo-img">
+      <span id="nav-logo-txt" style="display:none;font-family:var(--H);font-size:1.1rem;letter-spacing:.15em;color:var(--gold)">GT DETAILING</span>
+    </a>
+
+    <!-- Liens droite -->
+    <div class="nav-right">
+      <a href="#avis">Avis</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hamburger -->
+    <label class="hamburger" for="menu-open" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO — split diagonal 58 / 42
+══════════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-split">
+
+    <!-- Panneau gauche — texte -->
+    <div class="hero-left">
+      <div class="hero-bg-img" aria-hidden="true"></div>
+      <p class="hero-eyebrow">Cannes · Monaco · Nice · Menton</p>
+      <h1 class="hero-title">L'art du<br><em>detail</em><br>dans le detail.</h1>
+      <p class="hero-sub">Detailing haut de gamme pour véhicules d'exception.<br>Chaque prestation, une obsession du résultat.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-gold">Réserver</a>
+        <a href="#portfolio" class="btn-ghost">Voir le portfolio</a>
+      </div>
+    </div>
+
+    <!-- Panneau droit — stats -->
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-n">+100</span>
+          <span class="hero-stat-l">Véhicules traités</span>
+        </div>
+        <div class="hero-stat-div"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">5<span class="hero-stat-plus">★</span></span>
+          <span class="hero-stat-l">Note Google</span>
+        </div>
+        <div class="hero-stat-div"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">100<span class="hero-stat-plus">%</span></span>
+          <span class="hero-stat-l">Satisfaction client</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll">
+    <span class="hero-scroll-line"></span>
+    <span class="hero-scroll-text">Découvrir</span>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     STATS BAND — or sur noir
+══════════════════════════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <span class="stat-n">+100</span>
+      <span class="stat-l">Véhicules traités</span>
+    </div>
+    <div class="stat-sep"></div>
+    <a class="stat-item" href="https://share.google/7ClUWTkRPTxp1n9uy" target="_blank" rel="noopener noreferrer" style="text-decoration:none;cursor:pointer">
+      <span class="stat-n" style="transition:color .2s">5<sup>★</sup></span>
+      <span class="stat-l">Note Google</span>
+    </a>
+
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <span class="stat-n">100<sup>%</sup></span>
+      <span class="stat-l">Satisfaction client</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MANIFESTE
+══════════════════════════════════════════════════════════════ -->
+<section id="manifeste">
+  <div class="container manifeste-inner">
+    <div class="manifeste-tag">Notre philosophie</div>
+    <h2 class="manifeste-title">Nous ne nettoyons pas.<br>Nous <em>révélons</em>.</h2>
+    <p class="manifeste-text">
+      GT Detailing est né d'une conviction : chaque véhicule mérite d'être traité comme une œuvre d'art. Notre équipe applique les meilleurs produits du marché pour restituer ou sublimer l'éclat d'origine de votre véhicule.
+    </p>
+    <div class="manifeste-pills">
+      <span class="pill">Produits haut de gamme</span>
+      <span class="pill">Techniciens minutieux</span>
+      <span class="pill">Résultats garantis</span>
+      <span class="pill">Déplacement inclus*</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES — accordion numéroté
+══════════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Ce que nous faisons</span>
+      <h2 class="section-title">Nos Services</h2>
+    </div>
+
+    <div class="svc-list">
+
+      <details class="svc-item" open>
+        <summary class="svc-summary">
+          <span class="svc-num">01</span>
+          <div class="svc-info">
+            <span class="svc-name">Lavage Intérieur</span>
+            <span class="svc-tagline">Aspiration · Traitement plastiques-cuirs · Protection</span>
+          </div>
+          <span class="svc-arrow">↓</span>
+        </summary>
+        <div class="svc-body">
+          <p>Aspiration complète de l'habitacle, nettoyage en profondeur des surfaces plastiques et cuir, shampouinage des textiles (tapis et sièges), pose d'une protection sur les cuirs et plastiques contre l'usure prématurée et les UV.</p>
+          <ul class="svc-feats">
+            <li>Aspiration haute puissance</li>
+            <li>Traitement cuir-plastique-textile</li>
+            <li>Protections</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc-item">
+        <summary class="svc-summary">
+          <span class="svc-num">02</span>
+          <div class="svc-info">
+            <span class="svc-name">Lavage Extérieur</span>
+            <span class="svc-tagline">Jantes · Lavage · Protection</span>
+          </div>
+          <span class="svc-arrow">↓</span>
+        </summary>
+        <div class="svc-body">
+          <p>Nettoyage complet des jantes et pneus, prélavage sans contact, lavage manuel, application d'une protection durable de 1 à 6 mois, finition brillant pneus et nettoyage des vitres pour un rendu propre et éclatant.</p>
+          <ul class="svc-feats">
+            <li>Nettoyage jantes-pneus</li>
+            <li>Prélavage et lavage</li>
+            <li>Protection</li>
+            <li>Brillance</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc-item">
+        <summary class="svc-summary">
+          <span class="svc-num">03</span>
+          <div class="svc-info">
+            <span class="svc-name">Détailing Complet</span>
+            <span class="svc-tagline">Intérieur + Extérieur en une séance</span>
+          </div>
+          <span class="svc-arrow">↓</span>
+        </summary>
+        <div class="svc-body">
+          <p>La combinaison parfaite : un nettoyage complet intérieur et extérieur réalisé lors d'une seule intervention. Idéal pour une remise à neuf, avant une vente, ou simplement pour conserver votre véhicule propre et entretenu.</p>
+          <ul class="svc-feats">
+            <li>Intérieur complet</li>
+            <li>Extérieur complet</li>
+            <li>Protection de 3 à 6 mois</li>
+            <li>Véhicule comme neuf</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc-item">
+        <summary class="svc-summary">
+          <span class="svc-num">04</span>
+          <div class="svc-info">
+            <span class="svc-name">Polissage</span>
+            <span class="svc-tagline">Suppression des micro-rayures</span>
+          </div>
+          <span class="svc-arrow">↓</span>
+        </summary>
+        <div class="svc-body">
+          <p>Élimination des micro-rayures, hologrammes et défauts afin de redonner toute la brillance et la profondeur à votre carrosserie. Finition lisse, effet miroir pour un rendu comme neuf. Idéal avant la pose d'un traitement céramique ou une Wax.</p>
+          <ul class="svc-feats">
+            <li>Élimination des micro-rayures</li>
+            <li>Effet miroir</li>
+            <li>Correction des défauts</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc-item">
+        <summary class="svc-summary">
+          <span class="svc-num">05</span>
+          <div class="svc-info">
+            <span class="svc-name">Protection Céramique</span>
+            <span class="svc-tagline">Protection longue durée</span>
+          </div>
+          <span class="svc-arrow">↓</span>
+        </summary>
+        <div class="svc-body">
+          <p>Application d'un revêtement céramique haute performance offrant une protection durable contre les UV, la saleté, l'oxydation et les agressions extérieures. Apporte une brillance intense et un effet hydrophobe pour un entretien facilité.</p>
+          <ul class="svc-feats">
+            <li>Protection durable 2 à 5 ans</li>
+            <li>Effet hydrophobe intense</li>
+            <li>Résistance UV &amp; oxydation</li>
+          </ul>
+        </div>
+      </details>
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PORTFOLIO — bandes alternées pleine largeur + sliders avant/après
+══════════════════════════════════════════════════════════════ -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Nos réalisations</span>
+      <h2 class="section-title">Portfolio</h2>
+    </div>
+  </div>
+
+  <!-- Véhicule 1 — Lamborghini Revuelto -->
+  <div class="port-strip">
+    <div class="port-visual">
+      <div class="ba" style="--p:50%">
+        <img class="ba-before" src="avant-1.jpg" alt="Avant — Lamborghini Revuelto">
+        <div class="ba-after">
+          <img src="apres-1.jpg" alt="Après — Lamborghini Revuelto">
+        </div>
+        <div class="ba-line"></div>
+        <div class="ba-handle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
+        </div>
+        <input type="range" class="ba-range" min="0" max="100" value="50">
+        <span class="ba-label ba-label-b">AVANT</span>
+        <span class="ba-label ba-label-a">APRÈS</span>
+      </div>
+    </div>
+    <div class="port-info">
+      <span class="port-num">01</span>
+   
+
+    </div>
+  </div>
+
+  <!-- Véhicule 2 — Porsche Cayenne Turbo S -->
+  <div class="port-strip port-strip--alt">
+    <div class="port-visual">
+      <div class="ba" style="--p:50%">
+        <img class="ba-before" src="avant-2.jpg" alt="Avant — Porsche Cayenne Turbo S">
+        <div class="ba-after">
+          <img src="apres-2.jpg" alt="Après — Porsche Cayenne Turbo S">
+        </div>
+        <div class="ba-line"></div>
+        <div class="ba-handle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
+        </div>
+        <input type="range" class="ba-range" min="0" max="100" value="50">
+        <span class="ba-label ba-label-b">AVANT</span>
+        <span class="ba-label ba-label-a">APRÈS</span>
+      </div>
+    </div>
+    <div class="port-info">
+      <span class="port-num">02</span>
+      
+
+    </div>
+  </div>
+
+  <!-- Véhicule 3 — Mercedes CLA -->
+  <div class="port-strip">
+    <div class="port-visual">
+      <div class="ba" style="--p:50%">
+        <img class="ba-before" src="avant-3.jpg" alt="Avant — Mercedes CLA">
+        <div class="ba-after">
+          <img src="apres-3.jpg" alt="Après — Mercedes CLA">
+        </div>
+        <div class="ba-line"></div>
+        <div class="ba-handle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
+        </div>
+        <input type="range" class="ba-range" min="0" max="100" value="50">
+        <span class="ba-label ba-label-b">AVANT</span>
+        <span class="ba-label ba-label-a">APRÈS</span>
+      </div>
+    </div>
+    <div class="port-info">
+      <span class="port-num">03</span>
+  
+
+    </div>
+  </div>
+
+  <!-- Véhicule 4 — Cupra Formentor-->
+  <div class="port-strip port-strip--alt">
+    <div class="port-visual">
+      <div class="ba" style="--p:50%">
+        <img class="ba-before" src="avant-4.jpg" alt="Avant — Cupra Formentor">
+        <div class="ba-after">
+          <img src="apres-4.jpg" alt="Après — Cupra Formentor">
+        </div>
+        <div class="ba-line"></div>
+        <div class="ba-handle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" width="22" height="22"><path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15"/></svg>
+        </div>
+        <input type="range" class="ba-range" min="0" max="100" value="50">
+        <span class="ba-label ba-label-b">AVANT</span>
+        <span class="ba-label ba-label-a">APRÈS</span>
+      </div>
+    </div>
+    <div class="port-info">
+      <span class="port-num">04</span>
+      
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     TARIFS — 2D tabs véhicule × service + 3 cartes
+══════════════════════════════════════════════════════════════ -->
+
+<!-- Radios véhicule (doivent précéder le contenu pour CSS ~ ) -->
+<input type="radio" name="tv" id="tv-cit" checked hidden>
+<input type="radio" name="tv" id="tv-ber" hidden>
+<input type="radio" name="tv" id="tv-suv" hidden>
+<!-- Radios service -->
+<input type="radio" name="ts" id="ts-int" checked hidden>
+<input type="radio" name="ts" id="ts-ext" hidden>
+<input type="radio" name="ts" id="ts-pak" hidden>
+
+<section id="tarifs">
+  <div class="container">
+
+    <div class="section-header" style="text-align:center;max-width:640px;margin:0 auto clamp(40px,6vw,64px)">
+      <span class="section-tag">Nos Tarifs</span>
+      <h2 class="section-title">Nos <em>Tarifs</em></h2>
+      <p style="margin-top:14px;color:#999;font-size:15px">Des prestations d'exception à des tarifs clairs.</p>
+    </div>
+
+    <!-- Tabs véhicule -->
+    <div class="tt-row">
+      <label for="tv-cit" class="tt-pill">Citadines</label>
+      <label for="tv-ber" class="tt-pill">Berlines</label>
+      <label for="tv-suv" class="tt-pill">SUVs · Supercars</label>
+    </div>
+    <!-- Tabs service -->
+    <div class="tt-row">
+      <label for="ts-int" class="tt-pill">Intérieur</label>
+      <label for="ts-ext" class="tt-pill">Extérieur</label>
+      <label for="ts-pak" class="tt-pill">Packs Complets</label>
+    </div>
+
+    <!-- ── Panels (9 combinaisons) ── -->
+    <div class="tt-panels">
+
+      <!-- CITADINE + INTÉRIEUR -->
+      <div class="tt-panel p-cit-int">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Intérieur Premium</h3>
+          <div class="tt-price">90<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Aspiration haute puissance</li>
+            <li>Shampoing des tapis</li>
+            <li>Nettoyage approfondi des plastiques</li>
+            <li>Nettoyage des vitres intérieures</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Intérieur Perfect</h3>
+          <div class="tt-price">120<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Tout le pack Premium</li>
+            <li>Nettoyage en profondeur des sièges textiles et cuirs</li>
+            <li>Protection et nourrissage des cuirs</li>
+            <li>Protection des plastiques</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- CITADINE + EXTÉRIEUR -->
+      <div class="tt-panel p-cit-ext">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Extérieur Premium</h3>
+          <div class="tt-price">40<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Prélavage à la mousse active</li>
+            <li>Lavage manuel soigné</li>
+            <li>Nettoyage approfondi des jantes et pneus</li>
+            <li>Pose d'une cire à effet déperlant</li>
+            <li>Brillance des pneus</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Extérieur Perfect</h3>
+          <div class="tt-price">50<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Tout le pack Extérieur Premium</li>
+            <li>Protection Wax longue durée de 1 à 6 mois</li>
+            <li>Rénovation des plastiques extérieurs</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- CITADINE + PACKS -->
+      <div class="tt-panel p-cit-pak">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Pack Complet Premium</h3>
+          <div class="tt-price">110<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Intérieur Premium + Extérieur Premium en une seule intervention</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Pack Complet Perfect</h3>
+          <div class="tt-price">150<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Intérieur Perfect + Extérieur Perfect en une seule intervention</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- BERLINE + INTÉRIEUR -->
+      <div class="tt-panel p-ber-int">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Intérieur Premium</h3>
+          <div class="tt-price">100<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Aspiration haute puissance</li>
+            <li>Shampoing des tapis</li>
+            <li>Nettoyage approfondi des plastiques</li>
+            <li>Nettoyage des vitres intérieures</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Intérieur Perfect</h3>
+          <div class="tt-price">130<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Tout le pack Premium</li>
+            <li>Nettoyage en profondeur des sièges textiles et cuirs</li>
+            <li>Protection et nourrissage des cuirs</li>
+            <li>Protection des plastiques</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- BERLINE + EXTÉRIEUR -->
+      <div class="tt-panel p-ber-ext">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Extérieur Premium</h3>
+          <div class="tt-price">45<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Prélavage à la mousse active</li>
+            <li>Lavage manuel soigné</li>
+            <li>Nettoyage approfondi des jantes et pneus</li>
+            <li>Pose d'une cire à effet déperlant</li>
+            <li>Brillance des pneus</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Extérieur Perfect</h3>
+          <div class="tt-price">55<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Tout le pack Extérieur Premium</li>
+            <li>Protection Wax longue durée de 1 à 6 mois</li>
+            <li>Rénovation des plastiques extérieurs</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- BERLINE + PACKS -->
+      <div class="tt-panel p-ber-pak">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Pack Complet Premium</h3>
+          <div class="tt-price">120<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Intérieur Premium + Extérieur Premium en une seule intervention</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Pack Complet Perfect</h3>
+          <div class="tt-price">170<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Intérieur Perfect + Extérieur Perfect en une seule intervention</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- SUV + INTÉRIEUR -->
+      <div class="tt-panel p-suv-int">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Intérieur Premium</h3>
+          <div class="tt-price">110<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Aspiration haute puissance</li>
+            <li>Shampoing des tapis</li>
+            <li>Nettoyage approfondi des plastiques</li>
+            <li>Nettoyage des vitres intérieures</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Intérieur Perfect</h3>
+          <div class="tt-price">140<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Tout le pack Premium</li>
+            <li>Nettoyage en profondeur des sièges textiles et cuirs</li>
+            <li>Protection et nourrissage des cuirs</li>
+            <li>Protection des plastiques</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- SUV + EXTÉRIEUR -->
+      <div class="tt-panel p-suv-ext">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Extérieur Premium</h3>
+          <div class="tt-price">60<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Prélavage à la mousse active</li>
+            <li>Lavage manuel soigné</li>
+            <li>Nettoyage approfondi des jantes et pneus</li>
+            <li>Pose d'une cire à effet déperlant</li>
+            <li>Brillance des pneus</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Extérieur Perfect</h3>
+          <div class="tt-price">70<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Tout le pack Extérieur Premium</li>
+            <li>Protection Wax longue durée de 1 à 6 mois</li>
+            <li>Rénovation des plastiques extérieurs</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+      <!-- SUV + PACKS -->
+      <div class="tt-panel p-suv-pak">
+        <div class="tt-card">
+          <h3 class="tt-card-name">Pack Complet Premium</h3>
+          <div class="tt-price">140<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Intérieur Premium + Extérieur Premium en une seule intervention</li>
+          </ul>
+          <a href="#contact" class="tt-btn">Réserver</a>
+        </div>
+        <div class="tt-card tt-card--pop">
+          <span class="tt-pop-badge">★ Recommandé</span>
+          <h3 class="tt-card-name">Pack Complet Perfect</h3>
+          <div class="tt-price">190<sup>€</sup></div>
+          <ul class="tt-feats">
+            <li>Intérieur Perfect + Extérieur Perfect en une seule intervention</li>
+          </ul>
+          <a href="#contact" class="tt-btn tt-btn--gold">Réserver</a>
+        </div>
+      </div>
+
+    </div><!-- /.tt-panels -->
+
+    <p class="tt-note"><em>Tarifs indicatifs – Le tarif peut varier selon l'état du véhicule.</em></p>
+
+    <div style="text-align:center;margin-top:clamp(32px,4vw,48px)">
+      <a href="#contact" class="btn-gold">Demander un devis personnalisé &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     AVIS — grande citation + carousel
+══════════════════════════════════════════════════════════════ -->
+<section id="avis">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">L'art du detail dans le detail</span>
+      <h2 class="section-title">Avis Clients</h2>
+    </div>
+  </div>
+
+  <!-- Grande citation vedette -->
+  <div class="avis-big">
+    <div class="container avis-big-inner">
+      <div class="avis-big-mark">&ldquo;</div>
+      <blockquote class="avis-big-text">
+        L'art du détail parfait — ma voiture n'a jamais été aussi propre et brillante.
+      </blockquote>
+      <cite class="avis-big-cite">— Gabriele, Monaco ★★★★★</cite>
+    </div>
+  </div>
+
+  <!-- Grille d'avis -->
+  <div class="container avis-grid">
+
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">&ldquo;Excellent service : le travail est soigné, minutieux et d'une qualité remarquable. Ma voiture n'a jamais été aussi propre et brillante. Je recommande vivement !&rdquo;</p>
+      <div class="avis-author">
+        <span class="avis-name">Gabriele</span>
+        <span class="avis-ville">Monaco · Google</span>
+      </div>
+    </div>
+
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">&ldquo;Detailing complet de ma BMW M850i, service parfait et personnel agréable. Je recommande fortement.&rdquo;</p>
+      <div class="avis-author">
+        <span class="avis-name">Elias</span>
+        <span class="avis-ville">Nice · Google</span>
+      </div>
+    </div>
+
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">&ldquo;J'ai fait nettoyer mes tapis de voiture, ils sont revenus comme neuf. Je recommande fortement. Service de qualité, sérieux et ponctuel.&rdquo;</p>
+      <div class="avis-author">
+        <span class="avis-name">Pierre</span>
+        <span class="avis-ville">Menton · Google</span>
+      </div>
+    </div>
+
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">&ldquo;Je n'avais pas nettoyé ma voiture depuis 2 ans. Au final j'ai été bluffé, c'est comme si ma voiture était neuve. Le retour client est très réactif et professionnel, je conseille fortement.&rdquo;</p>
+      <div class="avis-author">
+        <span class="avis-name">Luis</span>
+        <span class="avis-ville">Monaco · Google</span>
+      </div>
+    </div>
+
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">&ldquo;Got my car detailed and the difference is incredible. The interior looks and smells brand new, and the exterior has that amazing deep gloss back. Highly recommend.&rdquo;</p>
+      <div class="avis-author">
+        <span class="avis-name">X.</span>
+        <span class="avis-ville">Nice · Google</span>
+      </div>
+    </div>
+
+    <div class="avis-card avis-card--cta">
+      <p class="avis-cta-title">Votre expérience mérite d'être partagée.</p>
+      <a href="https://share.google/7ClUWTkRPTxp1n9uy" target="_blank" rel="noopener noreferrer" class="btn-gold">Laisser un avis Google</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     À PROPOS
+══════════════════════════════════════════════════════════════ -->
+<section id="apropos">
+  <div class="container apropos-inner">
+    <div class="apropos-img-wrap">
+      <img src="equipe.jpg" alt="L'équipe GT Detailing" class="apropos-img" id="apropos-img">
+      <div class="apropos-img-placeholder" style="display:none">
+        <span>GT</span>
+      </div>
+      <div class="apropos-badge">
+        <span class="apropos-badge-n">+100</span>
+        <span class="apropos-badge-l">Clients satisfaits</span>
+      </div>
+    </div>
+    <div class="apropos-content">
+      <span class="section-tag">Notre histoire</span>
+      <h2 class="section-title" style="margin-bottom:1.5rem">Passionnés<br>depuis le premier jour.</h2>
+      <p>GT Detailing est né de la passion pour l'automobile et l'obsession du travail bien fait. Basés sur la Côte d'Azur, nous intervenons à Cannes, Monaco, Nice, Menton et dans toute la région.</p>
+      <p>Chaque prestation est réalisée avec des produits professionnels certifiés, sélectionnés pour leur efficacité et leur respect du véhicule. Nous venons directement chez vous.</p>
+      <div class="apropos-vals">
+        <div class="apropos-val">
+          <span class="apropos-val-icon">◈</span>
+          <div>
+            <strong>Produits professionnels</strong>
+            <span>Gammes certifiées detailing</span>
+          </div>
+        </div>
+        <div class="apropos-val">
+          <span class="apropos-val-icon">◈</span>
+          <div>
+            <strong>Déplacement à domicile ou prise en charge du véhicule</strong>
+            <span>Cannes, Nice, Monaco, Menton</span>
+          </div>
+        </div>
+        <div class="apropos-val">
+          <span class="apropos-val-icon">◈</span>
+          <div>
+            <strong>Résultats garantis</strong>
+            <span>Satisfaction ou retouche offerte</span>
+          </div>
+        </div>
+        <div class="apropos-val">
+          <span class="apropos-val-icon">◈</span>
+          <div>
+            <strong>Produits de qualité</strong>
+            <span>Spécialement conçus pour vos véhicules</span>
+          </div>
+        </div>
+      </div>
+      <a href="#contact" class="btn-gold" style="margin-top:2rem;display:inline-block">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SOCIAL — grille Instagram
+══════════════════════════════════════════════════════════════ -->
+<section id="social">
+  <div class="container social-header">
+    <span class="section-tag">Suivez-nous</span>
+    <h2 class="section-title">Instagram</h2>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="social-handle">@gtdetailingmc</a>
+  </div>
+  <div class="insta-grid">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
+      <img src="insta-1.jpg" alt="GT Detailing Instagram 1" loading="lazy">
+      <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
+      <img src="insta-2.jpg" alt="GT Detailing Instagram 2" loading="lazy">
+      <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
+      <img src="insta-3.jpg" alt="GT Detailing Instagram 3" loading="lazy">
+      <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
+      <img src="insta-4.jpg" alt="GT Detailing Instagram 4" loading="lazy">
+      <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
+      <img src="insta-5.jpg" alt="GT Detailing Instagram 5" loading="lazy">
+      <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="insta-cell">
+      <img src="insta-6.jpg" alt="GT Detailing Instagram 6" loading="lazy">
+      <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+    </a>
+  </div>
+  <div class="container" style="text-align:center;margin-top:2.5rem">
+    <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" class="btn-ghost">Voir le profil complet</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FAQ — accordéon avec label latéral
+══════════════════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container faq-inner">
+    <div class="faq-label">FAQ</div>
+    <div class="faq-list">
+      <h2 class="section-title" style="margin-bottom:2.5rem">Questions<br>fréquentes</h2>
+
+      <details class="faq-item" open>
+        <summary class="faq-q">Vous déplacez-vous à domicile ?</summary>
+        <div class="faq-a">Oui, nous nous déplaçons chez vous à Cannes, Monaco, Nice, Menton et dans les communes environnantes. Le déplacement est inclus dans le tarif.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Combien de temps dure une prestation ?</summary>
+        <div class="faq-a">Selon la prestation et le véhicule : entre 1h30 (lavage extérieur citadine) et 6h (détailing complet SUV). Nous vous communiquons un créneau précis lors de la réservation.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Faut-il préparer quoi que ce soit ?</summary>
+        <div class="faq-a">Un espace sécurisé permettant de travailler autour du véhicule sans gêner. Idéalement à proximité d'une prise électrique et d'un point d'eau, mais cela reste optionnel.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Vos produits sont-ils sans risque pour la peinture ?</summary>
+        <div class="faq-a">Nous utilisons uniquement des produits professionnels de haute qualité, respectueux de l'environnement et adaptés aux matériaux de votre véhicule. Chaque produit est soigneusement sélectionné et testé afin d'assurer une finition propre, durable et un résultat proche du neuf.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Quels services proposez-vous ?</summary>
+        <div class="faq-a">Nous proposons le nettoyage intérieur et extérieur, le polissage, le traitement céramique et la rénovation de phares. Consultez notre section Services pour le détail de chaque prestation.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">La protection céramique est-elle vraiment durable ?</summary>
+        <div class="faq-a">Oui. Selon le produit appliqué et l'entretien du véhicule, la protection céramique dure entre 2 et 5 ans. Elle facilite ensuite l'entretien quotidien grâce à l'effet hydrophobe.</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT + CARTE
+══════════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container contact-inner">
+
+    <!-- Formulaire -->
+    <div class="contact-form-wrap">
+      <span class="section-tag">Parlons-en</span>
+      <h2 class="section-title" style="margin-bottom:2rem">Réserver / Devis</h2>
+
+      <!-- IMPORTANT: Replace FORMSPREE_ID with your real Formspree form ID (see LISEZ-MOI.html) -->
+      <form class="contact-form" action="https://formspree.io/f/xjgzyodn" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-nom">Prénom & Nom</label>
+            <input type="text" id="cf-nom" name="nom" placeholder="Albert D." required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="cf-tel">Téléphone</label>
+            <input type="tel" id="cf-tel" name="telephone" placeholder="+33 6 00 00 00 00" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="votre@email.com" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-vehicule">Véhicule</label>
+            <input type="text" id="cf-vehicule" name="vehicule" placeholder="Porsche Cayenne">
+          </div>
+          <div class="form-field">
+            <label for="cf-service">Service souhaité</label>
+            <select id="cf-service" name="service">
+              <option value="">Choisir...</option>
+              <option>Lavage Intérieur</option>
+              <option>Lavage Extérieur</option>
+              <option>Détailing Complet</option>
+              <option>Polissage</option>
+              <option>Protection Céramique</option>
+              <option>Autre / Devis</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" rows="4" placeholder="État du véhicule, disponibilités, localisation..."></textarea>
+        </div>
+        <button type="submit" class="btn-gold btn-full">Envoyer la demande</button>
+      </form>
+    </div>
+
+    <!-- Infos + Carte -->
+    <div class="contact-info-wrap">
+      <div class="contact-infos">
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📍</span>
+          <div>
+            <strong>Zone d'intervention</strong>
+            <span>Cannes · Nice · Monaco · Menton</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📸</span>
+          <div>
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer">@gtdetailingmc</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">🎵</span>
+          <div>
+            <strong>TikTok</strong>
+            <a href="https://www.tiktok.com/@gtdetailingmc?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">@gtdetailingmc</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">★</span>
+          <div>
+            <strong>Note Google</strong>
+            <a href="https://share.google/7ClUWTkRPTxp1n9uy" target="_blank" rel="noopener noreferrer">5/5 · Laisser un avis</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d502690.2490115642!2d6.240797704241579!3d43.48303871103704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cebc738732d97f%3A0x594966412c5651c0!2sFrench%20Riviera!5e0!3m2!1sen!2sfr!4v1779994986593!5m2!1sen!2sfr"
+          width="100%" height="280" style="border:0;border-radius:8px;filter:grayscale(60%)"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="GT Detailing — Monaco">
+        </iframe>
+      </div>
+    </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="GT Detailing" class="footer-logo" id="footer-logo-img">
+      <span class="footer-logo-txt" style="display:none">GT DETAILING</span>
+      <p class="footer-tagline">L'art du détail parfait.<br>Cannes · Monaco · Nice · Menton.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#avis">Avis</a>
+      <a href="#apropos">À propos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/gtdetailingmc" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@gtdetailingmc?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 GT Detailing — Tous droits réservés</span>
+    <span style="color:rgba(255,255,255,.2);margin:0 10px">·</span>
+    <span><a href="#politique" class="footer-credit" style="color:rgba(255,255,255,.3)">Politique de confidentialité</a></span>
+    <span style="color:rgba(255,255,255,.2);margin:0 10px">·</span>
+    <span>Site réalisé par <a href="mailto:a1exb0nes.studio@gmail.com" class="footer-credit">A1B0.studio</a></span>
+  </div>
+</footer>
+
+<!-- Politique de confidentialité -->
+<section id="politique" style="background:#050505;border-top:1px solid rgba(255,255,255,.06);padding:clamp(48px,6vw,80px) 0">
+  <div class="container" style="max-width:760px">
+    <h2 style="font-family:var(--H);font-size:clamp(28px,4vw,42px);letter-spacing:.06em;color:#fff;margin-bottom:2rem">Politique de <em style="color:var(--gold)">confidentialité</em></h2>
+    <div style="color:#999;font-size:14px;line-height:1.9;display:flex;flex-direction:column;gap:1.4rem">
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Collecte des données</strong>Le formulaire de contact collecte uniquement les informations que vous fournissez volontairement (nom, email, téléphone, véhicule, message). Ces données sont utilisées exclusivement pour répondre à vos demandes de réservation ou de devis.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Utilisation des données</strong>Vos informations ne sont jamais vendues, partagées ou cédées à des tiers. Elles sont conservées le temps nécessaire au traitement de votre demande.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Service de formulaire</strong>Le formulaire de contact utilise Formspree (formspree.io), un service tiers. Les données soumises transitent par leurs serveurs. Consultez la politique de confidentialité de Formspree pour plus d'informations.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Cookies</strong>Ce site n'utilise aucun cookie de suivi ou de publicité.</div>
+      <div><strong style="color:#fff;display:block;margin-bottom:4px">Vos droits</strong>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous via le formulaire de contact.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky CTA mobile -->
+<a href="#contact" class="sticky-cta">Réserver</a>
+
+<script>
+  document.querySelectorAll('.ba-range').forEach(function(r){
+    r.addEventListener('input', function(){
+      this.closest('.ba').style.setProperty('--p', this.value + '%');
+    });
+  });
+</script>
+<script>
+  (function(){
+    var imgs=[
+      {id:'nav-logo-img',next:'nav-logo-txt',display:'block'},
+      {id:'apropos-img',next:'apropos-img-placeholder',display:'flex'},
+      {id:'footer-logo-img',next:'footer-logo-txt',display:'block'}
+    ];
+    imgs.forEach(function(o){
+      var el=document.getElementById(o.id);
+      if(el){el.addEventListener('error',function(){this.style.display='none';var n=document.getElementById(o.next);if(n)n.style.display=o.display;});}
+    });
+  })();
+</script>
+
+</body>
+</html>
