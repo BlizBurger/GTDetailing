@@ -272,10 +272,10 @@
   }
   .hero-bg-img {
     position:absolute; inset:0; z-index:0;
-    background:url('avant-1.jpg') center/cover no-repeat;
-    opacity:.08;
-    filter:blur(14px);
-    transform:scale(1.08);
+    background:url('back.jpg') center/cover no-repeat;
+    opacity:0.9;
+    filter:blur(1px) brightness(0.45);
+    transform:scale(1.03);
     pointer-events:none;
   }
   .hero-left > *:not(.hero-bg-img) { position:relative; z-index:1; }
@@ -1944,7 +1944,24 @@
     .tt-pill { padding:9px 16px; font-size:10px; letter-spacing:.14em; }
   }
 
-  </style>
+  
+  /* ── WhatsApp bubble ── */
+  .wa-bubble {
+    position:fixed; bottom:calc(24px + env(safe-area-inset-bottom));
+    right:24px; z-index:9999;
+    width:58px; height:58px; border-radius:50%;
+    background:#25D366;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 20px rgba(37,211,102,.45);
+    transition:transform .2s, box-shadow .2s;
+    text-decoration:none;
+  }
+  .wa-bubble:hover { transform:scale(1.1); box-shadow:0 6px 28px rgba(37,211,102,.6); }
+  .wa-bubble svg { width:30px; height:30px; fill:#fff; }
+  @media(max-width:768px) {
+    .wa-bubble { bottom:calc(96px + env(safe-area-inset-bottom)); right:16px; width:52px; height:52px; }
+  }
+</style>
 </head>
 <body>
 
@@ -2008,6 +2025,7 @@
 
     <!-- Panneau gauche — texte -->
     <div class="hero-left">
+      <!-- Background image overlay — remplacez hero-bg.jpg par votre photo -->
       <div class="hero-bg-img" aria-hidden="true"></div>
       <p class="hero-eyebrow">Cannes · Monaco · Nice · Menton</p>
       <h1 class="hero-title">L'art du<br><em>detail</em><br>dans le detail.</h1>
@@ -2235,7 +2253,6 @@
     </div>
     <div class="port-info">
       <span class="port-num">01</span>
-   
 
     </div>
   </div>
@@ -2259,7 +2276,6 @@
     </div>
     <div class="port-info">
       <span class="port-num">02</span>
-      
 
     </div>
   </div>
@@ -2283,18 +2299,17 @@
     </div>
     <div class="port-info">
       <span class="port-num">03</span>
-  
 
     </div>
   </div>
 
-  <!-- Véhicule 4 — Cupra Formentor-->
+  <!-- Véhicule 4 — Renault Twingo -->
   <div class="port-strip port-strip--alt">
     <div class="port-visual">
       <div class="ba" style="--p:50%">
-        <img class="ba-before" src="avant-4.jpg" alt="Avant — Cupra Formentor">
+        <img class="ba-before" src="avant-4.jpg" alt="Avant — Renault Twingo">
         <div class="ba-after">
-          <img src="apres-4.jpg" alt="Après — Cupra Formentor">
+          <img src="apres-4.jpg" alt="Après — Renault Twingo">
         </div>
         <div class="ba-line"></div>
         <div class="ba-handle">
@@ -2307,7 +2322,6 @@
     </div>
     <div class="port-info">
       <span class="port-num">04</span>
-      
 
     </div>
   </div>
@@ -2864,10 +2878,31 @@
     <div class="contact-info-wrap">
       <div class="contact-infos">
         <div class="contact-info-item">
+          <span class="contact-info-icon">📞</span>
+          <div>
+            <strong>Téléphone / WhatsApp</strong>
+            <a href="tel:+33647869180">06 47 86 91 80</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:albert@gtdetailingmc.com">albert@gtdetailingmc.com</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
           <span class="contact-info-icon">📍</span>
           <div>
+            <strong>Adresse</strong>
+            <span>Roquebrune-Cap-Martin, Côte d'Azur</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">🗺️</span>
+          <div>
             <strong>Zone d'intervention</strong>
-            <span>Cannes · Nice · Monaco · Menton</span>
+            <span>Cannes · Monaco · Nice · Menton</span>
           </div>
         </div>
         <div class="contact-info-item">
@@ -2903,6 +2938,7 @@
       </div>
     </div>
 
+  </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -2913,7 +2949,7 @@
     <div class="footer-brand">
       <img src="logo.png" alt="GT Detailing" class="footer-logo" id="footer-logo-img">
       <span class="footer-logo-txt" style="display:none">GT DETAILING</span>
-      <p class="footer-tagline">L'art du détail parfait.<br>Cannes · Monaco · Nice · Menton.</p>
+      <p class="footer-tagline">L'art du détail parfait.<br>Roquebrune-Cap-Martin · Cannes · Monaco · Nice · Menton.<br><span style="font-size:12px;color:#555;display:block;margin-top:6px">Lavage · Detailing · Polissage · Protection céramique</span><span style="font-size:11px;color:#444;display:block;margin-top:4px">SIREN : 994 036 192</span></p>
     </div>
     <nav class="footer-nav">
       <a href="#services">Services</a>
@@ -2956,6 +2992,94 @@
   </div>
 </section>
 
+<!-- Politique de rendez-vous et conditions de prestation -->
+
+<section id="rendez-vous" style="background:#080808;border-top:1px solid rgba(255,255,255,.06);padding:clamp(48px,6vw,80px) 0">
+  <div class="container" style="max-width:760px">
+    <h2 style="font-family:var(--H);font-size:clamp(28px,4vw,42px);letter-spacing:.06em;color:#fff;margin-bottom:2rem">
+      Politique de <em style="color:var(--gold)">rendez-vous</em>
+    </h2>
+
+```
+<div style="color:#999;font-size:14px;line-height:1.9;display:flex;flex-direction:column;gap:1.4rem">
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Validation du rendez-vous</strong>
+    Toute réservation est considérée comme acceptée après confirmation de notre équipe. En réservant une prestation, le client reconnaît avoir pris connaissance et accepté les présentes conditions.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Présence du client</strong>
+    La présence du client ou d'une personne autorisée est obligatoire au début du rendez-vous afin de permettre l'inspection du véhicule, la remise des clés et la validation de la prestation demandée.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Retards</strong>
+    Le client s'engage à être présent à l'heure convenue. Un retard supérieur à 15 minutes doit être signalé dès que possible. Au-delà de 30 minutes de retard, la prestation pourra être écourtée, reportée ou annulée selon les disponibilités. Des frais compensatoires pouvant aller jusqu'à 30 € pourront être appliqués lorsque le retard entraîne une perte de temps ou une désorganisation du planning.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Absence au rendez-vous</strong>
+    En cas d'absence du client, de véhicule inaccessible ou de non-présentation sans préavis, une indemnité forfaitaire de 50 € pourra être facturée afin de couvrir le déplacement, le créneau réservé et les frais engagés.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Annulation ou report</strong>
+    Toute demande d'annulation ou de report doit être effectuée au minimum 24 heures avant le rendez-vous. En cas d'annulation tardive ou de report de dernière minute, des frais pourront être appliqués selon le préjudice subi et le temps réservé.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Véhicule à vider avant intervention</strong>
+    Le véhicule doit être vidé de tous les objets personnels avant notre arrivée. Si notre équipe doit retirer ou déplacer des objets afin de pouvoir réaliser la prestation, un supplément forfaitaire de 10 € sera appliqué.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Objets personnels</strong>
+    Nous recommandons fortement de retirer tous les objets de valeur avant la prestation. Nous ne pourrons être tenus responsables des objets oubliés, perdus ou détériorés laissés dans le véhicule.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">État du véhicule</strong>
+    Les tarifs affichés correspondent à un niveau d'encrassement standard. Les véhicules nécessitant un travail exceptionnel (poils d'animaux, sable excessif, déchets, moisissures, odeurs importantes, taches incrustées ou salissures extrêmes) pourront faire l'objet d'un supplément communiqué avant le début de la prestation.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Poils d'animaux</strong>
+    Le retrait des poils d'animaux peut nécessiter un temps de travail important. Un supplément pourra être appliqué selon la quantité présente dans le véhicule.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Conditions météorologiques</strong>
+    Pour les prestations mobiles, nous nous réservons le droit de reporter le rendez-vous en cas de pluie, vent important ou toute condition susceptible de compromettre la qualité du résultat ou la sécurité de l'intervention.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Accès au véhicule</strong>
+    Le client doit fournir un emplacement permettant d'effectuer la prestation dans des conditions normales de sécurité et d'accès. En cas d'impossibilité d'accès ou de conditions inadaptées, le rendez-vous pourra être reporté ou annulé.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Résultats de la prestation</strong>
+    Le detailing permet une amélioration importante de l'apparence du véhicule, sans toutefois garantir la suppression totale des rayures, défauts, taches permanentes, brûlures, décolorations ou odeurs profondément incrustées.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Réclamations</strong>
+    Toute réclamation concernant la prestation devra être signalée dans un délai de 48 heures après son exécution afin de permettre une vérification et, le cas échéant, la mise en place d'une solution adaptée.
+  </div>
+
+  <div>
+    <strong style="color:#fff;display:block;margin-bottom:4px">Acceptation des conditions</strong>
+    La réservation d'une prestation implique l'acceptation pleine et entière de la présente politique de rendez-vous et des conditions de service.
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+
 <!-- Sticky CTA mobile -->
 <a href="#contact" class="sticky-cta">Réserver</a>
 
@@ -2980,5 +3104,10 @@
   })();
 </script>
 
+
+<!-- WhatsApp bubble -->
+<a href="https://wa.me/33647869180" class="wa-bubble" target="_blank" rel="noopener noreferrer" aria-label="Nous contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 </body>
 </html>
